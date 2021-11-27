@@ -34,8 +34,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
+            this.btn_Service = new System.Windows.Forms.Button();
+            this.btn_cliente = new System.Windows.Forms.Button();
             this.ContentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +69,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.btn_cliente);
+            this.panel2.Controls.Add(this.btn_Service);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 34);
             this.panel2.Name = "panel2";
@@ -105,6 +110,24 @@
             this.btn_close.TabStop = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // btn_Service
+            // 
+            this.btn_Service.Location = new System.Drawing.Point(0, 215);
+            this.btn_Service.Name = "btn_Service";
+            this.btn_Service.Size = new System.Drawing.Size(265, 58);
+            this.btn_Service.TabIndex = 0;
+            this.btn_Service.Text = "Servicio";
+            this.btn_Service.UseVisualStyleBackColor = true;
+            // 
+            // btn_cliente
+            // 
+            this.btn_cliente.Location = new System.Drawing.Point(0, 269);
+            this.btn_cliente.Name = "btn_cliente";
+            this.btn_cliente.Size = new System.Drawing.Size(265, 58);
+            this.btn_cliente.TabIndex = 1;
+            this.btn_cliente.Text = "Cliente";
+            this.btn_cliente.UseVisualStyleBackColor = true;
+            // 
             // Lobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,6 +140,7 @@
             this.Text = "0";
             this.ContentPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.ResumeLayout(false);
@@ -131,5 +155,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.PictureBox btn_close;
+        private System.Windows.Forms.Button btn_cliente;
+        private System.Windows.Forms.Button btn_Service;
     }
 }
