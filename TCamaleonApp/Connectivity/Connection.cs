@@ -8,6 +8,7 @@ namespace TCamaleonApp.View
 {
     class Connection
     {
+        //Testing branch
         public string cn = "Data Source=PC-WIN8-64BIT\\SQLEXPRESS;Initial Catalog=TallerMecanicoTC;Integrated Security=True";
     }
 }
