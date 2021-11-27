@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCamaleonApp.Views;
 
 namespace TCamaleonApp.Views
 {
@@ -41,19 +42,30 @@ namespace TCamaleonApp.Views
         private void OpenForm<myform>() where myform : Form, new()
         {
             Form form;
-            form = ContentPanel.Controls.OfType<myform>().FirstOrDefault(); //Search on the collection panel someone called form
+            form = panel_painting.Controls.OfType<myform>().FirstOrDefault(); //Search on the collection panel someone called form
             if(form == null)
             {
-                form = new Form();
+                form = new myform();
                 form.TopLevel = false;
-                ContentPanel.Controls.Add(form);
-                ContentPanel.Tag = form;
+                panel_painting.Controls.Add(form);
+                panel_painting.Tag = form;
                 form.Show();
+                form.BringToFront();
             }
             else
             {
                 form.BringToFront();
             }
+        }
+
+        private void btn_Service_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormServicio>();
+        }
+
+        private void btn_cliente_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormUsuario>();
         }
     }
 }

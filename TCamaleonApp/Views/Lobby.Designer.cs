@@ -31,7 +31,7 @@
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_painting = new System.Windows.Forms.Panel();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_Service = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             // ContentPanel
             // 
             this.ContentPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ContentPanel.Controls.Add(this.panel3);
+            this.ContentPanel.Controls.Add(this.panel_painting);
             this.ContentPanel.Controls.Add(this.panel2);
             this.ContentPanel.Controls.Add(this.panel1);
             this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,14 +77,14 @@
             this.panel2.Size = new System.Drawing.Size(265, 583);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
+            // panel_painting
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(265, 34);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(870, 583);
-            this.panel3.TabIndex = 2;
+            this.panel_painting.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_painting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_painting.Location = new System.Drawing.Point(265, 34);
+            this.panel_painting.Name = "panel_painting";
+            this.panel_painting.Size = new System.Drawing.Size(870, 583);
+            this.panel_painting.TabIndex = 2;
             // 
             // btn_minimize
             // 
@@ -118,6 +118,7 @@
             this.btn_Service.TabIndex = 0;
             this.btn_Service.Text = "Servicio";
             this.btn_Service.UseVisualStyleBackColor = true;
+            this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click);
             // 
             // btn_cliente
             // 
@@ -127,6 +128,7 @@
             this.btn_cliente.TabIndex = 1;
             this.btn_cliente.Text = "Cliente";
             this.btn_cliente.UseVisualStyleBackColor = true;
+            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
             // 
             // Lobby
             // 
@@ -150,7 +152,7 @@
         #endregion
 
         private System.Windows.Forms.Panel ContentPanel;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_painting;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btn_minimize;
