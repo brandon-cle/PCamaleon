@@ -15,8 +15,14 @@ namespace TCamaleonApp.Views
         public Lobby()
         {
             InitializeComponent();
+            maximize();
         }
 
+        public void maximize()
+        {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
 
+        }
     }
 }

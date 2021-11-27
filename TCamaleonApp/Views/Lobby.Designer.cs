@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_minimize = new System.Windows.Forms.PictureBox();
+            this.btn_close = new System.Windows.Forms.PictureBox();
             this.ContentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.SuspendLayout();
             // 
             // ContentPanel
@@ -55,8 +55,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.btn_close);
+            this.panel1.Controls.Add(this.btn_minimize);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -81,25 +81,25 @@
             this.panel3.Size = new System.Drawing.Size(870, 583);
             this.panel3.TabIndex = 2;
             // 
-            // pictureBox2
+            // btn_minimize
             // 
-            this.pictureBox2.Image = global::TCamaleonApp.Properties.Resources.minus;
-            this.pictureBox2.Location = new System.Drawing.Point(1067, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.btn_minimize.Image = global::TCamaleonApp.Properties.Resources.minus;
+            this.btn_minimize.Location = new System.Drawing.Point(1067, 4);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(29, 28);
+            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimize.TabIndex = 1;
+            this.btn_minimize.TabStop = false;
             // 
-            // pictureBox1
+            // btn_close
             // 
-            this.pictureBox1.Image = global::TCamaleonApp.Properties.Resources.close;
-            this.pictureBox1.Location = new System.Drawing.Point(1102, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btn_close.Image = global::TCamaleonApp.Properties.Resources.close;
+            this.btn_close.Location = new System.Drawing.Point(1102, 3);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(30, 29);
+            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_close.TabIndex = 0;
+            this.btn_close.TabStop = false;
             // 
             // Lobby
             // 
@@ -113,8 +113,8 @@
             this.Text = "0";
             this.ContentPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,7 +125,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_minimize;
+        private System.Windows.Forms.PictureBox btn_close;
     }
 }
