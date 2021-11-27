@@ -83,6 +83,7 @@
             // 
             // btn_minimize
             // 
+            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_minimize.Image = global::TCamaleonApp.Properties.Resources.minus;
             this.btn_minimize.Location = new System.Drawing.Point(1067, 4);
             this.btn_minimize.Name = "btn_minimize";
@@ -90,9 +91,11 @@
             this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_minimize.TabIndex = 1;
             this.btn_minimize.TabStop = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
             // 
             // btn_close
             // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Image = global::TCamaleonApp.Properties.Resources.close;
             this.btn_close.Location = new System.Drawing.Point(1102, 3);
             this.btn_close.Name = "btn_close";
@@ -100,6 +103,7 @@
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_close.TabIndex = 0;
             this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // Lobby
             // 
