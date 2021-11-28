@@ -51,9 +51,11 @@
   <ItemGroup>
     <Compile Include="Controller\cCliente.cs" />
     <Compile Include="Controller\CEmployeer.cs" />
+    <Compile Include="Controller\cRepuesto.cs" />
     <Compile Include="Controller\cUsuario.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
+    <Compile Include="Model\mRepuesto.cs" />
     <Compile Include="Model\mUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
