@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Controller\cCliente.cs" />
     <Compile Include="Controller\CEmployeer.cs" />
+    <Compile Include="Controller\cUsuario.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
     <Compile Include="Model\mUsuario.cs" />
