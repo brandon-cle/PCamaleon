@@ -63,6 +63,18 @@
     <Compile Include="Views\EmployeeSearcher.Designer.cs">
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormBaseEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormBaseEmployees.Designer.cs">
+      <DependentUpon>FormBaseEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormBase_Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormBase_Servicios.Designer.cs">
+      <DependentUpon>FormBase_Servicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,12 @@
     </Compile>
     <EmbeddedResource Include="Views\EmployeeSearcher.resx">
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormBaseEmployees.resx">
+      <DependentUpon>FormBaseEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormBase_Servicios.resx">
+      <DependentUpon>FormBase_Servicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>

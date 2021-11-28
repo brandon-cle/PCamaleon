@@ -46,3 +46,5 @@ C:\Users\Brandon Lenin Cajina\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCam
 C:\Users\Brandon Lenin Cajina\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.CopyComplete
 C:\Users\Brandon Lenin Cajina\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.exe
 C:\Users\Brandon Lenin Cajina\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.pdb
+C:\Users\Brandon Lenin Cajina\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormBaseEmployees.resources
+C:\Users\Brandon Lenin Cajina\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormBase_Servicios.resources

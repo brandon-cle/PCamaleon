@@ -35,7 +35,10 @@ namespace TCamaleonApp.Views
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
         #endregion
         //Opening form over panels
@@ -65,7 +68,7 @@ namespace TCamaleonApp.Views
 
         private void btn_cliente_Click(object sender, EventArgs e)
         {
-            OpenForm<FormUsuario>();
+            OpenForm<FormBaseEmployees>();
         }
     }
 }

@@ -35,7 +35,7 @@
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_Service = new System.Windows.Forms.Button();
-            this.btn_cliente = new System.Windows.Forms.Button();
+            this.btn_employees = new System.Windows.Forms.Button();
             this.ContentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,7 +69,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.btn_cliente);
+            this.panel2.Controls.Add(this.btn_employees);
             this.panel2.Controls.Add(this.btn_Service);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 34);
@@ -120,15 +120,15 @@
             this.btn_Service.UseVisualStyleBackColor = true;
             this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click);
             // 
-            // btn_cliente
+            // btn_employees
             // 
-            this.btn_cliente.Location = new System.Drawing.Point(0, 269);
-            this.btn_cliente.Name = "btn_cliente";
-            this.btn_cliente.Size = new System.Drawing.Size(265, 58);
-            this.btn_cliente.TabIndex = 1;
-            this.btn_cliente.Text = "Cliente";
-            this.btn_cliente.UseVisualStyleBackColor = true;
-            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
+            this.btn_employees.Location = new System.Drawing.Point(0, 269);
+            this.btn_employees.Name = "btn_employees";
+            this.btn_employees.Size = new System.Drawing.Size(265, 58);
+            this.btn_employees.TabIndex = 1;
+            this.btn_employees.Text = "Empleados";
+            this.btn_employees.UseVisualStyleBackColor = true;
+            this.btn_employees.Click += new System.EventHandler(this.btn_cliente_Click);
             // 
             // Lobby
             // 
@@ -157,7 +157,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.PictureBox btn_close;
-        private System.Windows.Forms.Button btn_cliente;
+        private System.Windows.Forms.Button btn_employees;
         private System.Windows.Forms.Button btn_Service;
     }
 }
