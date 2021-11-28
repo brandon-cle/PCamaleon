@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\TCamaleonApp",
+    "\\TCamaleonApp\\Connectivity",
     "\\TCamaleonApp\\Views"
   ],
-  "SelectedNode": "\\TCamaleonApp\\Views\\frmBuscarCliente.cs",
+  "SelectedNode": "\\TCamaleonApp\\Views\\EmployeeSearcher.cs",
   "PreviewInSolutionExplorer": false
 }
