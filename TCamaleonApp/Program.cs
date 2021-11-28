@@ -17,7 +17,7 @@ namespace TCamaleonApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormVehiculo());
+            Application.Run(new Lobby());
         }
     }
 }
