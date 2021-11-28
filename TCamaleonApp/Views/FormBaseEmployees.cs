@@ -25,6 +25,8 @@ namespace TCamaleonApp.Views
             {
                 form = new mysubform();
                 form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
                 pnl_openForm.Controls.Add(form);
                 pnl_openForm.Tag = form;
                 form.Show();
@@ -41,10 +43,11 @@ namespace TCamaleonApp.Views
             //OpenSubForm<>()
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_E_Searcher_Click(object sender, EventArgs e)
         {
             OpenSubForm<EmployeeSearcher>();
         }
+
     }
 
     

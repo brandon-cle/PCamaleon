@@ -25,6 +25,8 @@ namespace TCamaleonApp.Views
             {
                 form = new mysubform();
                 form.TopLevel = false;
+                form.FormBorderStyle= FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
                 pnl_openForm.Controls.Add(form);
                 pnl_openForm.Tag = form;
                 form.Show();

@@ -50,6 +50,8 @@ namespace TCamaleonApp.Views
             {
                 form = new myform();
                 form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
                 panel_painting.Controls.Add(form);
                 panel_painting.Tag = form;
                 form.Show();
