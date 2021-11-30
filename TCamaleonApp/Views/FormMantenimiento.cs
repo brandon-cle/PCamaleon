@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace TCamaleonApp.Views
 {
-    public partial class FormMantenimiento : Form
+    public partial class FormMA : Form
     {
-        public FormMantenimiento()
+        public FormMA()
         {
             InitializeComponent();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
-        private void limpiar()
-        {
-            txtDescripcion.Text = String.Empty;
-            txtVehiculo.Text = String.Empty;
-
         }
     }
 }
