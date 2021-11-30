@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.ContentPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel_painting = new System.Windows.Forms.Panel();
-            this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.btn_close = new System.Windows.Forms.PictureBox();
-            this.btn_Service = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_employees = new System.Windows.Forms.Button();
+            this.btn_Service = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_close = new System.Windows.Forms.PictureBox();
+            this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.ContentPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             this.SuspendLayout();
             // 
             // ContentPanel
@@ -55,16 +55,14 @@
             this.ContentPanel.Size = new System.Drawing.Size(1135, 617);
             this.ContentPanel.TabIndex = 0;
             // 
-            // panel1
+            // panel_painting
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Controls.Add(this.btn_close);
-            this.panel1.Controls.Add(this.btn_minimize);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1135, 34);
-            this.panel1.TabIndex = 0;
+            this.panel_painting.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_painting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_painting.Location = new System.Drawing.Point(265, 34);
+            this.panel_painting.Name = "panel_painting";
+            this.panel_painting.Size = new System.Drawing.Size(870, 583);
+            this.panel_painting.TabIndex = 2;
             // 
             // panel2
             // 
@@ -77,26 +75,35 @@
             this.panel2.Size = new System.Drawing.Size(265, 583);
             this.panel2.TabIndex = 1;
             // 
-            // panel_painting
+            // btn_employees
             // 
-            this.panel_painting.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_painting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_painting.Location = new System.Drawing.Point(265, 34);
-            this.panel_painting.Name = "panel_painting";
-            this.panel_painting.Size = new System.Drawing.Size(870, 583);
-            this.panel_painting.TabIndex = 2;
+            this.btn_employees.Location = new System.Drawing.Point(0, 269);
+            this.btn_employees.Name = "btn_employees";
+            this.btn_employees.Size = new System.Drawing.Size(265, 58);
+            this.btn_employees.TabIndex = 1;
+            this.btn_employees.Text = "Empleados";
+            this.btn_employees.UseVisualStyleBackColor = true;
             // 
-            // btn_minimize
+            // btn_Service
             // 
-            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_minimize.Image = global::TCamaleonApp.Properties.Resources.minus;
-            this.btn_minimize.Location = new System.Drawing.Point(1067, 4);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(29, 28);
-            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_minimize.TabIndex = 1;
-            this.btn_minimize.TabStop = false;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            this.btn_Service.Location = new System.Drawing.Point(0, 215);
+            this.btn_Service.Name = "btn_Service";
+            this.btn_Service.Size = new System.Drawing.Size(265, 58);
+            this.btn_Service.TabIndex = 0;
+            this.btn_Service.Text = "Servicio";
+            this.btn_Service.UseVisualStyleBackColor = true;
+            this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.btn_close);
+            this.panel1.Controls.Add(this.btn_minimize);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1135, 34);
+            this.panel1.TabIndex = 0;
             // 
             // btn_close
             // 
@@ -110,25 +117,17 @@
             this.btn_close.TabStop = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // btn_Service
+            // btn_minimize
             // 
-            this.btn_Service.Location = new System.Drawing.Point(0, 215);
-            this.btn_Service.Name = "btn_Service";
-            this.btn_Service.Size = new System.Drawing.Size(265, 58);
-            this.btn_Service.TabIndex = 0;
-            this.btn_Service.Text = "Servicio";
-            this.btn_Service.UseVisualStyleBackColor = true;
-            this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click);
-            // 
-            // btn_employees
-            // 
-            this.btn_employees.Location = new System.Drawing.Point(0, 269);
-            this.btn_employees.Name = "btn_employees";
-            this.btn_employees.Size = new System.Drawing.Size(265, 58);
-            this.btn_employees.TabIndex = 1;
-            this.btn_employees.Text = "Empleados";
-            this.btn_employees.UseVisualStyleBackColor = true;
-            this.btn_employees.Click += new System.EventHandler(this.btn_cliente_Click);
+            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimize.Image = global::TCamaleonApp.Properties.Resources.minus;
+            this.btn_minimize.Location = new System.Drawing.Point(1067, 4);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(29, 28);
+            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_minimize.TabIndex = 1;
+            this.btn_minimize.TabStop = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
             // 
             // Lobby
             // 
@@ -141,10 +140,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "0";
             this.ContentPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
             this.ResumeLayout(false);
 
         }

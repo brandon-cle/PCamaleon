@@ -68,9 +68,9 @@ namespace TCamaleonApp.Views
             OpenForm<FormServicio>();
         }
 
-        private void btn_cliente_Click(object sender, EventArgs e)
+        private void btn_Empleado_Click(object sender, EventArgs e)
         {
-            OpenForm<FormBaseEmployees>();
+            OpenForm<EmployeeSearcher>();
         }
     }
 }
