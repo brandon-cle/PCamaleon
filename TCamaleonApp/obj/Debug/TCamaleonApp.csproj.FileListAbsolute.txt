@@ -40,3 +40,23 @@ C:\Users\LENOVO\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.cspro
 C:\Users\LENOVO\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.exe
 C:\Users\LENOVO\Source\Repos\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.pdb
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.AssemblyReference.cache
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Properties.Resources.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.EmployeeSearcher.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormMantenimiento.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormPuesto.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormRepuesto.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormServicio.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormUsuario.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.FormVehiculo.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.Views.frmBuscarCliente.resources
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.GenerateResource.cache
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.CoreCompileInputs.cache
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.exe
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.pdb
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\bin\Debug\TCamaleonApp.exe.config
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\bin\Debug\TCamaleonApp.exe
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\bin\Debug\TCamaleonApp.pdb
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Brandon Lenin Cajina\Downloads\Programming stuffs\Sánchez's camaleon\PCamaleon\TCamaleonApp\obj\Debug\TCamaleonApp.csproj.CopyComplete
