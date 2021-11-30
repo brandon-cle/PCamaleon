@@ -23,8 +23,7 @@ namespace TCamaleonApp.Views
         #region Funcionalidades del formulario
         public void maximize()
         {
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.WindowState = FormWindowState.Maximized;   
 
         }
 

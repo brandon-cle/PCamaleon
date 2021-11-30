@@ -36,5 +36,30 @@ namespace TCamaleonApp.Views
             
             this.dgv_employees.DataSource = CEmployeer.SearchEmployeer(this.txt_employeeS.Text);
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgv_employees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
