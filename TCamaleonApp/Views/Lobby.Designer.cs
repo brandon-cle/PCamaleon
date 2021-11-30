@@ -42,15 +42,21 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dl_roluser = new System.Windows.Forms.Label();
             this.dl_username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dl_roluser = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dl_disconnected = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ContentPanel
@@ -78,11 +84,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.panel2.Controls.Add(this.dl_roluser);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dl_username);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -219,9 +222,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(83, 80);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -229,17 +232,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.label1.Location = new System.Drawing.Point(116, 36);
+            this.label1.Location = new System.Drawing.Point(108, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Nombre de usuario:";
             // 
+            // dl_roluser
+            // 
+            this.dl_roluser.AutoSize = true;
+            this.dl_roluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.dl_roluser.Location = new System.Drawing.Point(108, 70);
+            this.dl_roluser.Name = "dl_roluser";
+            this.dl_roluser.Size = new System.Drawing.Size(48, 16);
+            this.dl_roluser.TabIndex = 10;
+            this.dl_roluser.Text = "roluser";
+            // 
             // dl_username
             // 
             this.dl_username.AutoSize = true;
             this.dl_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.dl_username.Location = new System.Drawing.Point(116, 52);
+            this.dl_username.Location = new System.Drawing.Point(108, 22);
             this.dl_username.Name = "dl_username";
             this.dl_username.Size = new System.Drawing.Size(67, 16);
             this.dl_username.TabIndex = 8;
@@ -249,21 +262,54 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.label2.Location = new System.Drawing.Point(116, 79);
+            this.label2.Location = new System.Drawing.Point(108, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Tipo de cuenta:";
             // 
-            // dl_roluser
+            // panel3
             // 
-            this.dl_roluser.AutoSize = true;
-            this.dl_roluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.dl_roluser.Location = new System.Drawing.Point(116, 97);
-            this.dl_roluser.Name = "dl_roluser";
-            this.dl_roluser.Size = new System.Drawing.Size(48, 16);
-            this.dl_roluser.TabIndex = 10;
-            this.dl_roluser.Text = "roluser";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.dl_roluser);
+            this.panel3.Controls.Add(this.dl_username);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(3, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(259, 94);
+            this.panel3.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.dl_disconnected);
+            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(265, 38);
+            this.panel4.TabIndex = 12;
+            // 
+            // dl_disconnected
+            // 
+            this.dl_disconnected.AutoSize = true;
+            this.dl_disconnected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.dl_disconnected.Location = new System.Drawing.Point(88, 11);
+            this.dl_disconnected.Name = "dl_disconnected";
+            this.dl_disconnected.Size = new System.Drawing.Size(90, 16);
+            this.dl_disconnected.TabIndex = 0;
+            this.dl_disconnected.Text = "Disconnected";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.label3.Location = new System.Drawing.Point(96, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Connected";
             // 
             // Lobby
             // 
@@ -277,11 +323,14 @@
             this.Text = "0";
             this.ContentPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -301,9 +350,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label dl_roluser;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label dl_username;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label dl_disconnected;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label dl_username;
+        private System.Windows.Forms.Label label2;
     }
 }
