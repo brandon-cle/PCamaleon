@@ -46,19 +46,19 @@ namespace TCamaleonApp.Views
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,17 +70,17 @@ namespace TCamaleonApp.Views
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_employees.Location = new System.Drawing.Point(89, 574);
+            this.dgv_employees.Location = new System.Drawing.Point(157, 599);
             this.dgv_employees.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_employees.Name = "dgv_employees";
             this.dgv_employees.RowHeadersWidth = 51;
-            this.dgv_employees.Size = new System.Drawing.Size(731, 270);
+            this.dgv_employees.Size = new System.Drawing.Size(595, 231);
             this.dgv_employees.TabIndex = 0;
             // 
             // txt_employeeS
             // 
             this.txt_employeeS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txt_employeeS.Location = new System.Drawing.Point(287, 465);
+            this.txt_employeeS.Location = new System.Drawing.Point(308, 484);
             this.txt_employeeS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_employeeS.Name = "txt_employeeS";
             this.txt_employeeS.Size = new System.Drawing.Size(308, 22);
@@ -91,7 +91,7 @@ namespace TCamaleonApp.Views
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 445);
+            this.label1.Location = new System.Drawing.Point(383, 464);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
@@ -122,7 +122,7 @@ namespace TCamaleonApp.Views
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(223, 538);
+            this.comboBox1.Location = new System.Drawing.Point(244, 557);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
@@ -131,7 +131,7 @@ namespace TCamaleonApp.Views
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(529, 538);
+            this.comboBox2.Location = new System.Drawing.Point(550, 557);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace TCamaleonApp.Views
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(377, 503);
+            this.label2.Location = new System.Drawing.Point(398, 522);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 8;
@@ -150,7 +150,7 @@ namespace TCamaleonApp.Views
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(246, 519);
+            this.label3.Location = new System.Drawing.Point(267, 538);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 9;
@@ -160,7 +160,7 @@ namespace TCamaleonApp.Views
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(565, 519);
+            this.label4.Location = new System.Drawing.Point(586, 538);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 10;
@@ -242,109 +242,15 @@ namespace TCamaleonApp.Views
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del perfil";
             // 
-            // textBox8
+            // label12
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.Location = new System.Drawing.Point(53, 255);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(225, 22);
-            this.textBox8.TabIndex = 18;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox9.Location = new System.Drawing.Point(53, 307);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(225, 22);
-            this.textBox9.TabIndex = 19;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(940, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 46);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Guardar empleado";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 16);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Primer nombre:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 16);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Segundo nombre:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(534, 62);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 16);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Primer apellido:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(534, 121);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 16);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Segundo apellido:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(50, 185);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Correo:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(534, 185);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Dirección:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.richTextBox1.Location = new System.Drawing.Point(537, 208);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(257, 121);
-            this.richTextBox1.TabIndex = 26;
-            this.richTextBox1.Text = "";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(325, 253);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(167, 24);
-            this.comboBox3.TabIndex = 27;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(280, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 16);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Cédula:";
             // 
             // label11
             // 
@@ -356,15 +262,109 @@ namespace TCamaleonApp.Views
             this.label11.TabIndex = 28;
             this.label11.Text = "Puesto:";
             // 
-            // label12
+            // comboBox3
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(280, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 16);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Cédula:";
+            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(325, 253);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(167, 24);
+            this.comboBox3.TabIndex = 27;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.richTextBox1.Location = new System.Drawing.Point(537, 208);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(257, 121);
+            this.richTextBox1.TabIndex = 26;
+            this.richTextBox1.Text = "";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(534, 185);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Dirección:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(50, 185);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Correo:";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(534, 121);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 16);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Segundo apellido:";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(534, 62);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 16);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Primer apellido:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(50, 121);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 16);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Segundo nombre:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(50, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Primer nombre:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox9.Location = new System.Drawing.Point(53, 307);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(225, 22);
+            this.textBox9.TabIndex = 19;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox8.Location = new System.Drawing.Point(53, 255);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(225, 22);
+            this.textBox8.TabIndex = 18;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(940, 233);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(173, 46);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Guardar empleado";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // EmployeeSearcher
             // 

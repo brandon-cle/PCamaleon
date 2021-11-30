@@ -72,5 +72,10 @@ namespace TCamaleonApp.Views
         {
             OpenForm<EmployeeSearcher>();
         }
+
+        private void panel_painting_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
