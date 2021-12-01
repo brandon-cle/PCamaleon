@@ -24,5 +24,15 @@ namespace TCamaleonApp.Controller
         {
             return MEmployeer.ShowToCmbCatWorks();
         }
+
+        public static DataTable ShowJob(string category)
+        {
+            return MEmployeer.ShowJob(category);
+        }
+
+        public static DataTable ShowJobID()
+        {
+            return MEmployeer.ShowJobID();
+        }
     }
 }

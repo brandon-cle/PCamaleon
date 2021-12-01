@@ -39,7 +39,7 @@ namespace TCamaleonApp.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace TCamaleonApp.Views
             this.txt_name2 = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmb_job = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -179,25 +179,26 @@ namespace TCamaleonApp.Views
             this.label4.TabIndex = 10;
             this.label4.Text = "Cargo:";
             // 
-            // button2
+            // btn_save
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(182, 591);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 46);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Guardar empleado";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_save.ForeColor = System.Drawing.Color.Black;
+            this.btn_save.Location = new System.Drawing.Point(182, 591);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(135, 46);
+            this.btn_save.TabIndex = 19;
+            this.btn_save.Text = "Guardar empleado";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
             this.panel1.Controls.Add(this.btn_clean);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.cmb_job);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btn_save);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.cmb_categories);
@@ -254,6 +255,7 @@ namespace TCamaleonApp.Views
             this.cmb_categories.Name = "cmb_categories";
             this.cmb_categories.Size = new System.Drawing.Size(173, 24);
             this.cmb_categories.TabIndex = 45;
+            this.cmb_categories.SelectedIndexChanged += new System.EventHandler(this.cmb_categories_SelectedIndexChanged);
             // 
             // txt_Address
             // 
@@ -397,14 +399,14 @@ namespace TCamaleonApp.Views
             this.label13.TabIndex = 48;
             this.label13.Text = "Teléfono";
             // 
-            // comboBox4
+            // cmb_job
             // 
-            this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(266, 520);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(185, 24);
-            this.comboBox4.TabIndex = 50;
+            this.cmb_job.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_job.FormattingEnabled = true;
+            this.cmb_job.Location = new System.Drawing.Point(266, 520);
+            this.cmb_job.Name = "cmb_job";
+            this.cmb_job.Size = new System.Drawing.Size(185, 24);
+            this.cmb_job.TabIndex = 50;
             // 
             // label14
             // 
@@ -538,10 +540,10 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmb_job;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
