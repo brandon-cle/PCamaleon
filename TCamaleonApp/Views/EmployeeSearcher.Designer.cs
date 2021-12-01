@@ -39,59 +39,71 @@ namespace TCamaleonApp.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cmb_categories = new System.Windows.Forms.ComboBox();
+            this.txt_Address = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txt_phone = new System.Windows.Forms.TextBox();
+            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.txt_name4 = new System.Windows.Forms.TextBox();
+            this.txt_name3 = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_name2 = new System.Windows.Forms.TextBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmb_job = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_clean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_employees
             // 
-            this.dgv_employees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgv_employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_employees.Location = new System.Drawing.Point(157, 599);
+            this.dgv_employees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_employees.Location = new System.Drawing.Point(0, 0);
             this.dgv_employees.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_employees.Name = "dgv_employees";
             this.dgv_employees.RowHeadersWidth = 51;
-            this.dgv_employees.Size = new System.Drawing.Size(595, 231);
+            this.dgv_employees.Size = new System.Drawing.Size(994, 619);
             this.dgv_employees.TabIndex = 0;
+            this.dgv_employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_employees_CellContentClick);
             // 
             // txt_employeeS
             // 
-            this.txt_employeeS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txt_employeeS.Location = new System.Drawing.Point(308, 484);
+            this.txt_employeeS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_employeeS.Location = new System.Drawing.Point(70, 57);
             this.txt_employeeS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_employeeS.Name = "txt_employeeS";
-            this.txt_employeeS.Size = new System.Drawing.Size(308, 22);
+            this.txt_employeeS.Size = new System.Drawing.Size(239, 22);
             this.txt_employeeS.TabIndex = 1;
             this.txt_employeeS.TextChanged += new System.EventHandler(this.txt_employeeS_TextChanged);
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(383, 464);
+            this.label1.Location = new System.Drawing.Point(67, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
@@ -100,8 +112,8 @@ namespace TCamaleonApp.Views
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(940, 670);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(12, 26);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 46);
             this.button1.TabIndex = 3;
@@ -110,37 +122,38 @@ namespace TCamaleonApp.Views
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(940, 128);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(19, 591);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 46);
+            this.button3.Size = new System.Drawing.Size(135, 46);
             this.button3.TabIndex = 5;
             this.button3.Text = "Nuevo empleado";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(244, 557);
+            this.comboBox1.Location = new System.Drawing.Point(728, 54);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
             // 
             // comboBox2
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(550, 557);
+            this.comboBox2.Location = new System.Drawing.Point(574, 55);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.Size = new System.Drawing.Size(106, 24);
             this.comboBox2.TabIndex = 7;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 522);
+            this.label2.Location = new System.Drawing.Point(561, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 8;
@@ -148,9 +161,9 @@ namespace TCamaleonApp.Views
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(267, 538);
+            this.label3.Location = new System.Drawing.Point(571, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 9;
@@ -158,240 +171,360 @@ namespace TCamaleonApp.Views
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(586, 538);
+            this.label4.Location = new System.Drawing.Point(725, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Cargo:";
             // 
-            // textBox1
+            // btn_save
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(50, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 22);
-            this.textBox1.TabIndex = 11;
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_save.ForeColor = System.Drawing.Color.Black;
+            this.btn_save.Location = new System.Drawing.Point(182, 591);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(135, 46);
+            this.btn_save.TabIndex = 19;
+            this.btn_save.Text = "Guardar empleado";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox2
+            // panel1
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(50, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 22);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(282, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 22);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Location = new System.Drawing.Point(537, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(225, 22);
-            this.textBox4.TabIndex = 14;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Location = new System.Drawing.Point(537, 140);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(225, 22);
-            this.textBox5.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.Location = new System.Drawing.Point(53, 208);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(225, 22);
-            this.textBox7.TabIndex = 17;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(26, 37);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(867, 347);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del perfil";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel1.Controls.Add(this.btn_clean);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.cmb_job);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.btn_save);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.cmb_categories);
+            this.panel1.Controls.Add(this.txt_Address);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txt_phone);
+            this.panel1.Controls.Add(this.txt_mail);
+            this.panel1.Controls.Add(this.txt_name4);
+            this.panel1.Controls.Add(this.txt_name3);
+            this.panel1.Controls.Add(this.txt_id);
+            this.panel1.Controls.Add(this.txt_name2);
+            this.panel1.Controls.Add(this.txt_name);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel1.Location = new System.Drawing.Point(994, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(467, 797);
+            this.panel1.TabIndex = 20;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label12
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(280, 17);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(210, 65);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 16);
-            this.label12.TabIndex = 29;
+            this.label12.TabIndex = 47;
             this.label12.Text = "Cédula:";
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(325, 231);
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(23, 492);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 16);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Puesto:";
+            this.label11.Size = new System.Drawing.Size(132, 16);
+            this.label11.TabIndex = 46;
+            this.label11.Text = "Categoría de puesto:";
             // 
-            // comboBox3
+            // cmb_categories
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(325, 253);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(167, 24);
-            this.comboBox3.TabIndex = 27;
+            this.cmb_categories.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_categories.FormattingEnabled = true;
+            this.cmb_categories.Location = new System.Drawing.Point(23, 520);
+            this.cmb_categories.Name = "cmb_categories";
+            this.cmb_categories.Size = new System.Drawing.Size(173, 24);
+            this.cmb_categories.TabIndex = 45;
+            this.cmb_categories.SelectedIndexChanged += new System.EventHandler(this.cmb_categories_SelectedIndexChanged);
             // 
-            // richTextBox1
+            // txt_Address
             // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.richTextBox1.Location = new System.Drawing.Point(537, 208);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(257, 121);
-            this.richTextBox1.TabIndex = 26;
-            this.richTextBox1.Text = "";
+            this.txt_Address.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_Address.Location = new System.Drawing.Point(23, 359);
+            this.txt_Address.Name = "txt_Address";
+            this.txt_Address.Size = new System.Drawing.Size(422, 115);
+            this.txt_Address.TabIndex = 44;
+            this.txt_Address.Text = "";
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(534, 185);
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(20, 340);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 16);
-            this.label10.TabIndex = 25;
+            this.label10.TabIndex = 43;
             this.label10.Text = "Dirección:";
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(50, 185);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(20, 281);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 16);
-            this.label9.TabIndex = 24;
+            this.label9.TabIndex = 42;
             this.label9.Text = "Correo:";
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(534, 121);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(264, 217);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 16);
-            this.label8.TabIndex = 23;
+            this.label8.TabIndex = 41;
             this.label8.Text = "Segundo apellido:";
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(534, 62);
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(265, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 16);
-            this.label7.TabIndex = 22;
+            this.label7.TabIndex = 40;
             this.label7.Text = "Primer apellido:";
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 121);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(19, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 16);
-            this.label6.TabIndex = 21;
+            this.label6.TabIndex = 39;
             this.label6.Text = "Segundo nombre:";
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 62);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(20, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 16);
-            this.label5.TabIndex = 20;
+            this.label5.TabIndex = 38;
             this.label5.Text = "Primer nombre:";
             // 
-            // textBox9
+            // txt_phone
             // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox9.Location = new System.Drawing.Point(53, 307);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(225, 22);
-            this.textBox9.TabIndex = 19;
+            this.txt_phone.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_phone.Location = new System.Drawing.Point(270, 304);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(172, 22);
+            this.txt_phone.TabIndex = 36;
             // 
-            // textBox8
+            // txt_mail
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.Location = new System.Drawing.Point(53, 255);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(225, 22);
-            this.textBox8.TabIndex = 18;
+            this.txt_mail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_mail.Location = new System.Drawing.Point(23, 304);
+            this.txt_mail.Name = "txt_mail";
+            this.txt_mail.Size = new System.Drawing.Size(184, 22);
+            this.txt_mail.TabIndex = 35;
             // 
-            // button2
+            // txt_name4
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(940, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 46);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Guardar empleado";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txt_name4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name4.Location = new System.Drawing.Point(269, 237);
+            this.txt_name4.Name = "txt_name4";
+            this.txt_name4.Size = new System.Drawing.Size(174, 22);
+            this.txt_name4.TabIndex = 34;
+            // 
+            // txt_name3
+            // 
+            this.txt_name3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name3.Location = new System.Drawing.Point(270, 180);
+            this.txt_name3.Name = "txt_name3";
+            this.txt_name3.Size = new System.Drawing.Size(174, 22);
+            this.txt_name3.TabIndex = 33;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_id.Location = new System.Drawing.Point(126, 88);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(240, 22);
+            this.txt_id.TabIndex = 32;
+            // 
+            // txt_name2
+            // 
+            this.txt_name2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name2.Location = new System.Drawing.Point(19, 236);
+            this.txt_name2.Name = "txt_name2";
+            this.txt_name2.Size = new System.Drawing.Size(187, 22);
+            this.txt_name2.TabIndex = 31;
+            // 
+            // txt_name
+            // 
+            this.txt_name.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name.Location = new System.Drawing.Point(20, 180);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(187, 22);
+            this.txt_name.TabIndex = 30;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(267, 285);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 16);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "Teléfono";
+            // 
+            // cmb_job
+            // 
+            this.cmb_job.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_job.FormattingEnabled = true;
+            this.cmb_job.Location = new System.Drawing.Point(266, 520);
+            this.cmb_job.Name = "cmb_job";
+            this.cmb_job.Size = new System.Drawing.Size(185, 24);
+            this.cmb_job.TabIndex = 50;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(265, 492);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(52, 16);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Puesto:";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(422, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(30, 16);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "Cat:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(425, 55);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(116, 24);
+            this.comboBox5.TabIndex = 52;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 713);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(994, 84);
+            this.panel2.TabIndex = 54;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel3.Controls.Add(this.txt_employeeS);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.comboBox5);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(994, 94);
+            this.panel3.TabIndex = 55;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dgv_employees);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 94);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(994, 619);
+            this.panel4.TabIndex = 56;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TCamaleonApp.Properties.Resources.Cleaning;
+            this.pictureBox1.Location = new System.Drawing.Point(718, 265);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 512);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_clean
+            // 
+            this.btn_clean.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_clean.ForeColor = System.Drawing.Color.Black;
+            this.btn_clean.Location = new System.Drawing.Point(344, 591);
+            this.btn_clean.Name = "btn_clean";
+            this.btn_clean.Size = new System.Drawing.Size(99, 46);
+            this.btn_clean.TabIndex = 52;
+            this.btn_clean.Text = "Limpiar ";
+            this.btn_clean.UseVisualStyleBackColor = true;
             // 
             // EmployeeSearcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 857);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_employeeS);
-            this.Controls.Add(this.dgv_employees);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.ClientSize = new System.Drawing.Size(1461, 797);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeSearcher";
             this.Text = "EmployeeSearcher";
             this.Load += new System.EventHandler(this.EmployeeSearcher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -407,25 +540,34 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmb_job;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmb_categories;
+        private System.Windows.Forms.RichTextBox txt_Address;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txt_phone;
+        private System.Windows.Forms.TextBox txt_mail;
+        private System.Windows.Forms.TextBox txt_name4;
+        private System.Windows.Forms.TextBox txt_name3;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_name2;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_clean;
     }
 }
