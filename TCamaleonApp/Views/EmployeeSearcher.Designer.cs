@@ -43,23 +43,22 @@ namespace TCamaleonApp.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cmb_categories = new System.Windows.Forms.ComboBox();
+            this.txt_Address = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_phone = new System.Windows.Forms.TextBox();
+            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.txt_name4 = new System.Windows.Forms.TextBox();
+            this.txt_name3 = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_name2 = new System.Windows.Forms.TextBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -67,11 +66,14 @@ namespace TCamaleonApp.Views
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_clean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_employees
@@ -122,9 +124,9 @@ namespace TCamaleonApp.Views
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(193, 591);
+            this.button3.Location = new System.Drawing.Point(19, 591);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 46);
+            this.button3.Size = new System.Drawing.Size(135, 46);
             this.button3.TabIndex = 5;
             this.button3.Text = "Nuevo empleado";
             this.button3.UseVisualStyleBackColor = true;
@@ -181,9 +183,9 @@ namespace TCamaleonApp.Views
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(20, 591);
+            this.button2.Location = new System.Drawing.Point(182, 591);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 46);
+            this.button2.Size = new System.Drawing.Size(135, 46);
             this.button2.TabIndex = 19;
             this.button2.Text = "Guardar empleado";
             this.button2.UseVisualStyleBackColor = true;
@@ -191,15 +193,15 @@ namespace TCamaleonApp.Views
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel1.Controls.Add(this.btn_clean);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.cmb_categories);
+            this.panel1.Controls.Add(this.txt_Address);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button3);
@@ -207,13 +209,13 @@ namespace TCamaleonApp.Views
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_phone);
+            this.panel1.Controls.Add(this.txt_mail);
+            this.panel1.Controls.Add(this.txt_name4);
+            this.panel1.Controls.Add(this.txt_name3);
+            this.panel1.Controls.Add(this.txt_id);
+            this.panel1.Controls.Add(this.txt_name2);
+            this.panel1.Controls.Add(this.txt_name);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
             this.panel1.Location = new System.Drawing.Point(994, 0);
@@ -244,23 +246,23 @@ namespace TCamaleonApp.Views
             this.label11.TabIndex = 46;
             this.label11.Text = "Categoría de puesto:";
             // 
-            // comboBox3
+            // cmb_categories
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(23, 520);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(173, 24);
-            this.comboBox3.TabIndex = 45;
+            this.cmb_categories.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_categories.FormattingEnabled = true;
+            this.cmb_categories.Location = new System.Drawing.Point(23, 520);
+            this.cmb_categories.Name = "cmb_categories";
+            this.cmb_categories.Size = new System.Drawing.Size(173, 24);
+            this.cmb_categories.TabIndex = 45;
             // 
-            // richTextBox1
+            // txt_Address
             // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.richTextBox1.Location = new System.Drawing.Point(23, 359);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(422, 115);
-            this.richTextBox1.TabIndex = 44;
-            this.richTextBox1.Text = "";
+            this.txt_Address.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_Address.Location = new System.Drawing.Point(23, 359);
+            this.txt_Address.Name = "txt_Address";
+            this.txt_Address.Size = new System.Drawing.Size(422, 115);
+            this.txt_Address.TabIndex = 44;
+            this.txt_Address.Text = "";
             // 
             // label10
             // 
@@ -328,61 +330,61 @@ namespace TCamaleonApp.Views
             this.label5.TabIndex = 38;
             this.label5.Text = "Primer nombre:";
             // 
-            // textBox8
+            // txt_phone
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox8.Location = new System.Drawing.Point(270, 304);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(172, 22);
-            this.textBox8.TabIndex = 36;
+            this.txt_phone.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_phone.Location = new System.Drawing.Point(270, 304);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(172, 22);
+            this.txt_phone.TabIndex = 36;
             // 
-            // textBox7
+            // txt_mail
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox7.Location = new System.Drawing.Point(23, 304);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 22);
-            this.textBox7.TabIndex = 35;
+            this.txt_mail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_mail.Location = new System.Drawing.Point(23, 304);
+            this.txt_mail.Name = "txt_mail";
+            this.txt_mail.Size = new System.Drawing.Size(184, 22);
+            this.txt_mail.TabIndex = 35;
             // 
-            // textBox5
+            // txt_name4
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox5.Location = new System.Drawing.Point(269, 237);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 22);
-            this.textBox5.TabIndex = 34;
+            this.txt_name4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name4.Location = new System.Drawing.Point(269, 237);
+            this.txt_name4.Name = "txt_name4";
+            this.txt_name4.Size = new System.Drawing.Size(174, 22);
+            this.txt_name4.TabIndex = 34;
             // 
-            // textBox4
+            // txt_name3
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox4.Location = new System.Drawing.Point(270, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 22);
-            this.textBox4.TabIndex = 33;
+            this.txt_name3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name3.Location = new System.Drawing.Point(270, 180);
+            this.txt_name3.Name = "txt_name3";
+            this.txt_name3.Size = new System.Drawing.Size(174, 22);
+            this.txt_name3.TabIndex = 33;
             // 
-            // textBox3
+            // txt_id
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox3.Location = new System.Drawing.Point(126, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 22);
-            this.textBox3.TabIndex = 32;
+            this.txt_id.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_id.Location = new System.Drawing.Point(126, 88);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(240, 22);
+            this.txt_id.TabIndex = 32;
             // 
-            // textBox2
+            // txt_name2
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox2.Location = new System.Drawing.Point(19, 236);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 22);
-            this.textBox2.TabIndex = 31;
+            this.txt_name2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name2.Location = new System.Drawing.Point(19, 236);
+            this.txt_name2.Name = "txt_name2";
+            this.txt_name2.Size = new System.Drawing.Size(187, 22);
+            this.txt_name2.TabIndex = 31;
             // 
-            // textBox1
+            // txt_name
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.Location = new System.Drawing.Point(20, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 30;
+            this.txt_name.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_name.Location = new System.Drawing.Point(20, 180);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(187, 22);
+            this.txt_name.TabIndex = 30;
             // 
             // label13
             // 
@@ -394,16 +396,6 @@ namespace TCamaleonApp.Views
             this.label13.Size = new System.Drawing.Size(61, 16);
             this.label13.TabIndex = 48;
             this.label13.Text = "Teléfono";
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button4.Location = new System.Drawing.Point(380, 591);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 46);
-            this.button4.TabIndex = 49;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // comboBox4
             // 
@@ -477,11 +469,33 @@ namespace TCamaleonApp.Views
             // panel4
             // 
             this.panel4.Controls.Add(this.dgv_employees);
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 94);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(994, 619);
             this.panel4.TabIndex = 56;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TCamaleonApp.Properties.Resources.Cleaning;
+            this.pictureBox1.Location = new System.Drawing.Point(718, 265);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 512);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_clean
+            // 
+            this.btn_clean.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_clean.ForeColor = System.Drawing.Color.Black;
+            this.btn_clean.Location = new System.Drawing.Point(344, 591);
+            this.btn_clean.Name = "btn_clean";
+            this.btn_clean.Size = new System.Drawing.Size(99, 46);
+            this.btn_clean.TabIndex = 52;
+            this.btn_clean.Text = "Limpiar ";
+            this.btn_clean.UseVisualStyleBackColor = true;
             // 
             // EmployeeSearcher
             // 
@@ -494,6 +508,7 @@ namespace TCamaleonApp.Views
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeSearcher";
             this.Text = "EmployeeSearcher";
@@ -505,6 +520,8 @@ namespace TCamaleonApp.Views
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,29 +542,30 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ComboBox cmb_categories;
+        private System.Windows.Forms.RichTextBox txt_Address;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_phone;
+        private System.Windows.Forms.TextBox txt_mail;
+        private System.Windows.Forms.TextBox txt_name4;
+        private System.Windows.Forms.TextBox txt_name3;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_name2;
+        private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_clean;
     }
 }

@@ -16,6 +16,7 @@ namespace TCamaleonApp.Views
         public EmployeeSearcher()
         {
             InitializeComponent();
+            ShowToCmbCatWorks();
         }
 
 
@@ -25,10 +26,25 @@ namespace TCamaleonApp.Views
 
         }
 
+        private void ShowToCmbCatWorks()
+        {
+            DataTable distribuyer = new DataTable();
+            distribuyer = CEmployeer.ShowToCmbCatWorks();
+            int x = 0;
+            string word = null;
+            do
+            {
+                word = distribuyer.Rows[x][0].ToString();
+                cmb_categories.Items.Add(word);
+                x++;
+            } while (x != 5);
+        }
+
         private void EmployeeSearcher_Load(object sender, EventArgs e)
         {
             dgv_employees.AllowUserToAddRows = false;
             ShowEmployeer();
+            
         }
 
         private void txt_employeeS_TextChanged(object sender, EventArgs e)

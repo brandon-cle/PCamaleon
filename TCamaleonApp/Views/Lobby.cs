@@ -34,7 +34,8 @@ namespace TCamaleonApp.Views
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo) == DialogResult.Yes)
+           
+            if (MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

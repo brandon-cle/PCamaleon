@@ -19,5 +19,10 @@ namespace TCamaleonApp.Controller
         {
             return MEmployeer.SearchEmployeer(info);
         }
+
+        public static DataTable ShowToCmbCatWorks()
+        {
+            return MEmployeer.ShowToCmbCatWorks();
+        }
     }
 }
