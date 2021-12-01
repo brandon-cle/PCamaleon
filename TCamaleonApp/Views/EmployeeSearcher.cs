@@ -13,6 +13,7 @@ namespace TCamaleonApp.Views
 {
     public partial class EmployeeSearcher : Form
     {
+        bool modify = false;
         public EmployeeSearcher()
         {
             InitializeComponent();
@@ -60,8 +61,7 @@ namespace TCamaleonApp.Views
 
         private int Idjobpass(string puesto)
         {
-            int indexdb = 0;
-            string Iwant = null;
+            int idxdb = 0;
             bool puesto_searcher = false;
             DataTable showering = new DataTable();  
             showering = CEmployeer.ShowJobID();
@@ -73,8 +73,10 @@ namespace TCamaleonApp.Views
                 word = showering.Rows[x][1].ToString();
                 if (puesto == word )
                 {
-                    puesto_searcher = Int32.TryParse(showering.Rows[x][1].ToString(), out indexdb);
-                    return indexdb;
+                    
+                    idxdb = Int32.Parse(showering.Rows[x][0].ToString());
+                    Console.WriteLine(idxdb);
+                    return idxdb;
                 }
                 
                 x++;
@@ -129,15 +131,26 @@ namespace TCamaleonApp.Views
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool modify = false;
             if (modify)
             {
 
             }
             else
             {
-                
-                    
+               // string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, int E_IDworkstation, string E_status, string E_mail, string E_Address
+                CEmployeer.InsertarEmpleado(
+                    txt_name.Text, 
+                    txt_name2.Text, 
+                    txt_name3.Text, 
+                    txt_name4.Text,
+                    txt_id.Text, 
+                    txt_phone.Text, 
+                    Idjobpass(cmb_job.Text), 
+                    "Laborando", 
+                    txt_mail.Text, 
+                    txt_Address.Text);
+
+                Console.WriteLine("I'M IN, BUT IDK");
             }
 
         }
