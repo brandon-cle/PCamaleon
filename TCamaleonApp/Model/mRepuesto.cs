@@ -11,6 +11,36 @@ namespace TCamaleonApp.Model
 {
     internal class mRepuesto
     {
+        public static DataTable MostrarRepuesto()
+        {
+            DataTable DtResultado = new DataTable("MostrarRepuesto");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarRepuesto";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+            return DtResultado;
+        }
         public static DataTable BuscarRepuesto(string dato)
         {
             DataTable DtResultado = new DataTable("BuscarRepuesto");

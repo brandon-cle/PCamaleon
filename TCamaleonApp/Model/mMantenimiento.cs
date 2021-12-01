@@ -11,6 +11,36 @@ namespace TCamaleonApp.Model
 {
     class mMantenimiento
     {
+        public static DataTable MostrarMantenimiento()
+        {
+            DataTable DtResultado = new DataTable("MostrarMantenimiento");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarMantenimiento";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+            return DtResultado;
+        }
         public static DataTable BuscarMantenimiento(string dato)
         {
             DataTable DtResultado = new DataTable("BuscarMantenimiento");

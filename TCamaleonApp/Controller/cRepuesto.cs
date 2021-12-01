@@ -8,18 +8,15 @@ using TCamaleonApp.Model;
 
 namespace TCamaleonApp.Controller
 {
-
-
-    class cServicio
+     class cRepuesto
     {
-        public static DataTable MostrarServicio()
+        public static DataTable MostrarRepuesto()
         {
-            return mServicio.MostrarServicio();
+            return mRepuesto.MostrarRepuesto();
         }
-        public static DataTable BuscarServicio(string info)
+        public static DataTable BuscarRepuesto(string info)
         {
-            return mServicio.BuscarServicio(info);
+            return mRepuesto.BuscarRepuesto(info);
         }
     }
 }
-
