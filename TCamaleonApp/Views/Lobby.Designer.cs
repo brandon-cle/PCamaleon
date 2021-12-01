@@ -31,30 +31,29 @@
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.panel_painting = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_employees = new System.Windows.Forms.Button();
-            this.btn_Service = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dl_disconnected = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pb_typeofuser = new System.Windows.Forms.PictureBox();
             this.dl_roluser = new System.Windows.Forms.Label();
             this.dl_username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dl_disconnected = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pb_typeofuser = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_employees = new System.Windows.Forms.Button();
+            this.btn_Service = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.ContentPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_typeofuser)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +86,6 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_employees);
@@ -97,6 +95,144 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 654);
             this.panel2.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.dl_disconnected);
+            this.panel4.Location = new System.Drawing.Point(0, 113);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(265, 38);
+            this.panel4.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.label3.Location = new System.Drawing.Point(96, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Connected";
+            // 
+            // dl_disconnected
+            // 
+            this.dl_disconnected.AutoSize = true;
+            this.dl_disconnected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.dl_disconnected.Location = new System.Drawing.Point(88, 11);
+            this.dl_disconnected.Name = "dl_disconnected";
+            this.dl_disconnected.Size = new System.Drawing.Size(90, 16);
+            this.dl_disconnected.TabIndex = 0;
+            this.dl_disconnected.Text = "Disconnected";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
+            this.panel3.Controls.Add(this.pb_typeofuser);
+            this.panel3.Controls.Add(this.dl_roluser);
+            this.panel3.Controls.Add(this.dl_username);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(259, 104);
+            this.panel3.TabIndex = 11;
+            // 
+            // pb_typeofuser
+            // 
+            this.pb_typeofuser.Image = global::TCamaleonApp.Properties.Resources.user__questionable_;
+            this.pb_typeofuser.Location = new System.Drawing.Point(9, 7);
+            this.pb_typeofuser.Name = "pb_typeofuser";
+            this.pb_typeofuser.Size = new System.Drawing.Size(89, 79);
+            this.pb_typeofuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_typeofuser.TabIndex = 6;
+            this.pb_typeofuser.TabStop = false;
+            // 
+            // dl_roluser
+            // 
+            this.dl_roluser.AutoSize = true;
+            this.dl_roluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.dl_roluser.Location = new System.Drawing.Point(117, 70);
+            this.dl_roluser.Name = "dl_roluser";
+            this.dl_roluser.Size = new System.Drawing.Size(48, 16);
+            this.dl_roluser.TabIndex = 10;
+            this.dl_roluser.Text = "roluser";
+            // 
+            // dl_username
+            // 
+            this.dl_username.AutoSize = true;
+            this.dl_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.dl_username.Location = new System.Drawing.Point(117, 22);
+            this.dl_username.Name = "dl_username";
+            this.dl_username.Size = new System.Drawing.Size(67, 16);
+            this.dl_username.TabIndex = 8;
+            this.dl_username.Text = "username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.label2.Location = new System.Drawing.Point(117, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Tipo de cuenta:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.label1.Location = new System.Drawing.Point(117, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nombre de usuario:";
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button4.Location = new System.Drawing.Point(3, 596);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(265, 58);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Salir";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button2.Location = new System.Drawing.Point(0, 374);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(265, 54);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Usuario";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button1.Location = new System.Drawing.Point(0, 310);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(265, 54);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Cliente";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btn_employees
             // 
@@ -139,158 +275,6 @@
             this.panel1.Size = new System.Drawing.Size(1032, 34);
             this.panel1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button1.Location = new System.Drawing.Point(0, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 54);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cliente";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button2.Location = new System.Drawing.Point(0, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(265, 54);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Usuario";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button3.Location = new System.Drawing.Point(0, 491);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(265, 54);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Factura";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button4.Location = new System.Drawing.Point(3, 596);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(265, 58);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Salir";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.label1.Location = new System.Drawing.Point(117, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nombre de usuario:";
-            // 
-            // dl_roluser
-            // 
-            this.dl_roluser.AutoSize = true;
-            this.dl_roluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.dl_roluser.Location = new System.Drawing.Point(117, 70);
-            this.dl_roluser.Name = "dl_roluser";
-            this.dl_roluser.Size = new System.Drawing.Size(48, 16);
-            this.dl_roluser.TabIndex = 10;
-            this.dl_roluser.Text = "roluser";
-            // 
-            // dl_username
-            // 
-            this.dl_username.AutoSize = true;
-            this.dl_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.dl_username.Location = new System.Drawing.Point(117, 22);
-            this.dl_username.Name = "dl_username";
-            this.dl_username.Size = new System.Drawing.Size(67, 16);
-            this.dl_username.TabIndex = 8;
-            this.dl_username.Text = "username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.label2.Location = new System.Drawing.Point(117, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tipo de cuenta:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
-            this.panel3.Controls.Add(this.pb_typeofuser);
-            this.panel3.Controls.Add(this.dl_roluser);
-            this.panel3.Controls.Add(this.dl_username);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(259, 104);
-            this.panel3.TabIndex = 11;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(71)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.dl_disconnected);
-            this.panel4.Location = new System.Drawing.Point(0, 113);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(265, 38);
-            this.panel4.TabIndex = 12;
-            // 
-            // dl_disconnected
-            // 
-            this.dl_disconnected.AutoSize = true;
-            this.dl_disconnected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.dl_disconnected.Location = new System.Drawing.Point(88, 11);
-            this.dl_disconnected.Name = "dl_disconnected";
-            this.dl_disconnected.Size = new System.Drawing.Size(90, 16);
-            this.dl_disconnected.TabIndex = 0;
-            this.dl_disconnected.Text = "Disconnected";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.label3.Location = new System.Drawing.Point(96, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Connected";
-            // 
-            // pb_typeofuser
-            // 
-            this.pb_typeofuser.Image = global::TCamaleonApp.Properties.Resources.user__questionable_;
-            this.pb_typeofuser.Location = new System.Drawing.Point(9, 7);
-            this.pb_typeofuser.Name = "pb_typeofuser";
-            this.pb_typeofuser.Size = new System.Drawing.Size(89, 79);
-            this.pb_typeofuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_typeofuser.TabIndex = 6;
-            this.pb_typeofuser.TabStop = false;
-            // 
             // btn_close
             // 
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -327,12 +311,12 @@
             this.Text = "0";
             this.ContentPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_typeofuser)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
             this.ResumeLayout(false);
@@ -352,7 +336,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label dl_roluser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pb_typeofuser;
