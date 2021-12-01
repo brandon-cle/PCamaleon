@@ -11,6 +11,24 @@ namespace TCamaleonApp.Model
 {
     internal class mRepuesto
     {
+        private int idRepuesto;
+        private string titulo;
+        private string descripcion;
+        private string marca;
+        private string modelo;
+        private int stock;
+        private float precio;
+
+
+        public int IdRepuesto { get => idRepuesto; set => idRepuesto = value; }
+
+        public string Titulo { get => titulo; set => titulo = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Marca { get => marca; set => marca = value; }
+        public string Modelo { get => modelo; set => modelo = value; }
+        public int Stock { get => stock; set => stock = value; }
+
+        public float Precio { get => precio; set => precio = value; }
         public static DataTable MostrarRepuesto()
         {
             DataTable DtResultado = new DataTable("MostrarRepuesto");
@@ -72,6 +90,163 @@ namespace TCamaleonApp.Model
                 DtResultado = null;
             }
             return DtResultado;
+        }
+        public string Insertar(mRepuesto Repuesto)
+        {
+            string repuesta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = connection.cn; ;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "InsertarRepuesto";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                // Parámetros del Procedimiento Almacenado
+
+                SqlParameter ParTitulo = new SqlParameter();
+                ParTitulo.ParameterName = "@titulo";
+                ParTitulo.SqlDbType = SqlDbType.VarChar;
+                ParTitulo.Size = 60;
+                ParTitulo.Value =Repuesto.titulo;
+                SqlCmd.Parameters.Add(ParTitulo);
+
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@descripcion";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 60;
+                ParDescripcion.Value = Repuesto.descripcion;
+                SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParMarca = new SqlParameter();
+                ParMarca.ParameterName = "@marca";
+                ParMarca.SqlDbType = SqlDbType.VarChar;
+                ParMarca.Size = 60;
+                ParMarca.Value = Repuesto.marca;
+                SqlCmd.Parameters.Add(ParMarca);
+
+                SqlParameter ParModelo = new SqlParameter();
+                ParModelo.ParameterName = "@modelo";
+                ParModelo.SqlDbType = SqlDbType.VarChar;
+                ParModelo.Size = 60;
+                ParModelo.Value = Repuesto.modelo;
+                SqlCmd.Parameters.Add(ParModelo);
+
+
+                SqlParameter ParStock = new SqlParameter();
+                ParStock.ParameterName = "@stock";
+                ParStock.SqlDbType = SqlDbType.VarChar;
+                ParStock.Size = 60;
+                ParStock.Value = Repuesto.modelo;
+                SqlCmd.Parameters.Add(ParStock);
+
+                SqlParameter ParPrecio = new SqlParameter();
+                ParPrecio.ParameterName = "@precio";
+                ParPrecio.SqlDbType = SqlDbType.VarChar;
+                ParPrecio.Size = 60;
+                ParPrecio.Value = Repuesto.precio;
+                SqlCmd.Parameters.Add(ParPrecio);
+
+                //Ejecutamos nuestro comando
+
+                repuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+            }
+            catch (Exception ex)
+            {
+                repuesta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return repuesta;
+
+        }
+        public string Editar(mRepuesto Repuesto)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = connection.cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "EditarRepuesto";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetros del Procedimiento Almacenado
+                SqlParameter ParIdRepuesto= new SqlParameter();
+                ParIdRepuesto.ParameterName = "@idRepuesto";
+                ParIdRepuesto.SqlDbType = SqlDbType.Int;
+                ParIdRepuesto.Value = Repuesto.idRepuesto;
+                SqlCmd.Parameters.Add(ParIdRepuesto);
+
+                SqlParameter ParTitulo = new SqlParameter();
+                ParTitulo.ParameterName = "@titulo";
+                ParTitulo.SqlDbType = SqlDbType.VarChar;
+                ParTitulo.Size = 60;
+                ParTitulo.Value = Repuesto.titulo;
+                SqlCmd.Parameters.Add(ParTitulo);
+
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@descripcion";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 60;
+                ParDescripcion.Value = Repuesto.descripcion;
+                SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParMarca = new SqlParameter();
+                ParMarca.ParameterName = "@marca";
+                ParMarca.SqlDbType = SqlDbType.VarChar;
+                ParMarca.Size = 60;
+                ParMarca.Value = Repuesto.marca;
+                SqlCmd.Parameters.Add(ParMarca);
+
+                SqlParameter ParModelo = new SqlParameter();
+                ParModelo.ParameterName = "@modelo";
+                ParModelo.SqlDbType = SqlDbType.VarChar;
+                ParModelo.Size = 60;
+                ParModelo.Value = Repuesto.modelo;
+                SqlCmd.Parameters.Add(ParModelo);
+
+
+                SqlParameter ParStock = new SqlParameter();
+                ParStock.ParameterName = "@stock";
+                ParStock.SqlDbType = SqlDbType.VarChar;
+                ParStock.Size = 60;
+                ParStock.Value = Repuesto.modelo;
+                SqlCmd.Parameters.Add(ParStock);
+
+                SqlParameter ParPrecio = new SqlParameter();
+                ParPrecio.ParameterName = "@precio";
+                ParPrecio.SqlDbType = SqlDbType.VarChar;
+                ParPrecio.Size = 60;
+                ParPrecio.Value = Repuesto.precio;
+                SqlCmd.Parameters.Add(ParPrecio);
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
         }
     }
 }

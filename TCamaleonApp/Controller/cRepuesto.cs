@@ -18,5 +18,29 @@ namespace TCamaleonApp.Controller
         {
             return mRepuesto.BuscarRepuesto(info);
         }
+        
+        public static string Insertar(string titulo, string descripcion, string marca, string modelo, int stock, float precio)
+        {
+            mRepuesto Obj = new mRepuesto();
+            Obj.Titulo = titulo;
+            Obj.Descripcion = descripcion;
+            Obj.Marca = marca;
+            Obj.Modelo = modelo;
+            Obj.Stock = stock;
+            Obj.Precio = precio;
+            return Obj.Insertar(Obj);
+        }
+        public static string Editar(int idRepuesto, string titulo, string descripcion, string marca, string modelo, int stock, float precio)
+        {
+            mRepuesto Obj = new mRepuesto();
+            Obj.IdRepuesto= idRepuesto;
+            Obj.Titulo = titulo;
+            Obj.Descripcion = descripcion;
+            Obj.Marca = marca;
+            Obj.Modelo = modelo;
+            Obj.Stock = stock;
+            Obj.Precio = precio;
+            return Obj.Editar(Obj);
+        }
     }
 }

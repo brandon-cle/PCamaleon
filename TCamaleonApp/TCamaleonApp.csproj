@@ -147,6 +147,9 @@
     <EmbeddedResource Include="Views\FormMA.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormMantenimiento.resx">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormPuesto.resx">
       <DependentUpon>FormPuesto.cs</DependentUpon>
     </EmbeddedResource>

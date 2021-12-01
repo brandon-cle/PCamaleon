@@ -20,6 +20,24 @@ namespace TCamaleonApp.Controller
         {
             return mServicio.BuscarServicio(info);
         }
+        public static string Insertar(string tipoMantenimiento, string descripcion, float precio)
+        {
+            mServicio Obj = new mServicio();
+            Obj.TipoMantenimiento = tipoMantenimiento;
+            Obj.Descripcion = descripcion;
+            Obj.Precio = precio;
+            
+            return Obj.Insertar(Obj);
+        }
+        public static string Editar(int idServicio, string tipoMantenimiento, string descripcion, float precio)
+        {
+            mServicio Obj = new mServicio();
+            Obj.IdServicio = idServicio;
+            Obj.TipoMantenimiento = tipoMantenimiento;
+            Obj.Descripcion = descripcion;
+            Obj.Precio = precio;
+            return Obj.Editar(Obj);
+        }
     }
 }
 
