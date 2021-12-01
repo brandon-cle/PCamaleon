@@ -18,5 +18,11 @@ namespace TCamaleonApp.Controller
         {
             return mVehiculo.BuscarVehiculo(dato);
         }
+        private int idVehiculo;
+        private string placa;
+        private int idCliente;
+        private string marca;
+        private string modelo;
+        private int ano;
     }
 }
