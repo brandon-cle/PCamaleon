@@ -23,8 +23,7 @@ namespace TCamaleonApp.Views
         #region Funcionalidades del formulario
         public void maximize()
         {
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.WindowState = FormWindowState.Maximized;   
 
         }
 
@@ -35,7 +34,8 @@ namespace TCamaleonApp.Views
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo) == DialogResult.Yes)
+           
+            if (MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
