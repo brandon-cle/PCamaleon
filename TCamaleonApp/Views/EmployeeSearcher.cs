@@ -63,7 +63,7 @@ namespace TCamaleonApp.Views
         {
             int idxdb = 0;
             bool puesto_searcher = false;
-            DataTable showering = new DataTable();  
+            DataTable showering = new DataTable();
             showering = CEmployeer.ShowJobID();
             int x = 0;
             int c = showering.Rows.Count;
@@ -71,14 +71,14 @@ namespace TCamaleonApp.Views
             do
             {
                 word = showering.Rows[x][1].ToString();
-                if (puesto == word )
+                if (puesto == word)
                 {
-                    
+
                     idxdb = Int32.Parse(showering.Rows[x][0].ToString());
                     Console.WriteLine(idxdb);
                     return idxdb;
                 }
-                
+
                 x++;
             } while (x != c);
 
@@ -89,12 +89,12 @@ namespace TCamaleonApp.Views
         {
             dgv_employees.AllowUserToAddRows = false;
             ShowEmployeer();
-            
+
         }
 
         private void txt_employeeS_TextChanged(object sender, EventArgs e)
         {
-            
+
             this.dgv_employees.DataSource = CEmployeer.SearchEmployeer(this.txt_employeeS.Text);
         }
         #region trash to delete
@@ -126,7 +126,7 @@ namespace TCamaleonApp.Views
         private void cmb_categories_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowJob(cmb_categories.SelectedItem.ToString());
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -137,22 +137,31 @@ namespace TCamaleonApp.Views
             }
             else
             {
-               // string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, int E_IDworkstation, string E_status, string E_mail, string E_Address
+                // string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, int E_IDworkstation, string E_status, string E_mail, string E_Address
                 CEmployeer.InsertarEmpleado(
-                    txt_name.Text, 
-                    txt_name2.Text, 
-                    txt_name3.Text, 
+                    txt_name.Text,
+                    txt_name2.Text,
+                    txt_name3.Text,
                     txt_name4.Text,
-                    txt_id.Text, 
-                    txt_phone.Text, 
-                    Idjobpass(cmb_job.Text), 
-                    "Laborando", 
-                    txt_mail.Text, 
+                    txt_id.Text,
+                    txt_phone.Text,
+                    Idjobpass(cmb_job.Text),
+                    "Laborando",
+                    txt_mail.Text,
                     txt_Address.Text);
 
                 Console.WriteLine("I'M IN, BUT IDK");
+                ShowEmployeer();
             }
 
+        }
+
+        public static string status()
+        {
+            string status = null;
+
+
+            return status;
         }
     }
 }
