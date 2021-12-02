@@ -73,6 +73,7 @@ namespace TCamaleonApp.Model
             }
             return DtResultado;
         }
+        /*
         public string Insertar(mMantenimiento Mantenimiento)
         {
             string repuesta = "";
@@ -229,6 +230,6 @@ namespace TCamaleonApp.Model
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
-        }
+        } */
     }
 }

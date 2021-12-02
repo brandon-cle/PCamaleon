@@ -21,28 +21,34 @@ namespace TCamaleonApp.Views
         private void dtServicio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            this.dtServicio.AllowUserToAddRows = false;
-            this.MostrarServicio();
+           // this.dtServicio.AllowUserToAddRows = false;
+            //this.MostrarServicio();
 
         }
 
         private void MostrarServicio()
         {
+            
             this.dtServicio.DataSource = cServicio.MostrarServicio();
 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtDescripcion.Text = string.Empty;
+           
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             cServicio.Insertar("Cambio de aceite", "Ordinario", 20);
-            
-
+ 
             Console.WriteLine("Hello");
+        }
+
+        private void FormServicio_Load(object sender, EventArgs e)
+        {
+            dtServicio.AllowUserToAddRows = false;
+            MostrarServicio();
         }
     }
 }

@@ -54,6 +54,7 @@ namespace TCamaleonApp.Model
             }
             return DtResultado;
         }
+
         public static DataTable BuscarServicio(string dato)
         {
             DataTable DtResultado = new DataTable("BuscarServicio");
@@ -104,19 +105,19 @@ namespace TCamaleonApp.Model
 
                 // Parámetros del Procedimiento Almacenado
 
-                SqlParameter ParTipoMantenimiento = new SqlParameter();
-                ParTipoMantenimiento.ParameterName = "@tipoMantenimiento";
-                ParTipoMantenimiento.SqlDbType = SqlDbType.VarChar;
-                ParTipoMantenimiento.Size = 60;
-                ParTipoMantenimiento.Value = Servicio.tipoMantenimiento;
-                SqlCmd.Parameters.Add(ParTipoMantenimiento);
-
                 SqlParameter ParDescripcion = new SqlParameter();
                 ParDescripcion.ParameterName = "@descripcion";
                 ParDescripcion.SqlDbType = SqlDbType.VarChar;
                 ParDescripcion.Size = 60;
                 ParDescripcion.Value = Servicio.descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParTipoMantenimiento = new SqlParameter();
+                ParTipoMantenimiento.ParameterName = "@tipoMantenimiento";
+                ParTipoMantenimiento.SqlDbType = SqlDbType.VarChar;
+                ParTipoMantenimiento.Size = 60;
+                ParTipoMantenimiento.Value = Servicio.tipoMantenimiento;
+                SqlCmd.Parameters.Add(ParTipoMantenimiento);
 
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
@@ -126,7 +127,6 @@ namespace TCamaleonApp.Model
                 SqlCmd.Parameters.Add(ParPrecio);
 
                 //Ejecutamos nuestro comando
-
                 repuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
 
             }
@@ -164,19 +164,19 @@ namespace TCamaleonApp.Model
                 ParIdServicio.Value = Servicio.idServicio;
                 SqlCmd.Parameters.Add(ParIdServicio);
 
-                SqlParameter ParTipoMantenimiento = new SqlParameter();
-                ParTipoMantenimiento.ParameterName = "@tipoMantenimiento";
-                ParTipoMantenimiento.SqlDbType = SqlDbType.VarChar;
-                ParTipoMantenimiento.Size = 60;
-                ParTipoMantenimiento.Value = Servicio.tipoMantenimiento;
-                SqlCmd.Parameters.Add(ParTipoMantenimiento);
-
                 SqlParameter ParDescripcion = new SqlParameter();
                 ParDescripcion.ParameterName = "@descripcion";
                 ParDescripcion.SqlDbType = SqlDbType.VarChar;
                 ParDescripcion.Size = 60;
                 ParDescripcion.Value = Servicio.descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParTipoMantenimiento = new SqlParameter();
+                ParTipoMantenimiento.ParameterName = "@tipoMantenimiento";
+                ParTipoMantenimiento.SqlDbType = SqlDbType.VarChar;
+                ParTipoMantenimiento.Size = 60;
+                ParTipoMantenimiento.Value = Servicio.tipoMantenimiento;
+                SqlCmd.Parameters.Add(ParTipoMantenimiento);
 
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
