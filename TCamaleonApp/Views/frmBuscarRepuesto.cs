@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
@@ -28,6 +29,11 @@ namespace TCamaleonApp.Views
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            this.dtRepuesto.DataSource = cRepuesto.BuscarRepuesto(this.textBox1.Text);
         }
     }
 }

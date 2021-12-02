@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
@@ -30,6 +31,11 @@ namespace TCamaleonApp.Views
             }
 
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            this.dtServicio.DataSource = cServicio.BuscarServicio(textBox1.Text);
         }
     }
 }

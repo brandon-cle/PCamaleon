@@ -34,5 +34,11 @@ namespace TCamaleonApp.Views
                 this.Close();
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            this.dtCliente.DataSource = cCliente.BuscarCliente(textBox1.Text);
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
@@ -19,7 +20,7 @@ namespace TCamaleonApp.Views
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            this.dtVehiculo.DataSource = cVehiculo.BuscarVehiculo(textBox1.Text);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
@@ -15,6 +16,23 @@ namespace TCamaleonApp.Views
         public FormCliente()
         {
             InitializeComponent();
+        }
+        private void MostrarServicio()
+        {
+
+            this.dtCliente.DataSource = cCliente.MostrarCliente();
+        }
+
+        private void FormCliente_Load(object sender, EventArgs e)
+        {
+
+            dtCliente.AllowUserToAddRows = false;
+            MostrarServicio();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            this.dtCliente.DataSource = cCliente.BuscarCliente(txtBuscar.Text);
         }
     }
 }

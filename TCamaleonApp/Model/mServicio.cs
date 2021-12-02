@@ -89,7 +89,7 @@ namespace TCamaleonApp.Model
         }
         public string Insertar(mServicio Servicio)
         {
-            string repuesta = "";
+            string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             Connection connection = new Connection();
             try
@@ -108,37 +108,37 @@ namespace TCamaleonApp.Model
                 SqlParameter ParDescripcion = new SqlParameter();
                 ParDescripcion.ParameterName = "@descripcion";
                 ParDescripcion.SqlDbType = SqlDbType.VarChar;
-                ParDescripcion.Size = 60;
+                ParDescripcion.Size = 50;
                 ParDescripcion.Value = Servicio.descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
 
                 SqlParameter ParTipoMantenimiento = new SqlParameter();
                 ParTipoMantenimiento.ParameterName = "@tipoMantenimiento";
                 ParTipoMantenimiento.SqlDbType = SqlDbType.VarChar;
-                ParTipoMantenimiento.Size = 60;
+                ParTipoMantenimiento.Size = 50;
                 ParTipoMantenimiento.Value = Servicio.tipoMantenimiento;
                 SqlCmd.Parameters.Add(ParTipoMantenimiento);
 
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
                 ParPrecio.SqlDbType = SqlDbType.VarChar;
-                ParPrecio.Size = 60;
+                ParPrecio.Size = 50;
                 ParPrecio.Value = Servicio.precio;
                 SqlCmd.Parameters.Add(ParPrecio);
 
                 //Ejecutamos nuestro comando
-                repuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
 
             }
             catch (Exception ex)
             {
-                repuesta = ex.Message;
+                rpta = ex.Message;
             }
             finally
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
-            return repuesta;
+            return rpta;
 
         }
         public string Editar(mServicio Servicio)

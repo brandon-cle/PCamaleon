@@ -16,19 +16,19 @@ namespace TCamaleonApp.Model
         private string descripcion;
         private string marca;
         private string modelo;
-        private int stock;
+       
         private float precio;
-
-
+        private int cantidad;
         public int IdRepuesto { get => idRepuesto; set => idRepuesto = value; }
 
         public string Titulo { get => titulo; set => titulo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Marca { get => marca; set => marca = value; }
         public string Modelo { get => modelo; set => modelo = value; }
-        public int Stock { get => stock; set => stock = value; }
-
+       
         public float Precio { get => precio; set => precio = value; }
+        public int Cantidad { get => cantidad; set => cantidad = value; }
+
         public static DataTable MostrarRepuesto()
         {
             DataTable DtResultado = new DataTable("MostrarRepuesto");
@@ -136,20 +136,20 @@ namespace TCamaleonApp.Model
                 ParModelo.Value = Repuesto.modelo;
                 SqlCmd.Parameters.Add(ParModelo);
 
-
-                SqlParameter ParStock = new SqlParameter();
-                ParStock.ParameterName = "@stock";
-                ParStock.SqlDbType = SqlDbType.VarChar;
-                ParStock.Size = 60;
-                ParStock.Value = Repuesto.modelo;
-                SqlCmd.Parameters.Add(ParStock);
-
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
                 ParPrecio.SqlDbType = SqlDbType.VarChar;
                 ParPrecio.Size = 60;
                 ParPrecio.Value = Repuesto.precio;
                 SqlCmd.Parameters.Add(ParPrecio);
+
+
+                SqlParameter ParCantidad = new SqlParameter();
+                ParCantidad.ParameterName = "@cantidad";
+                ParCantidad.SqlDbType = SqlDbType.VarChar;
+                ParCantidad.Size = 60;
+                ParCantidad.Value = Repuesto.modelo;
+                SqlCmd.Parameters.Add(ParCantidad);
 
                 //Ejecutamos nuestro comando
 
@@ -218,20 +218,19 @@ namespace TCamaleonApp.Model
                 ParModelo.Value = Repuesto.modelo;
                 SqlCmd.Parameters.Add(ParModelo);
 
-
-                SqlParameter ParStock = new SqlParameter();
-                ParStock.ParameterName = "@stock";
-                ParStock.SqlDbType = SqlDbType.VarChar;
-                ParStock.Size = 60;
-                ParStock.Value = Repuesto.modelo;
-                SqlCmd.Parameters.Add(ParStock);
-
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
                 ParPrecio.SqlDbType = SqlDbType.VarChar;
                 ParPrecio.Size = 60;
                 ParPrecio.Value = Repuesto.precio;
                 SqlCmd.Parameters.Add(ParPrecio);
+
+                SqlParameter ParCantidad = new SqlParameter();
+                ParCantidad.ParameterName = "@cantidad";
+                ParCantidad.SqlDbType = SqlDbType.VarChar;
+                ParCantidad.Size = 60;
+                ParCantidad.Value = Repuesto.modelo;
+                SqlCmd.Parameters.Add(ParCantidad);
 
                 //Ejecutamos nuestro comando
 

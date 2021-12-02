@@ -14,7 +14,7 @@ namespace TCamaleonApp.Controller
         {
             return mVehiculo.MostrarVehiculo();
         }
-        public static DataTable BuscarCliente(string dato)
+        public static DataTable BuscarVehiculo(string dato)
         {
             return mVehiculo.BuscarVehiculo(dato);
         }
