@@ -32,6 +32,17 @@ namespace TCamaleonApp.Views
 
         }
 
- 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtDescripcion.Text = string.Empty;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            cServicio.Insertar("Cambio de aceite", "Ordinario", 20);
+            
+
+            Console.WriteLine("Hello");
+        }
     }
 }
