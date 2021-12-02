@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
@@ -15,6 +8,11 @@ namespace TCamaleonApp.Views
         public FormRepuesto()
         {
             InitializeComponent();
+        }
+
+        private void FormRepuesto_Load(object sender, System.EventArgs e)
+        {
+            this.dtRepuesto.DataSource = cServicio.MostrarServicio();
         }
     }
 }

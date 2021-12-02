@@ -7,42 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
     public partial class FormServicio : Form
     {
-        private bool IsNuevo = false;
-        private bool IsEditar = false;
         public FormServicio()
         {
             InitializeComponent();
         }
 
-        private void FormServicio_Load(object sender, EventArgs e)
+        private void dtServicio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+           // this.dtServicio.AllowUserToAddRows = false;
+            //this.MostrarServicio();
 
         }
 
-        private void btnNuevo_Click_1(object sender, EventArgs e)
+        private void MostrarServicio()
         {
+            
+            this.dtServicio.DataSource = cServicio.MostrarServicio();
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            cServicio.Insertar("Cambio de aceite", "Ordinario", 20);
+ 
+            Console.WriteLine("Hello");
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void FormServicio_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            txtBuscar.Text = String.Empty;
-            txtDescripcion.Text = String.Empty;
+            dtServicio.AllowUserToAddRows = false;
+            MostrarServicio();
         }
     }
 }

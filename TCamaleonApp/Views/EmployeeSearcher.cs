@@ -14,7 +14,9 @@ namespace TCamaleonApp.Views
     public partial class EmployeeSearcher : Form
     {
         bool modify = false;
+
         int IDglobalmodify;
+
         public EmployeeSearcher()
         {
             InitializeComponent();
@@ -64,7 +66,9 @@ namespace TCamaleonApp.Views
         {
             int idxdb = 0;
             bool puesto_searcher = false;
+
             DataTable showering = new DataTable();
+
             showering = CEmployeer.ShowJobID();
             int x = 0;
             int c = showering.Rows.Count;
@@ -72,13 +76,17 @@ namespace TCamaleonApp.Views
             do
             {
                 word = showering.Rows[x][1].ToString();
+
                 if (puesto == word)
                 {
+
 
                     idxdb = Int32.Parse(showering.Rows[x][0].ToString());
                     Console.WriteLine(idxdb);
                     return idxdb;
                 }
+
+
 
                 x++;
             } while (x != c);
@@ -90,6 +98,8 @@ namespace TCamaleonApp.Views
         {
             dgv_employees.AllowUserToAddRows = false;
             ShowEmployeer();
+
+
 
         }
 
@@ -128,12 +138,15 @@ namespace TCamaleonApp.Views
         {
             ShowJob(cmb_categories.SelectedItem.ToString());
 
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (modify)
             {
+
                 CEmployeer.ActualizarEmpleado(
                     IDglobalmodify,
                     txt_name.Text,
@@ -219,6 +232,7 @@ namespace TCamaleonApp.Views
             {
 
             }
+
         }
     }
 }

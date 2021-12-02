@@ -1,5 +1,4 @@
-﻿
-namespace TCamaleonApp.Views
+﻿namespace TCamaleonApp.Views
 {
     partial class FormServicio
     {
@@ -32,110 +31,184 @@ namespace TCamaleonApp.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.dtServicio = new System.Windows.Forms.DataGridView();
-            this.cmbTipoMantenimiento = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblBuscar = new System.Windows.Forms.Label();
+            this.cmbTipoMantenimiento = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtServicio)).BeginInit();
+            this.dtServicio = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtServicio)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // panel1
             // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.flowLayoutPanel1.Controls.Add(this.btnNuevo);
-            this.flowLayoutPanel1.Controls.Add(this.btnGuardar);
-            this.flowLayoutPanel1.Controls.Add(this.btnModificar);
-            this.flowLayoutPanel1.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(37, 387);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(726, 51);
-            this.flowLayoutPanel1.TabIndex = 93;
+            this.panel1.Controls.Add(this.dtServicio);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(941, 536);
+            this.panel1.TabIndex = 0;
             // 
-            // btnCancelar
+            // panel5
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(509, 3);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(139, 42);
-            this.btnCancelar.TabIndex = 78;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            this.panel5.Controls.Add(this.nudPrecio);
+            this.panel5.Controls.Add(this.lblPrecio);
+            this.panel5.Controls.Add(this.cmbTipoMantenimiento);
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.lblCorreo);
+            this.panel5.Location = new System.Drawing.Point(478, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(497, 545);
+            this.panel5.TabIndex = 281;
             // 
-            // btnGuardar
+            // nudPrecio
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.nudPrecio.Location = new System.Drawing.Point(94, 359);
+            this.nudPrecio.Name = "nudPrecio";
+            this.nudPrecio.Size = new System.Drawing.Size(287, 20);
+            this.nudPrecio.TabIndex = 261;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPrecio.Location = new System.Drawing.Point(91, 320);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(67, 18);
+            this.lblPrecio.TabIndex = 260;
+            this.lblPrecio.Text = "Precio: ";
+            // 
+            // cmbTipoMantenimiento
+            // 
+            this.cmbTipoMantenimiento.FormattingEnabled = true;
+            this.cmbTipoMantenimiento.Items.AddRange(new object[] {
+            "Ordinario",
+            "Extraordinario"});
+            this.cmbTipoMantenimiento.Location = new System.Drawing.Point(94, 124);
+            this.cmbTipoMantenimiento.Name = "cmbTipoMantenimiento";
+            this.cmbTipoMantenimiento.Size = new System.Drawing.Size(287, 21);
+            this.cmbTipoMantenimiento.TabIndex = 259;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(205, 3);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(139, 42);
-            this.btnGuardar.TabIndex = 76;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(27, 435);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 35);
+            this.button1.TabIndex = 248;
+            this.button1.Text = "Nuevo";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnModificar
+            // button2
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModificar.Location = new System.Drawing.Point(357, 3);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(139, 42);
-            this.btnModificar.TabIndex = 75;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(146, 435);
+            this.button2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 35);
+            this.button2.TabIndex = 250;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnNuevo
+            // button3
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Location = new System.Drawing.Point(53, 3);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(139, 42);
-            this.btnNuevo.TabIndex = 74;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(263, 435);
+            this.button3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 35);
+            this.button3.TabIndex = 249;
+            this.button3.Text = "Modificar";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(378, 435);
+            this.button4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 35);
+            this.button4.TabIndex = 251;
+            this.button4.Text = "Cancelar";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(91, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 18);
+            this.label3.TabIndex = 257;
+            this.label3.Text = "Tipo de Mantenimiento:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(95, 214);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(290, 86);
+            this.textBox1.TabIndex = 256;
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCorreo.Location = new System.Drawing.Point(92, 180);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(103, 18);
+            this.lblCorreo.TabIndex = 253;
+            this.lblCorreo.Text = "Descripcion:";
             // 
             // dtServicio
             // 
             this.dtServicio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtServicio.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.dtServicio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtServicio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
             this.dtServicio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtServicio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -149,7 +222,7 @@ namespace TCamaleonApp.Views
             this.dtServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtServicio.EnableHeadersVisualStyles = false;
             this.dtServicio.GridColor = System.Drawing.Color.DarkTurquoise;
-            this.dtServicio.Location = new System.Drawing.Point(37, 189);
+            this.dtServicio.Location = new System.Drawing.Point(35, 12);
             this.dtServicio.Name = "dtServicio";
             this.dtServicio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -165,135 +238,42 @@ namespace TCamaleonApp.Views
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dtServicio.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtServicio.Size = new System.Drawing.Size(726, 166);
-            this.dtServicio.TabIndex = 96;
-            // 
-            // cmbTipoMantenimiento
-            // 
-            this.cmbTipoMantenimiento.FormattingEnabled = true;
-            this.cmbTipoMantenimiento.Items.AddRange(new object[] {
-            "Ordinario",
-            "Extraordinario"});
-            this.cmbTipoMantenimiento.Location = new System.Drawing.Point(237, 41);
-            this.cmbTipoMantenimiento.Name = "cmbTipoMantenimiento";
-            this.cmbTipoMantenimiento.Size = new System.Drawing.Size(471, 21);
-            this.cmbTipoMantenimiento.TabIndex = 104;
-            // 
-            // nudPrecio
-            // 
-            this.nudPrecio.Location = new System.Drawing.Point(237, 101);
-            this.nudPrecio.Name = "nudPrecio";
-            this.nudPrecio.Size = new System.Drawing.Size(471, 20);
-            this.nudPrecio.TabIndex = 103;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.CadetBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(66, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 16);
-            this.label1.TabIndex = 102;
-            this.label1.Text = "Tipo de Mantenimiento:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.Location = new System.Drawing.Point(238, 73);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(470, 20);
-            this.txtDescripcion.TabIndex = 101;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.BackColor = System.Drawing.Color.CadetBlue;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPrecio.Location = new System.Drawing.Point(171, 105);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(60, 16);
-            this.lblPrecio.TabIndex = 100;
-            this.lblPrecio.Text = "Precio: ";
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.BackColor = System.Drawing.Color.CadetBlue;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBuscar.Location = new System.Drawing.Point(174, 137);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(59, 16);
-            this.lblBuscar.TabIndex = 99;
-            this.lblBuscar.Text = "Buscar:";
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.BackColor = System.Drawing.Color.CadetBlue;
-            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCorreo.Location = new System.Drawing.Point(141, 77);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(94, 16);
-            this.lblCorreo.TabIndex = 98;
-            this.lblCorreo.Text = "Descripcion:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.Location = new System.Drawing.Point(239, 133);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(202, 20);
-            this.txtBuscar.TabIndex = 97;
+            this.dtServicio.Size = new System.Drawing.Size(413, 503);
+            this.dtServicio.TabIndex = 262;
             // 
             // FormServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cmbTipoMantenimiento);
-            this.Controls.Add(this.nudPrecio);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblBuscar);
-            this.Controls.Add(this.lblCorreo);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.dtServicio);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.ClientSize = new System.Drawing.Size(941, 536);
+            this.Controls.Add(this.panel1);
             this.Name = "FormServicio";
-            this.Text = "FormServicio";
+            this.Text = "FormServici";
             this.Load += new System.EventHandler(this.FormServicio_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtServicio)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtServicio)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.DataGridView dtServicio;
-        private System.Windows.Forms.ComboBox cmbTipoMantenimiento;
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown nudPrecio;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.ComboBox cmbTipoMantenimiento;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dtServicio;
     }
 }

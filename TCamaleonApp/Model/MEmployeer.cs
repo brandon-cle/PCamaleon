@@ -180,18 +180,22 @@ namespace TCamaleonApp.Model
         {
 
             Console.WriteLine(E_firstname + " " + E_thirdname + " " + E_IDworkstation + " " + E_Address);
+
             SqlConnection sqlconnection = new SqlConnection();
             Connection connection = new Connection();
             try
             {
                 sqlconnection.ConnectionString = connection.cn;
+
                 
+
                 SqlCommand sqlCmd = new SqlCommand();
                 sqlCmd.Connection = sqlconnection;
                 sqlCmd.CommandText = "InsertarEmpleado";
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 //------------------------------------------------------------------------------------
                 //------------------------------------------------------------------------------------
+
 
                 sqlCmd.Parameters.Add(new SqlParameter("@n1", SqlDbType.VarChar){Value = E_firstname });
                 sqlCmd.Parameters.Add(new SqlParameter("@n2", SqlDbType.VarChar) { Value = E_secondname });
@@ -252,6 +256,7 @@ namespace TCamaleonApp.Model
             }
             catch (Exception ex)
             {
+
 
             }
             finally

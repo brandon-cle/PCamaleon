@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TCamaleonApp.Views
 {
-    public partial class FormVehiculo : Form
+    public partial class FormCliente : Form
     {
-        public FormVehiculo()
+        public FormCliente()
         {
             InitializeComponent();
         }
