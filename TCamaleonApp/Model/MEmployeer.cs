@@ -178,23 +178,86 @@ namespace TCamaleonApp.Model
 
         public static void InsertarEmpleado(string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, int E_IDworkstation, string E_status, string E_mail, string E_Address)
         {
-            DataTable goingcmb = new DataTable("InsertarEmpleado");
+
+            Console.WriteLine(E_firstname + " " + E_thirdname + " " + E_IDworkstation + " " + E_Address);
+
             SqlConnection sqlconnection = new SqlConnection();
             Connection connection = new Connection();
             try
             {
                 sqlconnection.ConnectionString = connection.cn;
+
+                
+
                 SqlCommand sqlCmd = new SqlCommand();
                 sqlCmd.Connection = sqlconnection;
                 sqlCmd.CommandText = "InsertarEmpleado";
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 //------------------------------------------------------------------------------------
                 //------------------------------------------------------------------------------------
-             
+
+
+                sqlCmd.Parameters.Add(new SqlParameter("@n1", SqlDbType.VarChar){Value = E_firstname });
+                sqlCmd.Parameters.Add(new SqlParameter("@n2", SqlDbType.VarChar) { Value = E_secondname });
+                sqlCmd.Parameters.Add(new SqlParameter("@n3", SqlDbType.VarChar) { Value = E_thirdname });
+                sqlCmd.Parameters.Add(new SqlParameter("@n4", SqlDbType.VarChar) { Value = E_lastname });
+                sqlCmd.Parameters.Add(new SqlParameter("@IDc", SqlDbType.VarChar) { Value = E_identification });
+                sqlCmd.Parameters.Add(new SqlParameter("@phone", SqlDbType.VarChar) { Value = E_numberphone });
+                sqlCmd.Parameters.Add(new SqlParameter("@IDw", SqlDbType.Int) { Value = E_IDworkstation });
+                sqlCmd.Parameters.Add(new SqlParameter("@sts", SqlDbType.VarChar) { Value = E_status });
+                sqlCmd.Parameters.Add(new SqlParameter("@mail", SqlDbType.VarChar) { Value = E_mail });
+                sqlCmd.Parameters.Add(new SqlParameter("@adrs", SqlDbType.VarChar) { Value = E_Address });
+
+                sqlconnection.Open();
+                sqlCmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                goingcmb = null;
+                
+            }
+            finally
+            {
+                sqlconnection.Close();
+            }
+
+        }
+
+
+        public static void ActualizarEmpleado(int E_IDEmpleado, string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, int E_IDworkstation, string E_status, string E_mail, string E_Address)
+        {
+
+            Console.WriteLine(E_firstname + " " + E_thirdname + " " + E_IDworkstation + " " + E_Address);
+            SqlConnection sqlconnection = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                sqlconnection.ConnectionString = connection.cn;
+
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = sqlconnection;
+                sqlCmd.CommandText = "ActualizarEmpleado";
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                //------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------
+                sqlCmd.Parameters.Add(new SqlParameter("@employeeID", SqlDbType.Int) { Value = E_IDEmpleado });
+                sqlCmd.Parameters.Add(new SqlParameter("@n1", SqlDbType.VarChar) { Value = E_firstname });
+                sqlCmd.Parameters.Add(new SqlParameter("@n2", SqlDbType.VarChar) { Value = E_secondname });
+                sqlCmd.Parameters.Add(new SqlParameter("@n3", SqlDbType.VarChar) { Value = E_thirdname });
+                sqlCmd.Parameters.Add(new SqlParameter("@n4", SqlDbType.VarChar) { Value = E_lastname });
+                sqlCmd.Parameters.Add(new SqlParameter("@IDc", SqlDbType.VarChar) { Value = E_identification });
+                sqlCmd.Parameters.Add(new SqlParameter("@phone", SqlDbType.VarChar) { Value = E_numberphone });
+                sqlCmd.Parameters.Add(new SqlParameter("@IDw", SqlDbType.Int) { Value = E_IDworkstation });
+                sqlCmd.Parameters.Add(new SqlParameter("@sts", SqlDbType.VarChar) { Value = E_status });
+                sqlCmd.Parameters.Add(new SqlParameter("@mail", SqlDbType.VarChar) { Value = E_mail });
+                sqlCmd.Parameters.Add(new SqlParameter("@adrs", SqlDbType.VarChar) { Value = E_Address });
+
+                sqlconnection.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+
             }
             finally
             {
