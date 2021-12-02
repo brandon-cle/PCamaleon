@@ -123,6 +123,7 @@ namespace TCamaleonApp.Views
             this.btn_modify.TabIndex = 3;
             this.btn_modify.Text = "Modificar información";
             this.btn_modify.UseVisualStyleBackColor = true;
+            this.btn_modify.Click += new System.EventHandler(this.modify_option);
             // 
             // button3
             // 
@@ -258,6 +259,7 @@ namespace TCamaleonApp.Views
             // cmb_job
             // 
             this.cmb_job.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_job.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_job.FormattingEnabled = true;
             this.cmb_job.Location = new System.Drawing.Point(266, 524);
             this.cmb_job.Name = "cmb_job";
@@ -300,6 +302,7 @@ namespace TCamaleonApp.Views
             // cmb_categories
             // 
             this.cmb_categories.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmb_categories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_categories.FormattingEnabled = true;
             this.cmb_categories.Location = new System.Drawing.Point(23, 524);
             this.cmb_categories.Name = "cmb_categories";

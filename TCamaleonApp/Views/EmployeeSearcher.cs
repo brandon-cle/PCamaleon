@@ -14,6 +14,7 @@ namespace TCamaleonApp.Views
     public partial class EmployeeSearcher : Form
     {
         bool modify = false;
+        int IDglobalmodify;
         public EmployeeSearcher()
         {
             InitializeComponent();
@@ -133,8 +134,20 @@ namespace TCamaleonApp.Views
         {
             if (modify)
             {
-
-
+                CEmployeer.ActualizarEmpleado(
+                    IDglobalmodify,
+                    txt_name.Text,
+                    txt_name2.Text,
+                    txt_name3.Text,
+                    txt_name4.Text,
+                    txt_id.Text,
+                    txt_phone.Text,
+                    Idjobpass(cmb_job.Text),
+                    status_parameter(),
+                    txt_mail.Text,
+                    txt_Address.Text);
+                ShowEmployeer();
+                clean();
             }
             else
             {
@@ -153,6 +166,7 @@ namespace TCamaleonApp.Views
 
                 Console.WriteLine("I'M IN, BUT IDK");
                 ShowEmployeer();
+                clean();
 
             }
 
@@ -180,23 +194,29 @@ namespace TCamaleonApp.Views
             txt_Address.Text = "";
         }
 
-        private void modify_option()
+        private void modify_option(object sender, EventArgs e)
         {
             modify = true;
             if (this.dgv_employees.SelectedRows.Count == 1)
             {
-                /*
-                this.txt_name.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Primer Nombre"].Value);
-                this.txt_name2.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Segundo Nombre"].Value);
-                this.txt_name3.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Primer Apellido"].Value);
-                this.txt_name4.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Segundo Apellido"].Value);
-                this.txt_id.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Dirección"].Value);
-                this.txt_phone = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Correo"].Value);
-                this.cmb_job.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value);
-                if (Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value == "Laborando") rbtn_working.Checked = true ;
-                if (Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value == "Laborando") rbtn_working.Checked = true;
-                if (Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value == "Laborando") rbtn_working.Checked = true;*/
+                IDglobalmodify = Int32.Parse(Convert.ToString(this.dgv_employees.CurrentRow.Cells["IDEmpleado"].Value));
+                this.txt_name.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Primer Nombre"].Value);
+                this.txt_name2.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Segundo Nombre"].Value);
+                this.txt_name3.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Primer Apellido"].Value);
+                this.txt_name4.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Segundo Apellido"].Value);
+                this.txt_id.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Cédula"].Value);
+                this.txt_phone.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Teléfono"].Value);
+                this.cmb_job.Text = "Seleccionar";
+                this.cmb_categories.Text = "Seleccionar";
+                this.txt_Address.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Dirección"].Value);
+                this.txt_mail.Text = Convert.ToString(this.dgv_employees.CurrentRow.Cells["Correo"].Value);
+                if ((Convert.ToString(this.dgv_employees.CurrentRow.Cells["Estado"].Value) == "Laborando")) rbtn_working.Checked = true ;
+                if ((Convert.ToString(this.dgv_employees.CurrentRow.Cells["Estado"].Value) == "Vacaciones")) rbtn_vac.Checked = true;
+                if ((Convert.ToString(this.dgv_employees.CurrentRow.Cells["Estado"].Value) == "Despedido")) rbtn_fired.Checked = true;
 
+            }
+            else
+            {
 
             }
         }
