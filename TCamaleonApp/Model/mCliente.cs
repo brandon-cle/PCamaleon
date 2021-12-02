@@ -17,7 +17,7 @@ namespace TCamaleonApp.Model
         private string primerApellido;
         private string segundoApellido;
         private string cedula;
-        private int telefono;
+        private string telefono;
         private string correo;
         private string direccion;
 
@@ -27,7 +27,7 @@ namespace TCamaleonApp.Model
         public string PrimerApellido { get => primerApellido; set => primerApellido = value; }
         public string SegundoApellido { get => segundoApellido; set => segundoApellido = value; }
         public string Cedula { get => cedula; set => cedula = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         
@@ -104,7 +104,7 @@ namespace TCamaleonApp.Model
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "InsertarCliente";
+                SqlCmd.CommandText = "IngresarCliente";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros del Procedimiento Almacenado
@@ -140,12 +140,14 @@ namespace TCamaleonApp.Model
                 SqlParameter ParCedula = new SqlParameter();
                 ParCedula.ParameterName = "@cedula";
                 ParCedula.SqlDbType = SqlDbType.VarChar;
+                ParCedula.Size = 60;
                 ParCedula.Value = Cliente.Cedula;
                 SqlCmd.Parameters.Add(ParCedula);
 
                 SqlParameter ParTelefono = new SqlParameter();
                 ParTelefono.ParameterName = "@telefono";
                 ParTelefono.SqlDbType = SqlDbType.VarChar;
+                ParTelefono.Size = 60;
                 ParTelefono.Value = Cliente.Telefono;
                 SqlCmd.Parameters.Add(ParTelefono);
 

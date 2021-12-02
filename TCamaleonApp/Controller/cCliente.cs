@@ -18,7 +18,7 @@ namespace TCamaleonApp.Controller
         {
             return mCliente.BuscarCliente(dato);
         }
-        public static string Insertar(string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string cedula, int telefono, string correo, string direccion)
+        public static string Insertar(string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string cedula, string  telefono, string correo, string direccion)
         {
             mCliente Obj = new mCliente();
             Obj.PrimerNombre = primerNombre;
@@ -31,7 +31,7 @@ namespace TCamaleonApp.Controller
             Obj.Direccion = direccion;
             return Obj.Insertar(Obj);
         }
-        public static string Editar(int idCliente, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string cedula, int telefono, string correo, string direccion)
+        public static string Editar(int idCliente, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string cedula, string telefono, string correo, string direccion)
         {
             mCliente Obj = new mCliente();
             Obj.IdCliente = idCliente;
