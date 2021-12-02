@@ -32,7 +32,7 @@ namespace TCamaleonApp.Views
             this.dgv_employees = new System.Windows.Forms.DataGridView();
             this.txt_employeeS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_modify = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -69,8 +69,8 @@ namespace TCamaleonApp.Views
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rbtn_working = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_vac = new System.Windows.Forms.RadioButton();
+            this.rbtn_fired = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.panel1.SuspendLayout();
@@ -114,15 +114,15 @@ namespace TCamaleonApp.Views
             this.label1.TabIndex = 2;
             this.label1.Text = "Introduzca dato a buscar:";
             // 
-            // button1
+            // btn_modify
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(12, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 46);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Modificar información";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_modify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_modify.Location = new System.Drawing.Point(12, 26);
+            this.btn_modify.Name = "btn_modify";
+            this.btn_modify.Size = new System.Drawing.Size(173, 46);
+            this.btn_modify.TabIndex = 3;
+            this.btn_modify.Text = "Modificar información";
+            this.btn_modify.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -199,8 +199,8 @@ namespace TCamaleonApp.Views
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.rbtn_fired);
+            this.panel1.Controls.Add(this.rbtn_vac);
             this.panel1.Controls.Add(this.rbtn_working);
             this.panel1.Controls.Add(this.btn_clean);
             this.panel1.Controls.Add(this.label14);
@@ -461,7 +461,7 @@ namespace TCamaleonApp.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_modify);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 720);
             this.panel2.Name = "panel2";
@@ -520,31 +520,31 @@ namespace TCamaleonApp.Views
             this.rbtn_working.Text = "Laborando";
             this.rbtn_working.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtn_vac
             // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(184, 615);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 20);
-            this.radioButton1.TabIndex = 54;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Vacaciones";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtn_vac.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtn_vac.AutoSize = true;
+            this.rbtn_vac.ForeColor = System.Drawing.Color.Black;
+            this.rbtn_vac.Location = new System.Drawing.Point(184, 615);
+            this.rbtn_vac.Name = "rbtn_vac";
+            this.rbtn_vac.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_vac.TabIndex = 54;
+            this.rbtn_vac.TabStop = true;
+            this.rbtn_vac.Text = "Vacaciones";
+            this.rbtn_vac.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtn_fired
             // 
-            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(348, 615);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(96, 20);
-            this.radioButton2.TabIndex = 55;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Despedido";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtn_fired.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtn_fired.AutoSize = true;
+            this.rbtn_fired.ForeColor = System.Drawing.Color.Black;
+            this.rbtn_fired.Location = new System.Drawing.Point(348, 615);
+            this.rbtn_fired.Name = "rbtn_fired";
+            this.rbtn_fired.Size = new System.Drawing.Size(96, 20);
+            this.rbtn_fired.TabIndex = 55;
+            this.rbtn_fired.TabStop = true;
+            this.rbtn_fired.Text = "Despedido";
+            this.rbtn_fired.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -591,7 +591,7 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.DataGridView dgv_employees;
         private System.Windows.Forms.TextBox txt_employeeS;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_modify;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -628,8 +628,8 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_clean;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtn_fired;
+        private System.Windows.Forms.RadioButton rbtn_vac;
         private System.Windows.Forms.RadioButton rbtn_working;
     }
 }

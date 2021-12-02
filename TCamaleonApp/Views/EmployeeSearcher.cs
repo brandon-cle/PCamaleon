@@ -134,6 +134,7 @@ namespace TCamaleonApp.Views
             if (modify)
             {
 
+
             }
             else
             {
@@ -146,22 +147,58 @@ namespace TCamaleonApp.Views
                     txt_id.Text,
                     txt_phone.Text,
                     Idjobpass(cmb_job.Text),
-                    "Laborando",
+                    status_parameter(),
                     txt_mail.Text,
                     txt_Address.Text);
 
                 Console.WriteLine("I'M IN, BUT IDK");
                 ShowEmployeer();
+
             }
 
         }
 
-        public static string status()
+
+        public string status_parameter()
         {
             string status = null;
-
-
+            if (rbtn_working.Checked) status = "Laborando";
+            if (rbtn_vac.Checked) status = "Vacaciones";
+            if (rbtn_fired.Checked) status = "Despedido";
             return status;
+        }
+
+        public void clean()
+        {
+            txt_name.Text = "";
+            txt_name2.Text = "";
+            txt_name3.Text = "";
+            txt_name4.Text = "";
+            txt_id.Text = "";
+            txt_phone.Text = "";
+            txt_mail.Text = "";
+            txt_Address.Text = "";
+        }
+
+        private void modify_option()
+        {
+            modify = true;
+            if (this.dgv_employees.SelectedRows.Count == 1)
+            {
+                /*
+                this.txt_name.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Primer Nombre"].Value);
+                this.txt_name2.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Segundo Nombre"].Value);
+                this.txt_name3.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Primer Apellido"].Value);
+                this.txt_name4.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Segundo Apellido"].Value);
+                this.txt_id.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Dirección"].Value);
+                this.txt_phone = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Correo"].Value);
+                this.cmb_job.Text = Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value);
+                if (Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value == "Laborando") rbtn_working.Checked = true ;
+                if (Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value == "Laborando") rbtn_working.Checked = true;
+                if (Convert.ToString(this.dataEmpleado.CurrentRow.Cells["Teléfono"].Value == "Laborando") rbtn_working.Checked = true;*/
+
+
+            }
         }
     }
 }
