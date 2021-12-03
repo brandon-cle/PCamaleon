@@ -28,295 +28,269 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgv_users = new System.Windows.Forms.DataGridView();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_password_confirmed = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRepitaContrasena = new System.Windows.Forms.TextBox();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.dtUsuario = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBuscar = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.txtTrabajador = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtUsuario)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_nuser = new System.Windows.Forms.Button();
+            this.btn_suser = new System.Windows.Forms.Button();
+            this.btn_muser = new System.Windows.Forms.Button();
+            this.txt_user_searcher = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.dgv_users);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1142, 662);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Controls.Add(this.btn_suser);
+            this.panel2.Controls.Add(this.btn_nuser);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txt_password_confirmed);
+            this.panel2.Controls.Add(this.txt_password);
+            this.panel2.Controls.Add(this.txt_username);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(870, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(272, 662);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txt_user_searcher);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(870, 100);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel4.Controls.Add(this.btn_muser);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 562);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(870, 100);
+            this.panel4.TabIndex = 2;
+            // 
+            // dgv_users
+            // 
+            this.dgv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_users.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_users.Location = new System.Drawing.Point(0, 100);
+            this.dgv_users.Name = "dgv_users";
+            this.dgv_users.RowHeadersWidth = 51;
+            this.dgv_users.RowTemplate.Height = 24;
+            this.dgv_users.Size = new System.Drawing.Size(870, 462);
+            this.dgv_users.TabIndex = 3;
+            // 
+            // txt_username
+            // 
+            this.txt_username.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_username.Location = new System.Drawing.Point(22, 232);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(235, 22);
+            this.txt_username.TabIndex = 0;
+            // 
+            // txt_password
+            // 
+            this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_password.Location = new System.Drawing.Point(22, 287);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(235, 22);
+            this.txt_password.TabIndex = 1;
+            // 
+            // txt_password_confirmed
+            // 
+            this.txt_password_confirmed.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_password_confirmed.Location = new System.Drawing.Point(22, 339);
+            this.txt_password_confirmed.Name = "txt_password_confirmed";
+            this.txt_password_confirmed.Size = new System.Drawing.Size(235, 22);
+            this.txt_password_confirmed.TabIndex = 2;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBox4.Location = new System.Drawing.Point(58, 142);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(104, 22);
+            this.textBox4.TabIndex = 3;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.CadetBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(175, 34);
+            this.label1.Location = new System.Drawing.Point(22, 210);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 110;
-            this.label1.Text = "Usuario:";
-            // 
-            // txtRepitaContrasena
-            // 
-            this.txtRepitaContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRepitaContrasena.Location = new System.Drawing.Point(262, 89);
-            this.txtRepitaContrasena.Name = "txtRepitaContrasena";
-            this.txtRepitaContrasena.Size = new System.Drawing.Size(410, 20);
-            this.txtRepitaContrasena.TabIndex = 109;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.BackColor = System.Drawing.Color.CadetBlue;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPrecio.Location = new System.Drawing.Point(81, 93);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(159, 16);
-            this.lblPrecio.TabIndex = 108;
-            this.lblPrecio.Text = "Repita la contraseña: ";
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.BackColor = System.Drawing.Color.CadetBlue;
-            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCorreo.Location = new System.Drawing.Point(150, 65);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(90, 16);
-            this.lblCorreo.TabIndex = 106;
-            this.lblCorreo.Text = "Contraseña:";
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContrasena.Location = new System.Drawing.Point(262, 63);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(410, 20);
-            this.txtContrasena.TabIndex = 113;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.Location = new System.Drawing.Point(262, 30);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(410, 20);
-            this.txtUsuario.TabIndex = 114;
-            // 
-            // dtUsuario
-            // 
-            this.dtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtUsuario.BackgroundColor = System.Drawing.Color.CadetBlue;
-            this.dtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dtUsuario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtUsuario.EnableHeadersVisualStyles = false;
-            this.dtUsuario.GridColor = System.Drawing.Color.DarkTurquoise;
-            this.dtUsuario.Location = new System.Drawing.Point(38, 204);
-            this.dtUsuario.Name = "dtUsuario";
-            this.dtUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dtUsuario.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtUsuario.Size = new System.Drawing.Size(726, 166);
-            this.dtUsuario.TabIndex = 150;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.flowLayoutPanel1.Controls.Add(this.btnNuevo);
-            this.flowLayoutPanel1.Controls.Add(this.btnGuardar);
-            this.flowLayoutPanel1.Controls.Add(this.btnModificar);
-            this.flowLayoutPanel1.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 389);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(726, 51);
-            this.flowLayoutPanel1.TabIndex = 149;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Location = new System.Drawing.Point(53, 3);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(139, 42);
-            this.btnNuevo.TabIndex = 74;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(205, 3);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(139, 42);
-            this.btnGuardar.TabIndex = 76;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModificar.Location = new System.Drawing.Point(357, 3);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(139, 42);
-            this.btnModificar.TabIndex = 75;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(509, 3);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(139, 42);
-            this.btnCancelar.TabIndex = 78;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.label1.Size = new System.Drawing.Size(125, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nombre de usuario:";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.CadetBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(181, 156);
+            this.label2.Location = new System.Drawing.Point(19, 268);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
-            this.label2.TabIndex = 152;
-            this.label2.Text = "Buscar:";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Contraseña:";
             // 
-            // textBuscar
+            // label3
             // 
-            this.textBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBuscar.Location = new System.Drawing.Point(262, 152);
-            this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(202, 20);
-            this.textBuscar.TabIndex = 151;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 320);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Vuelva a introducir la contraseña:";
             // 
-            // lblBuscar
+            // button1
             // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.BackColor = System.Drawing.Color.CadetBlue;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBuscar.Location = new System.Drawing.Point(151, 125);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(89, 16);
-            this.lblBuscar.TabIndex = 107;
-            this.lblBuscar.Text = "Trabajador:";
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.Location = new System.Drawing.Point(169, 142);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // txtTrabajador
+            // label4
             // 
-            this.txtTrabajador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrabajador.Location = new System.Drawing.Point(262, 121);
-            this.txtTrabajador.Name = "txtTrabajador";
-            this.txtTrabajador.Size = new System.Drawing.Size(410, 20);
-            this.txtTrabajador.TabIndex = 105;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(55, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "ID del empleado";
+            // 
+            // btn_nuser
+            // 
+            this.btn_nuser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_nuser.Location = new System.Drawing.Point(25, 389);
+            this.btn_nuser.Name = "btn_nuser";
+            this.btn_nuser.Size = new System.Drawing.Size(105, 46);
+            this.btn_nuser.TabIndex = 9;
+            this.btn_nuser.Text = "Nuevo usuario";
+            this.btn_nuser.UseVisualStyleBackColor = true;
+            // 
+            // btn_suser
+            // 
+            this.btn_suser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_suser.Location = new System.Drawing.Point(152, 389);
+            this.btn_suser.Name = "btn_suser";
+            this.btn_suser.Size = new System.Drawing.Size(105, 46);
+            this.btn_suser.TabIndex = 10;
+            this.btn_suser.Text = "Guardar usuario";
+            this.btn_suser.UseVisualStyleBackColor = true;
+            // 
+            // btn_muser
+            // 
+            this.btn_muser.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_muser.Location = new System.Drawing.Point(21, 28);
+            this.btn_muser.Name = "btn_muser";
+            this.btn_muser.Size = new System.Drawing.Size(154, 46);
+            this.btn_muser.TabIndex = 11;
+            this.btn_muser.Text = "Modificar usuario";
+            this.btn_muser.UseVisualStyleBackColor = true;
+            // 
+            // txt_user_searcher
+            // 
+            this.txt_user_searcher.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_user_searcher.Location = new System.Drawing.Point(12, 54);
+            this.txt_user_searcher.Name = "txt_user_searcher";
+            this.txt_user_searcher.Size = new System.Drawing.Size(248, 22);
+            this.txt_user_searcher.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Buscador:";
             // 
             // FormUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBuscar);
-            this.Controls.Add(this.dtUsuario);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtRepitaContrasena);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblBuscar);
-            this.Controls.Add(this.lblCorreo);
-            this.Controls.Add(this.txtTrabajador);
+            this.ClientSize = new System.Drawing.Size(1142, 662);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.dtUsuario)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FormUsuario_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtRepitaContrasena;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.DataGridView dtUsuario;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnCancelar;
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgv_users;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_muser;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_user_searcher;
+        private System.Windows.Forms.Button btn_suser;
+        private System.Windows.Forms.Button btn_nuser;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBuscar;
-        private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.TextBox txtTrabajador;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_password_confirmed;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.TextBox txt_username;
     }
 }

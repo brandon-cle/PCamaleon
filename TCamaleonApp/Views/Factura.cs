@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TCamaleonApp.Controller;
 
 namespace TCamaleonApp.Views
 {
-    public partial class FormUsuario : Form
+    public partial class Factura : Form
     {
-        public FormUsuario()
+        public Factura()
         {
             InitializeComponent();
-        }
-
-        private void FormUsuario_Load(object sender, EventArgs e)
-        {
-           this.dgv_users.DataSource =  CUsuario.MostrarUsuarios();
         }
     }
 }
