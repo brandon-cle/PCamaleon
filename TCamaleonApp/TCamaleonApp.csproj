@@ -118,6 +118,12 @@
     <Compile Include="Views\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.Designer.cs">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_sEmployeerAd.resx">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>

@@ -76,6 +76,120 @@ namespace TCamaleonApp.Model
             return DtResultado;
         }
 
+        public static void InsertarUsuario(string username, string password, string employeeID)
+        {
+
+            SqlConnection sqlconnection = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                sqlconnection.ConnectionString = connection.cn;
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = sqlconnection;
+                sqlCmd.CommandText = "InsertarUsuario";
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                //------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------
+
+                sqlCmd.Parameters.Add(new SqlParameter("@usernameI", SqlDbType.VarChar) { Value = username });
+                sqlCmd.Parameters.Add(new SqlParameter("@userpasswordI", SqlDbType.VarChar) { Value = password });
+                sqlCmd.Parameters.Add(new SqlParameter("@username_IDemployeeI", SqlDbType.VarChar) { Value = employeeID });
+
+
+                sqlconnection.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                sqlconnection.Close();
+            }
+
+        }
+
+
+        public static void ActualizarUsuario(string nu, string password, string status, string ID_user)
+        {
+
+
+            SqlConnection sqlconnection = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                sqlconnection.ConnectionString = connection.cn;
+
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = sqlconnection;
+                sqlCmd.CommandText = "ActualizarUsuario";
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                //------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------
+                if (password == "" || password == null)
+                {
+                    ActualizarUsuario_Alter(nu, status, ID_user);
+                }
+                else
+                {
+                    sqlCmd.Parameters.Add(new SqlParameter("@IDUser", SqlDbType.Int) { Value = ID_user });
+                    sqlCmd.Parameters.Add(new SqlParameter("@un", SqlDbType.VarChar) { Value = nu });
+                    sqlCmd.Parameters.Add(new SqlParameter("@p", SqlDbType.VarChar) { Value = password });
+                    sqlCmd.Parameters.Add(new SqlParameter("@sts", SqlDbType.VarChar) { Value = status });
+                }
+                
+
+
+                sqlconnection.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                sqlconnection.Close();
+            }
+
+        }
+
+
+        public static void ActualizarUsuario_Alter(string nu, string status, string ID_user)
+        {
+
+
+            SqlConnection sqlconnection = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                sqlconnection.ConnectionString = connection.cn;
+
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = sqlconnection;
+                sqlCmd.CommandText = "ActualizarUsuario_Alter";
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                //------------------------------------------------------------------------------------
+                //------------------------------------------------------------------------------------
+
+                sqlCmd.Parameters.Add(new SqlParameter("@IDUser", SqlDbType.Int) { Value = ID_user });
+                sqlCmd.Parameters.Add(new SqlParameter("@un", SqlDbType.VarChar) { Value = nu });
+                sqlCmd.Parameters.Add(new SqlParameter("@sts", SqlDbType.VarChar) { Value = status });
+
+
+                sqlconnection.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                sqlconnection.Close();
+            }
+        }
     }
 }
-}
+

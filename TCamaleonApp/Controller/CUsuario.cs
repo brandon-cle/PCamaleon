@@ -22,6 +22,15 @@ namespace TCamaleonApp.Controller
             return mUsuario.MostrarUsuarios();
         }
 
+        public static void InsertarUsuario(string username, string password, string employeeID)
+        {
+            mUsuario.InsertarUsuario(username, password, employeeID);
+        }
+
+        public static void ActualizarUsuario(string nu, string password, string status, string ID_user)
+        {
+            mUsuario.ActualizarUsuario(nu, password, status, ID_user);
+        }
 
     }
 }
