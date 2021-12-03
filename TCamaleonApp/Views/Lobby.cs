@@ -37,7 +37,7 @@ namespace TCamaleonApp.Views
            
             if (MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
             }
         }
         #endregion

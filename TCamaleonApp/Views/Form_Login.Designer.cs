@@ -76,7 +76,6 @@
             this.txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.txt_password.Location = new System.Drawing.Point(162, 447);
             this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(255, 22);
             this.txt_password.TabIndex = 3;
             // 

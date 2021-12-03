@@ -43,9 +43,8 @@
             this.dgv_employeesS.Name = "dgv_employeesS";
             this.dgv_employeesS.RowHeadersWidth = 51;
             this.dgv_employeesS.RowTemplate.Height = 24;
-            this.dgv_employeesS.Size = new System.Drawing.Size(968, 353);
+            this.dgv_employeesS.Size = new System.Drawing.Size(745, 353);
             this.dgv_employeesS.TabIndex = 1;
-            this.dgv_employeesS.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employeesS_RowHeaderMouseDoubleClick);
             // 
             // textBox1
             // 
@@ -66,17 +65,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(741, 45);
+            this.label2.Location = new System.Drawing.Point(560, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 16);
+            this.label2.Size = new System.Drawing.Size(213, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Selecciona la fila del empleado a registar";
+            this.label2.Text = "Selecciona al empleado a registar";
             // 
             // Form_sEmployeerAd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
