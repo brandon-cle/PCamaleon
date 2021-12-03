@@ -35,5 +35,10 @@ namespace TCamaleonApp.Views
         {
             this.dtRepuesto.DataSource = cRepuesto.BuscarRepuesto(this.textBox1.Text);
         }
+
+        private void frmBuscarRepuesto_Load(object sender, EventArgs e)
+        {
+            this.dtRepuesto.DataSource = cRepuesto.MostrarRepuesto();
+        }
     }
 }

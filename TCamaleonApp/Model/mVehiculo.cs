@@ -12,7 +12,7 @@ namespace TCamaleonApp.Model
     class mVehiculo
     {
         private int idVehiculo;
-        private string placa;
+        private string matricula;
         private int idCliente;
         private string marca;
         private string modelo;
@@ -21,7 +21,7 @@ namespace TCamaleonApp.Model
 
         public int IdVehiculo { get => idVehiculo; set => idVehiculo = value; }
 
-        public string Placa { get => placa; set => placa = value; }
+        public string Matricula { get => matricula; set => matricula = value; }
         public int IdCliente { get => idCliente; set => idCliente= value; }
         public string Marca { get => marca; set => marca = value; }
         public string Modelo { get => modelo; set => modelo = value; }
@@ -100,14 +100,6 @@ namespace TCamaleonApp.Model
                 SqlCmd.CommandText = "InsertarVehiculo";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                // Parámetros del Procedimiento Almacenado
-                SqlParameter ParPlaca = new SqlParameter();
-                ParPlaca.ParameterName = "@placa";
-                ParPlaca.SqlDbType = SqlDbType.VarChar;
-                ParPlaca.Size = 60;
-                ParPlaca.Value = Vehiculo.IdCliente;
-                SqlCmd.Parameters.Add(ParPlaca);
-
                 SqlParameter ParIdCliente = new SqlParameter();
                 ParIdCliente.ParameterName = "@idCliente";
                 ParIdCliente.SqlDbType = SqlDbType.VarChar;
@@ -130,15 +122,21 @@ namespace TCamaleonApp.Model
                 SqlCmd.Parameters.Add(ParModelo);
 
                 SqlParameter ParAno = new SqlParameter();
-                ParAno.ParameterName = "@ano";
+                ParAno.ParameterName = "@año";
                 ParAno.SqlDbType = SqlDbType.VarChar;
                 ParAno.Size = 60;
                 ParAno.Value = Vehiculo.ano;
                 SqlCmd.Parameters.Add(ParAno);
+
+                SqlParameter ParMatricula = new SqlParameter();
+                ParMatricula.ParameterName = "@matricula";
+                ParMatricula.SqlDbType = SqlDbType.VarChar;
+                ParMatricula.Size = 60;
+                ParMatricula.Value = Vehiculo.IdCliente;
+                SqlCmd.Parameters.Add(ParMatricula);
                 //Ejecutamos nuestro comando
 
                 repuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
-
             }
             catch (Exception ex)
             {
@@ -164,7 +162,7 @@ namespace TCamaleonApp.Model
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "EditarServicio";
+                SqlCmd.CommandText = "EditarVehiculo";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros del Procedimiento Almacenado
@@ -175,12 +173,6 @@ namespace TCamaleonApp.Model
                 SqlCmd.Parameters.Add(ParIdVehiculo);
 
                 // Parámetros del Procedimiento Almacenado
-                SqlParameter ParPlaca = new SqlParameter();
-                ParPlaca.ParameterName = "@placa";
-                ParPlaca.SqlDbType = SqlDbType.VarChar;
-                ParPlaca.Size = 60;
-                ParPlaca.Value = Vehiculo.IdCliente;
-                SqlCmd.Parameters.Add(ParPlaca);
 
                 SqlParameter ParIdCliente = new SqlParameter();
                 ParIdCliente.ParameterName = "@idCliente";
@@ -204,11 +196,18 @@ namespace TCamaleonApp.Model
                 SqlCmd.Parameters.Add(ParModelo);
 
                 SqlParameter ParAno = new SqlParameter();
-                ParAno.ParameterName = "@ano";
+                ParAno.ParameterName = "@año";
                 ParAno.SqlDbType = SqlDbType.VarChar;
                 ParAno.Size = 60;
                 ParAno.Value = Vehiculo.ano;
                 SqlCmd.Parameters.Add(ParAno);
+
+                SqlParameter ParMatricula = new SqlParameter();
+                ParMatricula.ParameterName = "@matricula";
+                ParMatricula.SqlDbType = SqlDbType.VarChar;
+                ParMatricula.Size = 60;
+                ParMatricula.Value = Vehiculo.IdCliente;
+                SqlCmd.Parameters.Add(ParMatricula);
 
                 //Ejecutamos nuestro comando
 

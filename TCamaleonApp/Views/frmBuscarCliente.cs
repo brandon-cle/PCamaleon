@@ -17,10 +17,6 @@ namespace TCamaleonApp.Views
         {
             InitializeComponent();
         }
-        private void frmBuscarCliente_Load(object sender, EventArgs e)
-        {
-            this.dtCliente.DataSource = cCliente.MostrarCliente();
-        }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
@@ -39,6 +35,11 @@ namespace TCamaleonApp.Views
         {
 
             this.dtCliente.DataSource = cCliente.BuscarCliente(textBox1.Text);
+        }
+
+        private void frmBuscarCliente_Load_1(object sender, EventArgs e)
+        {
+            this.dtCliente.DataSource = cCliente.MostrarCliente();
         }
     }
 }

@@ -33,6 +33,10 @@ namespace TCamaleonApp.Views
 
         private void btnGuardar_Click(object sender, System.EventArgs e)
         {
+            if(float.Parse(txtPrecio.Text) < 0 || Convert.ToInt32(txtCantidad.Text) < 0)
+            {
+                MessageBox.Show("Cantidad y precio no pueden ser negativos", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             try
             {
                 float valor = float.Parse(txtPrecio.Text);
@@ -173,6 +177,14 @@ namespace TCamaleonApp.Views
             {
                 MessageBox.Show("Debe seleccionar una Fila antes de Modificar", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
             }
         }
     }

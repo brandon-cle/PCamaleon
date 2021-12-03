@@ -52,7 +52,7 @@ namespace TCamaleonApp.Views
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(350, 279);
+            this.btnSeleccionar.Location = new System.Drawing.Point(347, 277);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(145, 23);
             this.btnSeleccionar.TabIndex = 4;
@@ -129,6 +129,7 @@ namespace TCamaleonApp.Views
             this.Controls.Add(this.btnSeleccionar);
             this.Name = "frmBuscarCliente";
             this.Text = "frmBuscarCliente";
+            this.Load += new System.EventHandler(this.frmBuscarCliente_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dtCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,6 +141,6 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dtCliente;
+        public System.Windows.Forms.DataGridView dtCliente;
     }
 }

@@ -35,5 +35,10 @@ namespace TCamaleonApp.Views
                 this.Close();
             }
         }
+
+        private void frmBuscarVehiculo_Load(object sender, EventArgs e)
+        {
+            this.dtVehiculo.DataSource = cVehiculo.MostrarVehiculo();
+        }
     }
 }

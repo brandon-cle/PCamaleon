@@ -128,6 +128,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "frmBuscarRepuesto";
             this.Text = "frmBuscarRepuesto";
+            this.Load += new System.EventHandler(this.frmBuscarRepuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtRepuesto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,6 +140,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.DataGridView dtRepuesto;
+        public System.Windows.Forms.DataGridView dtRepuesto;
     }
 }

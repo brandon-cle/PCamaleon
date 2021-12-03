@@ -128,6 +128,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Name = "frmBuscarVehiculo";
             this.Text = "frmBuscarVehiculo";
+            this.Load += new System.EventHandler(this.frmBuscarVehiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtVehiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,6 +140,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.DataGridView dtVehiculo;
+        public System.Windows.Forms.DataGridView dtVehiculo;
     }
 }

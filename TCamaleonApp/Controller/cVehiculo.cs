@@ -18,26 +18,27 @@ namespace TCamaleonApp.Controller
         {
             return mVehiculo.BuscarVehiculo(dato);
         }
-        public static string Insertar(string placa, int idCliente, string marca, string modelo, int ano)
+        public static string Insertar( int idCliente, string marca, string modelo, int ano, string matricula)
         {
             mVehiculo Obj = new mVehiculo();
-            Obj.Placa = placa;
+            
             Obj.IdCliente = idCliente;
             Obj.Marca = marca;
             Obj.Modelo = modelo;
             Obj.Ano = ano;
+            Obj.Matricula = matricula;
 
             return Obj.Insertar(Obj);
         }
-        public static string Editar(int idVehiculo,string placa, int idCliente, string marca, string modelo, int ano)
+        public static string Editar(int idVehiculo, int idCliente, string marca, string modelo, int ano, string matricula)
         {
             mVehiculo Obj = new mVehiculo();
             Obj.IdVehiculo = idVehiculo;
-            Obj.Placa = placa;
             Obj.IdCliente = idCliente;
             Obj.Marca = marca;
             Obj.Modelo = modelo;
             Obj.Ano = ano;
+            Obj.Matricula = matricula;
             return Obj.Editar(Obj);
         }
     }

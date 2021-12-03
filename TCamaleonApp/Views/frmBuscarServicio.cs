@@ -37,5 +37,10 @@ namespace TCamaleonApp.Views
         {
             this.dtServicio.DataSource = cServicio.BuscarServicio(textBox1.Text);
         }
+
+        private void frmBuscarServicio_Load(object sender, EventArgs e)
+        {
+            this.dtServicio.DataSource = cServicio.MostrarServicio();
+        }
     }
 }
