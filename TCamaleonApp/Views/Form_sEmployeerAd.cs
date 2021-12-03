@@ -19,7 +19,7 @@ namespace TCamaleonApp.Views
 
         private void Form_sEmployeerAd_Load(object sender, EventArgs e)
         {
-            CEmployeer.MostrarEmpleado_noUser();
+            CEmployeer.MostrarEmpleadoAd_noUser();
 
         }
     }
