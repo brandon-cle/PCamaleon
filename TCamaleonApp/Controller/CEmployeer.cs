@@ -49,5 +49,13 @@ namespace TCamaleonApp.Controller
         {
             return MEmployeer.MostrarEmpleadoAd_noUser();
         }
+
+
+        public static DataTable DataToShow()
+        {
+            return MEmployeer.DataToShow()
+        }
+
+
     }
 }
