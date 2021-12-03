@@ -186,5 +186,13 @@ namespace TCamaleonApp.Views
                 this.txtCliente.Text = fc.dtCliente.Rows[fc.dtCliente.CurrentRow.Index].Cells[1].Value.ToString();
             }
         }
+
+        private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -104,7 +104,7 @@ namespace TCamaleonApp.Model
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "IngresarCliente";
+                SqlCmd.CommandText = "InsertarCliente";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros del Procedimiento Almacenado

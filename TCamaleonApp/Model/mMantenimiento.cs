@@ -11,6 +11,19 @@ namespace TCamaleonApp.Model
 {
     class mMantenimiento
     {
+        private int idMantenimiento;
+        private int idVehiculo;
+        private string descripcion;
+        private string estado;
+        private string fechaSalida;
+        private string fechaIngreso;
+        public int IdMantenimiento { get => idMantenimiento; set => idMantenimiento = value; }
+        public int IdVehiculo { get => idVehiculo; set => idVehiculo = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string  Estado { get => estado; set => estado = value; }
+        public string FechaSalida { get => fechaSalida; set => fechaSalida = value; }
+
+        public string FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public static DataTable MostrarMantenimiento()
         {
             DataTable DtResultado = new DataTable("MostrarMantenimiento");
@@ -73,7 +86,7 @@ namespace TCamaleonApp.Model
             }
             return DtResultado;
         }
-        /*
+        
         public string Insertar(mMantenimiento Mantenimiento)
         {
             string repuesta = "";
@@ -91,48 +104,18 @@ namespace TCamaleonApp.Model
                 SqlCmd.CommandType = CommandType.StoredProcedure;
                 // Parámetros del Procedimiento Almacenado
 
-                SqlParameter ParTitulo = new SqlParameter();
-                ParTitulo.ParameterName = "@titulo";
-                ParTitulo.SqlDbType = SqlDbType.VarChar;
-                ParTitulo.Size = 60;
-                ParTitulo.Value = Repuesto.titulo;
-                SqlCmd.Parameters.Add(ParTitulo);
+                SqlParameter ParIdVehiculo = new SqlParameter();
+                ParIdVehiculo.ParameterName = "@idVehiculo";
+                ParIdVehiculo.SqlDbType = SqlDbType.Int;
+                ParIdVehiculo.Value = Mantenimiento.idVehiculo;
+                SqlCmd.Parameters.Add(ParIdVehiculo);
 
-                SqlParameter ParDescripcion = new SqlParameter();
-                ParDescripcion.ParameterName = "@descripcion";
-                ParDescripcion.SqlDbType = SqlDbType.VarChar;
-                ParDescripcion.Size = 60;
-                ParDescripcion.Value = Repuesto.descripcion;
-                SqlCmd.Parameters.Add(ParDescripcion);
-
-                SqlParameter ParMarca = new SqlParameter();
-                ParMarca.ParameterName = "@marca";
-                ParMarca.SqlDbType = SqlDbType.VarChar;
-                ParMarca.Size = 60;
-                ParMarca.Value = Repuesto.marca;
-                SqlCmd.Parameters.Add(ParMarca);
-
-                SqlParameter ParModelo = new SqlParameter();
-                ParModelo.ParameterName = "@modelo";
-                ParModelo.SqlDbType = SqlDbType.VarChar;
-                ParModelo.Size = 60;
-                ParModelo.Value = Repuesto.modelo;
-                SqlCmd.Parameters.Add(ParModelo);
-
-
-                SqlParameter ParStock = new SqlParameter();
-                ParStock.ParameterName = "@stock";
-                ParStock.SqlDbType = SqlDbType.VarChar;
-                ParStock.Size = 60;
-                ParStock.Value = Repuesto.modelo;
-                SqlCmd.Parameters.Add(ParStock);
-
-                SqlParameter ParPrecio = new SqlParameter();
-                ParPrecio.ParameterName = "@precio";
-                ParPrecio.SqlDbType = SqlDbType.VarChar;
-                ParPrecio.Size = 60;
-                ParPrecio.Value = Repuesto.precio;
-                SqlCmd.Parameters.Add(ParPrecio);
+                SqlParameter ParFechaIngreso = new SqlParameter();
+                ParFechaIngreso.ParameterName = "@fechaIngreso";
+                ParFechaIngreso.SqlDbType = SqlDbType.VarChar;
+                ParFechaIngreso.Size = 60;
+                ParFechaIngreso.Value = Mantenimiento.fechaIngreso;
+                SqlCmd.Parameters.Add(ParFechaIngreso);
 
                 //Ejecutamos nuestro comando
 
@@ -150,7 +133,7 @@ namespace TCamaleonApp.Model
             return repuesta;
 
         }
-        public string Editar(mMantenimiento Mantenimiento)
+       /* public string Editar(mMantenimiento Mantenimiento)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
