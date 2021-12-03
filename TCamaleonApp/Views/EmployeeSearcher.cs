@@ -54,6 +54,7 @@ namespace TCamaleonApp.Views
             string word = null;
             do
             {
+                
                 word = distribuyer.Rows[x][0].ToString();
                 cmb_categories.Items.Add(word);
                 x++;
@@ -219,6 +220,12 @@ namespace TCamaleonApp.Views
             {
 
             }
+        }
+
+        private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

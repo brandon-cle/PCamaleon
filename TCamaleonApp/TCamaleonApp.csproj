@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Controller\cCliente.cs" />
     <Compile Include="Controller\CEmployeer.cs" />
+    <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
     <Compile Include="Model\mUsuario.cs" />
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="Views\EmployeeSearcher.Designer.cs">
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormBase_Servicios.cs">
       <SubType>Form</SubType>
@@ -105,6 +112,18 @@
     <Compile Include="Views\FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.Designer.cs">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +149,9 @@
     <EmbeddedResource Include="Views\EmployeeSearcher.resx">
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormBase_Servicios.resx">
       <DependentUpon>FormBase_Servicios.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_sEmployeerAd.resx">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>
@@ -185,6 +213,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cleaning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_31322065-stock-illustration-automotive-mechanic-car-repair-retro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mecanico-automo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user lobby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1250668.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93631.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2791696.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

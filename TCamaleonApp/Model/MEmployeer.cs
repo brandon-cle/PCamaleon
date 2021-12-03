@@ -259,6 +259,72 @@ namespace TCamaleonApp.Model
                 sqlconnection.Close();
             }
 
+
+
+
+
         }
+
+        public static DataTable MostrarEmpleadoAd_noUser()
+        {
+            DataTable DtResultado = new DataTable("MostrarEmpleadoAd_noUser");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarEmpleadoAd_noUser";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+            return DtResultado;
+        }
+
+        public static DataTable DataToShow()
+        {
+            DataTable DtResultado = new DataTable("Givemedata");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Givemedata";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+            return DtResultado;
+        }
+
+
     }
 }
