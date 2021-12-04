@@ -13,6 +13,8 @@ namespace TCamaleonApp.Views
 {
     public partial class FormUsuario : Form
     {
+
+        public static string globalID_toChange = null;
         bool modify_u = false;
         string IDglobalmodify_u = null;
         public FormUsuario()
@@ -23,7 +25,7 @@ namespace TCamaleonApp.Views
         private void FormUsuario_Load(object sender, EventArgs e)
         {
             dgv_users.AllowUserToAddRows = false;
-            this.dgv_users.DataSource =  CUsuario.MostrarUsuarios();
+            this.dgv_users.DataSource = CUsuario.MostrarUsuarios();
         }
 
         private void btn_suser_Click(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace TCamaleonApp.Views
             {
                 CUsuario.InsertarUsuario(txt_username.Text, txt_password.Text, txt_ide.Text);
             }
-            
+
         }
 
         private void btn_muser_Click(object sender, EventArgs e)
@@ -62,11 +64,20 @@ namespace TCamaleonApp.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form_sEmployeerAd frm_sEmployeerAd = new Form_sEmployeerAd();  
+            Form_sEmployeerAd frm_sEmployeerAd = new Form_sEmployeerAd();
             frm_sEmployeerAd.ShowDialog();
-            this.Close();
+            if(globalID_toChange != null)
+            {
+                txt_ide.Text = globalID_toChange;
+            }
+            else
+            {
+                return;
+            }
+            
         }
 
+        
      
     }
 }

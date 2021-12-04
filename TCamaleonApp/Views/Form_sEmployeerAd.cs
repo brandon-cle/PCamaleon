@@ -29,7 +29,7 @@ namespace TCamaleonApp.Views
         private void dgv_employeesS_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             
-            //.GivemetheID(Convert.ToString(this.dgv_employeesS.CurrentRow.Cells["IDEmpleado"].Value));//
+            FormUsuario.globalID_toChange = (Convert.ToString(this.dgv_employeesS.CurrentRow.Cells["IDEmpleado"].Value));//
             this.Close();
         }
     }
