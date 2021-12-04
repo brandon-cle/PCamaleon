@@ -50,6 +50,8 @@ namespace TCamaleonApp.Views
                 if (Convert.ToString(this.dgv_users.CurrentRow.Cells["Estado"].Value) == "Habilitado") rbtn_on.Checked = true;
                 if (Convert.ToString(this.dgv_users.CurrentRow.Cells["Estado"].Value) == "Deshabilitado") rbtn_on.Checked = true;
             }
+
+
         }
 
         public string status_parameter_u()
@@ -64,9 +66,6 @@ namespace TCamaleonApp.Views
         {
             Form_sEmployeerAd frm_sEmployeerAd = new Form_sEmployeerAd();  
             frm_sEmployeerAd.ShowDialog();
-            this.Close();
         }
-
-     
     }
 }

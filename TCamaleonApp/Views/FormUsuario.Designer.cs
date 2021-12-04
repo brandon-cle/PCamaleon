@@ -85,7 +85,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel4.Controls.Add(this.btn_muser);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 560);
@@ -106,7 +106,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txt_user_searcher);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -135,7 +135,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.rbtn_off);
             this.panel2.Controls.Add(this.rbtn_on);
@@ -332,7 +332,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public  System.Windows.Forms.TextBox txt_ide;
+        private System.Windows.Forms.TextBox txt_ide;
         private System.Windows.Forms.TextBox txt_password_confirmed;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_username;
