@@ -43,6 +43,10 @@ namespace TCamaleonApp.Views
 
             this.btn_save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.rbtn_fired = new System.Windows.Forms.RadioButton();
+            this.rbtn_vac = new System.Windows.Forms.RadioButton();
+            this.rbtn_working = new System.Windows.Forms.RadioButton();
             this.btn_clean = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.cmb_job = new System.Windows.Forms.ComboBox();
@@ -71,10 +75,6 @@ namespace TCamaleonApp.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rbtn_working = new System.Windows.Forms.RadioButton();
-            this.rbtn_vac = new System.Windows.Forms.RadioButton();
-            this.rbtn_fired = new System.Windows.Forms.RadioButton();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -246,6 +246,56 @@ namespace TCamaleonApp.Views
 
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(26, 572);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 16);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "Estado:";
+            // 
+            // rbtn_fired
+            // 
+            this.rbtn_fired.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtn_fired.AutoSize = true;
+            this.rbtn_fired.ForeColor = System.Drawing.Color.Black;
+            this.rbtn_fired.Location = new System.Drawing.Point(348, 615);
+            this.rbtn_fired.Name = "rbtn_fired";
+            this.rbtn_fired.Size = new System.Drawing.Size(96, 20);
+            this.rbtn_fired.TabIndex = 55;
+            this.rbtn_fired.TabStop = true;
+            this.rbtn_fired.Text = "Despedido";
+            this.rbtn_fired.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_vac
+            // 
+            this.rbtn_vac.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtn_vac.AutoSize = true;
+            this.rbtn_vac.ForeColor = System.Drawing.Color.Black;
+            this.rbtn_vac.Location = new System.Drawing.Point(184, 615);
+            this.rbtn_vac.Name = "rbtn_vac";
+            this.rbtn_vac.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_vac.TabIndex = 54;
+            this.rbtn_vac.TabStop = true;
+            this.rbtn_vac.Text = "Vacaciones";
+            this.rbtn_vac.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_working
+            // 
+            this.rbtn_working.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rbtn_working.AutoSize = true;
+            this.rbtn_working.ForeColor = System.Drawing.Color.Black;
+            this.rbtn_working.Location = new System.Drawing.Point(28, 615);
+            this.rbtn_working.Name = "rbtn_working";
+            this.rbtn_working.Size = new System.Drawing.Size(94, 20);
+            this.rbtn_working.TabIndex = 53;
+            this.rbtn_working.TabStop = true;
+            this.rbtn_working.Text = "Laborando";
+            this.rbtn_working.UseVisualStyleBackColor = true;
             // 
             // btn_clean
             // 
@@ -494,6 +544,7 @@ namespace TCamaleonApp.Views
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(187, 22);
             this.txt_name.TabIndex = 30;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
 
             // label15

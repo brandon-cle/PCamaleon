@@ -46,5 +46,19 @@ namespace TCamaleonApp.Controller
             MEmployeer.ActualizarEmpleado(employeeID, E_firstname, E_secondname, E_thirdname, E_lastname, E_identification, E_numberphone, E_IDworkstation, E_status, E_mail, E_Address);
         }
 
+
+        public static DataTable MostrarEmpleadoAd_noUser()
+        {
+            return MEmployeer.MostrarEmpleadoAd_noUser();
+        }
+
+
+        public static DataTable DataToShow()
+        {
+            return MEmployeer.DataToShow()
+        }
+
+
+
     }
 }

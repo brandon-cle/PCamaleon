@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -55,6 +55,7 @@
     <Compile Include="Controller\cRepuesto.cs" />
     <Compile Include="Controller\cServicio.cs" />
     <Compile Include="Controller\cVehiculo.cs" />
+    <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
     <Compile Include="Model\mMantenimiento.cs" />
@@ -72,6 +73,13 @@
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormCliente.cs">
+    <Compile Include="Views\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormBase_Servicios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormCliente.Designer.cs">
@@ -106,6 +114,18 @@
     </Compile>
     <Compile Include="Views\FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.Designer.cs">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmBuscarCliente.cs">
       <SubType>Form</SubType>
@@ -152,6 +172,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormBase_Servicios.resx">
+      <DependentUpon>FormBase_Servicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
@@ -167,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_sEmployeerAd.resx">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>
@@ -211,6 +242,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cleaning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_31322065-stock-illustration-automotive-mechanic-car-repair-retro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mecanico-automo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user lobby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1250668.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93631.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2791696.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
