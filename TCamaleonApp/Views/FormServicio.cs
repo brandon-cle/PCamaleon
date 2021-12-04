@@ -61,7 +61,7 @@ namespace TCamaleonApp.Views
             catch (FormatException ex)
             {
 
-                MessageBox.Show("Formato no adecuado", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox3.Text = "Error";
 
             }
             string Tipo = cmbTipoMantenimiento.Text;

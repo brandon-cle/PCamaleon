@@ -18,12 +18,5 @@ namespace TCamaleonApp.Controller
         {
             return mMantenimiento.BuscarMantenimiento(info);
         }
-        public static string Insertar(int idVehiculo, string fechaIngreso)
-        {
-            mMantenimiento Obj = new mMantenimiento();
-            Obj.IdVehiculo = idVehiculo;
-            Obj.FechaIngreso = fechaIngreso;
-            return Obj.Insertar(Obj);
-        }
     }
 }
