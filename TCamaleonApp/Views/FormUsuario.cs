@@ -44,15 +44,17 @@ namespace TCamaleonApp.Views
                 rbtn_on.Enabled = false;
                 rbtn_off.Enabled = false;
                 btn_suser.Enabled = false;
-                btn_nuser.Enabled = false;
+                btn_nuser.Enabled = true;
                 modify_u = false;
+              
             }
             else
             {
-                if(txt_password == txt_password_confirmed)
+                if(txt_password.Text == txt_password_confirmed.Text)
                 {
                     CUsuario.InsertarUsuario(txt_username.Text, txt_password.Text, txt_ide.Text);
                     Clean();
+                    this.dgv_users.DataSource = CUsuario.MostrarUsuarios();
                     txt_ide.Enabled = false;
                     txt_username.Enabled = false;
                     txt_password.Enabled = false;
@@ -65,7 +67,7 @@ namespace TCamaleonApp.Views
                 }
                 {
                     MessageBox.Show("Verifique que haya escrito bien la contraseña en la confirmación de esta", "Su buen mecánico le informa", MessageBoxButtons.OK);
-
+                    return;
                 }
 
                 
@@ -96,6 +98,7 @@ namespace TCamaleonApp.Views
                 btn_suser.Enabled = true;
                 btn_suser_mod.Visible = true;
                 btn_suser_mod.Enabled = true;
+                
                 
 
                 this.txt_username.Text = Convert.ToString(this.dgv_users.CurrentRow.Cells["Nombre de Usuario"].Value);
@@ -131,8 +134,9 @@ namespace TCamaleonApp.Views
         private void btn_nuser_Click(object sender, EventArgs e)
         {
             Clean();
+            btn_nuser.Enabled = false;
             bool modify_u = false;
-            txt_ide.Enabled = true;
+            txt_ide.Enabled = false;
             txt_username.Enabled = true;
             txt_password.Enabled = true;
             txt_password_confirmed.Enabled = true;
@@ -178,8 +182,8 @@ namespace TCamaleonApp.Views
             btn_suser.Enabled = false;
             IDglobalmodify_u = null;
             globalID_toChange = null;
-            btn_cancel.Enabled = false;
             btn_suser_mod.Visible = false;
+            btn_nuser.Enabled = true;
         }
 
         private void btn_suser_mod_Click(object sender, EventArgs e)
@@ -188,8 +192,8 @@ namespace TCamaleonApp.Views
             {
                 CUsuario.ActualizarUsuario(txt_username.Text, txt_password.Text, status_parameter_u(), IDglobalmodify_u);
                 this.dgv_users.DataSource = CUsuario.MostrarUsuarios();
-                Clean();
 
+                Clean();
                 txt_ide.Enabled = false;
                 txt_username.Enabled = false;
                 txt_password.Enabled = false;
@@ -197,8 +201,9 @@ namespace TCamaleonApp.Views
                 rbtn_on.Enabled = false;
                 rbtn_off.Enabled = false;
                 btn_suser.Enabled = false;
-                btn_nuser.Enabled = false;
                 modify_u = false;
+                btn_suser_mod.Visible = false;
+                btn_nuser.Enabled = true;
             }
             else
             {

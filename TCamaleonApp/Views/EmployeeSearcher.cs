@@ -227,5 +227,25 @@ namespace TCamaleonApp.Views
 
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //DESACTIVATE
+            button3.Enabled = false;
+            //ACTIVATE
+            txt_id.Enabled = true;
+            txt_name.Enabled = true;
+            txt_name2.Enabled = true;
+            txt_name3.Enabled = true;
+            txt_name4.Enabled = true;
+            txt_phone.Enabled = true;
+            txt_mail.Enabled = true;
+            txt_Address.Enabled = true;
+            cmb_categories.Enabled = true;
+            cmb_job.Enabled = true;
+            rbtn_working.Enabled = true;
+            rbtn_vac.Enabled = true;
+            rbtn_fired.Enabled = true;
+        }
     }
 }

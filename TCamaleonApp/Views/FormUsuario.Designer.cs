@@ -36,6 +36,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_user_searcher = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_suser_mod = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.rbtn_off = new System.Windows.Forms.RadioButton();
             this.rbtn_on = new System.Windows.Forms.RadioButton();
@@ -50,8 +52,6 @@
             this.txt_password_confirmed = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_username = new System.Windows.Forms.TextBox();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_suser_mod = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.panel4.SuspendLayout();
@@ -82,7 +82,7 @@
             this.dgv_users.Name = "dgv_users";
             this.dgv_users.RowHeadersWidth = 51;
             this.dgv_users.RowTemplate.Height = 24;
-            this.dgv_users.Size = new System.Drawing.Size(887, 460);
+            this.dgv_users.Size = new System.Drawing.Size(808, 460);
             this.dgv_users.TabIndex = 3;
             this.dgv_users.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_users_RowHeaderMouseClick);
             // 
@@ -93,7 +93,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 560);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(887, 100);
+            this.panel4.Size = new System.Drawing.Size(808, 100);
             this.panel4.TabIndex = 2;
             // 
             // btn_muser
@@ -116,7 +116,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(887, 100);
+            this.panel3.Size = new System.Drawing.Size(808, 100);
             this.panel3.TabIndex = 1;
             // 
             // label5
@@ -157,16 +157,40 @@
             this.panel2.Controls.Add(this.txt_password);
             this.panel2.Controls.Add(this.txt_username);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(887, 0);
+            this.panel2.Location = new System.Drawing.Point(808, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(272, 660);
+            this.panel2.Size = new System.Drawing.Size(351, 660);
             this.panel2.TabIndex = 0;
+            // 
+            // btn_suser_mod
+            // 
+            this.btn_suser_mod.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_suser_mod.Enabled = false;
+            this.btn_suser_mod.Location = new System.Drawing.Point(234, 460);
+            this.btn_suser_mod.Name = "btn_suser_mod";
+            this.btn_suser_mod.Size = new System.Drawing.Size(105, 46);
+            this.btn_suser_mod.TabIndex = 15;
+            this.btn_suser_mod.Text = "Guardar modificación";
+            this.btn_suser_mod.UseVisualStyleBackColor = true;
+            this.btn_suser_mod.Click += new System.EventHandler(this.btn_suser_mod_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_cancel.Enabled = false;
+            this.btn_cancel.Location = new System.Drawing.Point(123, 460);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(105, 46);
+            this.btn_cancel.TabIndex = 14;
+            this.btn_cancel.Text = "Cancelar";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 372);
+            this.label6.Location = new System.Drawing.Point(66, 373);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 17);
             this.label6.TabIndex = 13;
@@ -177,7 +201,7 @@
             this.rbtn_off.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbtn_off.AutoSize = true;
             this.rbtn_off.Enabled = false;
-            this.rbtn_off.Location = new System.Drawing.Point(138, 401);
+            this.rbtn_off.Location = new System.Drawing.Point(182, 402);
             this.rbtn_off.Name = "rbtn_off";
             this.rbtn_off.Size = new System.Drawing.Size(104, 21);
             this.rbtn_off.TabIndex = 12;
@@ -190,7 +214,7 @@
             this.rbtn_on.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbtn_on.AutoSize = true;
             this.rbtn_on.Enabled = false;
-            this.rbtn_on.Location = new System.Drawing.Point(25, 401);
+            this.rbtn_on.Location = new System.Drawing.Point(69, 402);
             this.rbtn_on.Name = "rbtn_on";
             this.rbtn_on.Size = new System.Drawing.Size(81, 21);
             this.rbtn_on.TabIndex = 11;
@@ -202,7 +226,7 @@
             // 
             this.btn_suser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_suser.Enabled = false;
-            this.btn_suser.Location = new System.Drawing.Point(155, 471);
+            this.btn_suser.Location = new System.Drawing.Point(234, 460);
             this.btn_suser.Name = "btn_suser";
             this.btn_suser.Size = new System.Drawing.Size(105, 46);
             this.btn_suser.TabIndex = 10;
@@ -213,7 +237,7 @@
             // btn_nuser
             // 
             this.btn_nuser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_nuser.Location = new System.Drawing.Point(22, 471);
+            this.btn_nuser.Location = new System.Drawing.Point(12, 460);
             this.btn_nuser.Name = "btn_nuser";
             this.btn_nuser.Size = new System.Drawing.Size(105, 46);
             this.btn_nuser.TabIndex = 9;
@@ -225,7 +249,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 122);
+            this.label4.Location = new System.Drawing.Point(99, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 8;
@@ -235,7 +259,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(169, 141);
+            this.button1.Location = new System.Drawing.Point(213, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 23);
             this.button1.TabIndex = 7;
@@ -247,7 +271,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 319);
+            this.label3.Location = new System.Drawing.Point(66, 320);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(220, 17);
             this.label3.TabIndex = 6;
@@ -257,7 +281,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 267);
+            this.label2.Location = new System.Drawing.Point(63, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 5;
@@ -267,7 +291,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 209);
+            this.label1.Location = new System.Drawing.Point(66, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 17);
             this.label1.TabIndex = 4;
@@ -277,7 +301,7 @@
             // 
             this.txt_ide.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_ide.Enabled = false;
-            this.txt_ide.Location = new System.Drawing.Point(58, 141);
+            this.txt_ide.Location = new System.Drawing.Point(102, 142);
             this.txt_ide.Name = "txt_ide";
             this.txt_ide.Size = new System.Drawing.Size(104, 22);
             this.txt_ide.TabIndex = 3;
@@ -286,7 +310,7 @@
             // 
             this.txt_password_confirmed.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_password_confirmed.Enabled = false;
-            this.txt_password_confirmed.Location = new System.Drawing.Point(22, 338);
+            this.txt_password_confirmed.Location = new System.Drawing.Point(66, 339);
             this.txt_password_confirmed.Name = "txt_password_confirmed";
             this.txt_password_confirmed.Size = new System.Drawing.Size(235, 22);
             this.txt_password_confirmed.TabIndex = 2;
@@ -295,7 +319,7 @@
             // 
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_password.Enabled = false;
-            this.txt_password.Location = new System.Drawing.Point(22, 286);
+            this.txt_password.Location = new System.Drawing.Point(66, 287);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(235, 22);
             this.txt_password.TabIndex = 1;
@@ -304,33 +328,10 @@
             // 
             this.txt_username.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_username.Enabled = false;
-            this.txt_username.Location = new System.Drawing.Point(22, 231);
+            this.txt_username.Location = new System.Drawing.Point(66, 232);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(235, 22);
             this.txt_username.TabIndex = 0;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_cancel.Location = new System.Drawing.Point(96, 535);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(105, 46);
-            this.btn_cancel.TabIndex = 14;
-            this.btn_cancel.Text = "Cancelar";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_suser_mod
-            // 
-            this.btn_suser_mod.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_suser_mod.Enabled = false;
-            this.btn_suser_mod.Location = new System.Drawing.Point(155, 471);
-            this.btn_suser_mod.Name = "btn_suser_mod";
-            this.btn_suser_mod.Size = new System.Drawing.Size(105, 46);
-            this.btn_suser_mod.TabIndex = 15;
-            this.btn_suser_mod.Text = "Guardar modificación";
-            this.btn_suser_mod.UseVisualStyleBackColor = true;
-            this.btn_suser_mod.Click += new System.EventHandler(this.btn_suser_mod_Click);
             // 
             // FormUsuario
             // 
