@@ -12,15 +12,25 @@ namespace TCamaleonApp.Views
 {
     public partial class Form_sEmployeerAd : Form
     {
+        
+
         public Form_sEmployeerAd()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form_sEmployeerAd_Load(object sender, EventArgs e)
         {
-            CEmployeer.MostrarEmpleadoAd_noUser();
+            this.dgv_employeesS.DataSource = CEmployeer.MostrarEmpleadoAd_noUser();
+            dgv_employeesS.AllowUserToAddRows = false;
+        }
 
+        private void dgv_employeesS_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
+            //.GivemetheID(Convert.ToString(this.dgv_employeesS.CurrentRow.Cells["IDEmpleado"].Value));//
+            this.Close();
         }
     }
 }

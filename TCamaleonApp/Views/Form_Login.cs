@@ -34,7 +34,7 @@ namespace TCamaleonApp.Views
 
         private void btn_cancel_l_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void pnlTop_lobby_Paint(object sender, PaintEventArgs e)
@@ -71,11 +71,6 @@ namespace TCamaleonApp.Views
 
                     if (dato.Rows[0][0].ToString() == "Green flag")
                     {
-
-                        
-
-
-                        MessageBox.Show("Bienvenido al Sistem", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Lobby lobby = new Lobby();
                         lobby.Show();
                         this.Hide();
