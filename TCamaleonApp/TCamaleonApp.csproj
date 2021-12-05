@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Console tester\Console tester.cs" />
     <Compile Include="Controller\cCliente.cs" />
     <Compile Include="Controller\CEmployeer.cs" />
     <Compile Include="Controller\CUsuario.cs" />
@@ -112,6 +113,12 @@
     <Compile Include="Views\FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_BuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_BuscarEmpleado.Designer.cs">
+      <DependentUpon>Form_BuscarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_BuscarEmpleado.resx">
+      <DependentUpon>Form_BuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
@@ -244,5 +254,6 @@
   <ItemGroup>
     <None Include="Resources\2791696.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
