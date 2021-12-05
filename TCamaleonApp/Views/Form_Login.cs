@@ -18,7 +18,7 @@ namespace TCamaleonApp.Views
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.txt_username.Focus();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -84,6 +84,11 @@ namespace TCamaleonApp.Views
                     }
                 }
             
+        }
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+            this.txt_username.Focus();
         }
     }
 }

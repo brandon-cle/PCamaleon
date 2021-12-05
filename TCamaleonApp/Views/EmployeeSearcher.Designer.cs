@@ -72,6 +72,7 @@ namespace TCamaleonApp.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cb_job = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,16 +83,20 @@ namespace TCamaleonApp.Views
             // 
             // dgv_employees
             // 
+            this.dgv_employees.AllowUserToResizeColumns = false;
+            this.dgv_employees.AllowUserToResizeRows = false;
             this.dgv_employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_employees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_employees.Location = new System.Drawing.Point(0, 0);
             this.dgv_employees.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_employees.Name = "dgv_employees";
+            this.dgv_employees.ReadOnly = true;
             this.dgv_employees.RowHeadersWidth = 51;
             this.dgv_employees.Size = new System.Drawing.Size(977, 626);
             this.dgv_employees.TabIndex = 0;
             this.dgv_employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_employees_CellContentClick);
+            this.dgv_employees.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employees_RowHeaderMouseClick);
             // 
             // txt_employeeS
             // 
@@ -130,7 +135,7 @@ namespace TCamaleonApp.Views
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(21, 665);
+            this.button3.Location = new System.Drawing.Point(21, 694);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(135, 46);
             this.button3.TabIndex = 5;
@@ -189,8 +194,9 @@ namespace TCamaleonApp.Views
             // btn_save
             // 
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_save.Enabled = false;
             this.btn_save.ForeColor = System.Drawing.Color.Black;
-            this.btn_save.Location = new System.Drawing.Point(184, 665);
+            this.btn_save.Location = new System.Drawing.Point(184, 694);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(135, 46);
             this.btn_save.TabIndex = 19;
@@ -201,6 +207,7 @@ namespace TCamaleonApp.Views
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel1.Controls.Add(this.cb_job);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.rbtn_fired);
             this.panel1.Controls.Add(this.rbtn_vac);
@@ -241,7 +248,7 @@ namespace TCamaleonApp.Views
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(26, 572);
+            this.label16.Location = new System.Drawing.Point(26, 601);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(56, 17);
             this.label16.TabIndex = 56;
@@ -253,7 +260,7 @@ namespace TCamaleonApp.Views
             this.rbtn_fired.AutoSize = true;
             this.rbtn_fired.Enabled = false;
             this.rbtn_fired.ForeColor = System.Drawing.Color.Black;
-            this.rbtn_fired.Location = new System.Drawing.Point(347, 615);
+            this.rbtn_fired.Location = new System.Drawing.Point(347, 644);
             this.rbtn_fired.Name = "rbtn_fired";
             this.rbtn_fired.Size = new System.Drawing.Size(97, 21);
             this.rbtn_fired.TabIndex = 55;
@@ -267,7 +274,7 @@ namespace TCamaleonApp.Views
             this.rbtn_vac.AutoSize = true;
             this.rbtn_vac.Enabled = false;
             this.rbtn_vac.ForeColor = System.Drawing.Color.Black;
-            this.rbtn_vac.Location = new System.Drawing.Point(182, 615);
+            this.rbtn_vac.Location = new System.Drawing.Point(182, 644);
             this.rbtn_vac.Name = "rbtn_vac";
             this.rbtn_vac.Size = new System.Drawing.Size(102, 21);
             this.rbtn_vac.TabIndex = 54;
@@ -281,7 +288,7 @@ namespace TCamaleonApp.Views
             this.rbtn_working.AutoSize = true;
             this.rbtn_working.Enabled = false;
             this.rbtn_working.ForeColor = System.Drawing.Color.Black;
-            this.rbtn_working.Location = new System.Drawing.Point(24, 615);
+            this.rbtn_working.Location = new System.Drawing.Point(24, 644);
             this.rbtn_working.Name = "rbtn_working";
             this.rbtn_working.Size = new System.Drawing.Size(98, 21);
             this.rbtn_working.TabIndex = 53;
@@ -292,20 +299,22 @@ namespace TCamaleonApp.Views
             // btn_cancel
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_cancel.Enabled = false;
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.Location = new System.Drawing.Point(348, 665);
+            this.btn_cancel.Location = new System.Drawing.Point(348, 694);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(99, 46);
             this.btn_cancel.TabIndex = 52;
             this.btn_cancel.Text = "Cancelar";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(265, 496);
+            this.label14.Location = new System.Drawing.Point(265, 525);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 17);
             this.label14.TabIndex = 51;
@@ -317,7 +326,7 @@ namespace TCamaleonApp.Views
             this.cmb_job.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_job.Enabled = false;
             this.cmb_job.FormattingEnabled = true;
-            this.cmb_job.Location = new System.Drawing.Point(266, 524);
+            this.cmb_job.Location = new System.Drawing.Point(266, 553);
             this.cmb_job.Name = "cmb_job";
             this.cmb_job.Size = new System.Drawing.Size(185, 24);
             this.cmb_job.TabIndex = 50;
@@ -349,7 +358,7 @@ namespace TCamaleonApp.Views
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(23, 496);
+            this.label11.Location = new System.Drawing.Point(23, 525);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(140, 17);
             this.label11.TabIndex = 46;
@@ -361,7 +370,7 @@ namespace TCamaleonApp.Views
             this.cmb_categories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_categories.Enabled = false;
             this.cmb_categories.FormattingEnabled = true;
-            this.cmb_categories.Location = new System.Drawing.Point(23, 524);
+            this.cmb_categories.Location = new System.Drawing.Point(23, 553);
             this.cmb_categories.Name = "cmb_categories";
             this.cmb_categories.Size = new System.Drawing.Size(173, 24);
             this.cmb_categories.TabIndex = 45;
@@ -576,6 +585,20 @@ namespace TCamaleonApp.Views
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
             // 
+            // cb_job
+            // 
+            this.cb_job.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cb_job.AutoSize = true;
+            this.cb_job.BackColor = System.Drawing.Color.Transparent;
+            this.cb_job.ForeColor = System.Drawing.Color.Black;
+            this.cb_job.Location = new System.Drawing.Point(24, 490);
+            this.cb_job.Name = "cb_job";
+            this.cb_job.Size = new System.Drawing.Size(134, 21);
+            this.cb_job.TabIndex = 57;
+            this.cb_job.Text = "Modificar puesto";
+            this.cb_job.UseVisualStyleBackColor = false;
+            this.cb_job.CheckedChanged += new System.EventHandler(this.cb_job_CheckedChanged);
+            // 
             // EmployeeSearcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -650,5 +673,6 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.RadioButton rbtn_fired;
         private System.Windows.Forms.RadioButton rbtn_vac;
         private System.Windows.Forms.RadioButton rbtn_working;
+        private System.Windows.Forms.CheckBox cb_job;
     }
 }

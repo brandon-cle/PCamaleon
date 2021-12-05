@@ -21,6 +21,7 @@ namespace TCamaleonApp.Views
         {
             InitializeComponent();
             this.btn_suser_mod.Visible = false;
+            this.checkBox1.Visible = false;
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)
@@ -91,20 +92,23 @@ namespace TCamaleonApp.Views
                 txt_ide.Enabled = false;
                 ////////////////////////////////////////////////
                 txt_username.Enabled = true;
-                txt_password.Enabled = true;
-                txt_password_confirmed.Enabled = true;
                 rbtn_on.Enabled = true;
                 rbtn_off.Enabled = true;
                 btn_suser.Enabled = true;
                 btn_suser_mod.Visible = true;
                 btn_suser_mod.Enabled = true;
-                
+                checkBox1.Visible = true;
                 
 
                 this.txt_username.Text = Convert.ToString(this.dgv_users.CurrentRow.Cells["Nombre de Usuario"].Value);
 
                 if (Convert.ToString(this.dgv_users.CurrentRow.Cells["Estado"].Value) == "Habilitado") rbtn_on.Checked = true;
                 if (Convert.ToString(this.dgv_users.CurrentRow.Cells["Estado"].Value) == "Deshabilitado") rbtn_on.Checked = true;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione solo una fila para el procedimiento", "Su buen mecánico le dice", MessageBoxButtons.OK);
+                dgv_users.ClearSelection();
             }
         }
 
@@ -184,10 +188,12 @@ namespace TCamaleonApp.Views
             globalID_toChange = null;
             btn_suser_mod.Visible = false;
             btn_nuser.Enabled = true;
+            this.checkBox1.Visible = false;
         }
 
         private void btn_suser_mod_Click(object sender, EventArgs e)
         {
+
             if (modify_u && txt_password_confirmed.Text == txt_password.Text)
             {
                 CUsuario.ActualizarUsuario(txt_username.Text, txt_password.Text, status_parameter_u(), IDglobalmodify_u);
@@ -204,6 +210,7 @@ namespace TCamaleonApp.Views
                 modify_u = false;
                 btn_suser_mod.Visible = false;
                 btn_nuser.Enabled = true;
+                this.checkBox1.Visible = false;
             }
             else
             {
@@ -221,6 +228,25 @@ namespace TCamaleonApp.Views
                 MessageBox.Show("Verifique que haya escrito bien la contraseña en la confirmación de esta", "Su buen mecánico le informa", MessageBoxButtons.OK);
                 return;
 
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txt_password.Enabled = true;
+                txt_password_confirmed.Enabled = true;
+            }
+            else
+            {
+                if(txt_password.Text != null && txt_password_confirmed.Text != null)
+                {
+                    txt_password.Text = null;
+                    txt_password_confirmed.Text = null;
+                }
+                txt_password.Enabled = false;
+                txt_password_confirmed.Enabled = false;
             }
         }
     }

@@ -52,6 +52,7 @@
             this.txt_password_confirmed = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_username = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.panel4.SuspendLayout();
@@ -69,7 +70,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1159, 660);
+            this.panel1.Size = new System.Drawing.Size(1162, 687);
             this.panel1.TabIndex = 0;
             // 
             // dgv_users
@@ -82,7 +83,7 @@
             this.dgv_users.Name = "dgv_users";
             this.dgv_users.RowHeadersWidth = 51;
             this.dgv_users.RowTemplate.Height = 24;
-            this.dgv_users.Size = new System.Drawing.Size(808, 460);
+            this.dgv_users.Size = new System.Drawing.Size(811, 487);
             this.dgv_users.TabIndex = 3;
             this.dgv_users.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_users_RowHeaderMouseClick);
             // 
@@ -91,9 +92,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
             this.panel4.Controls.Add(this.btn_muser);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 560);
+            this.panel4.Location = new System.Drawing.Point(0, 587);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(808, 100);
+            this.panel4.Size = new System.Drawing.Size(811, 100);
             this.panel4.TabIndex = 2;
             // 
             // btn_muser
@@ -116,7 +117,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(808, 100);
+            this.panel3.Size = new System.Drawing.Size(811, 100);
             this.panel3.TabIndex = 1;
             // 
             // label5
@@ -140,6 +141,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
+            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.btn_suser_mod);
             this.panel2.Controls.Add(this.btn_cancel);
             this.panel2.Controls.Add(this.label6);
@@ -157,16 +159,16 @@
             this.panel2.Controls.Add(this.txt_password);
             this.panel2.Controls.Add(this.txt_username);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(808, 0);
+            this.panel2.Location = new System.Drawing.Point(811, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(351, 660);
+            this.panel2.Size = new System.Drawing.Size(351, 687);
             this.panel2.TabIndex = 0;
             // 
             // btn_suser_mod
             // 
             this.btn_suser_mod.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_suser_mod.Enabled = false;
-            this.btn_suser_mod.Location = new System.Drawing.Point(234, 460);
+            this.btn_suser_mod.Location = new System.Drawing.Point(126, 512);
             this.btn_suser_mod.Name = "btn_suser_mod";
             this.btn_suser_mod.Size = new System.Drawing.Size(105, 46);
             this.btn_suser_mod.TabIndex = 15;
@@ -178,7 +180,7 @@
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_cancel.Enabled = false;
-            this.btn_cancel.Location = new System.Drawing.Point(123, 460);
+            this.btn_cancel.Location = new System.Drawing.Point(237, 512);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(105, 46);
             this.btn_cancel.TabIndex = 14;
@@ -190,7 +192,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(66, 373);
+            this.label6.Location = new System.Drawing.Point(52, 424);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 17);
             this.label6.TabIndex = 13;
@@ -201,7 +203,7 @@
             this.rbtn_off.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbtn_off.AutoSize = true;
             this.rbtn_off.Enabled = false;
-            this.rbtn_off.Location = new System.Drawing.Point(182, 402);
+            this.rbtn_off.Location = new System.Drawing.Point(168, 453);
             this.rbtn_off.Name = "rbtn_off";
             this.rbtn_off.Size = new System.Drawing.Size(104, 21);
             this.rbtn_off.TabIndex = 12;
@@ -214,7 +216,7 @@
             this.rbtn_on.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rbtn_on.AutoSize = true;
             this.rbtn_on.Enabled = false;
-            this.rbtn_on.Location = new System.Drawing.Point(69, 402);
+            this.rbtn_on.Location = new System.Drawing.Point(55, 453);
             this.rbtn_on.Name = "rbtn_on";
             this.rbtn_on.Size = new System.Drawing.Size(81, 21);
             this.rbtn_on.TabIndex = 11;
@@ -226,7 +228,7 @@
             // 
             this.btn_suser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_suser.Enabled = false;
-            this.btn_suser.Location = new System.Drawing.Point(234, 460);
+            this.btn_suser.Location = new System.Drawing.Point(126, 512);
             this.btn_suser.Name = "btn_suser";
             this.btn_suser.Size = new System.Drawing.Size(105, 46);
             this.btn_suser.TabIndex = 10;
@@ -237,7 +239,7 @@
             // btn_nuser
             // 
             this.btn_nuser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_nuser.Location = new System.Drawing.Point(12, 460);
+            this.btn_nuser.Location = new System.Drawing.Point(15, 512);
             this.btn_nuser.Name = "btn_nuser";
             this.btn_nuser.Size = new System.Drawing.Size(105, 46);
             this.btn_nuser.TabIndex = 9;
@@ -249,7 +251,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 123);
+            this.label4.Location = new System.Drawing.Point(85, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 8;
@@ -259,7 +261,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(213, 142);
+            this.button1.Location = new System.Drawing.Point(199, 168);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 23);
             this.button1.TabIndex = 7;
@@ -271,7 +273,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 320);
+            this.label3.Location = new System.Drawing.Point(52, 371);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(220, 17);
             this.label3.TabIndex = 6;
@@ -281,7 +283,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 268);
+            this.label2.Location = new System.Drawing.Point(49, 308);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 5;
@@ -291,7 +293,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 210);
+            this.label1.Location = new System.Drawing.Point(52, 233);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 17);
             this.label1.TabIndex = 4;
@@ -301,7 +303,7 @@
             // 
             this.txt_ide.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_ide.Enabled = false;
-            this.txt_ide.Location = new System.Drawing.Point(102, 142);
+            this.txt_ide.Location = new System.Drawing.Point(88, 168);
             this.txt_ide.Name = "txt_ide";
             this.txt_ide.Size = new System.Drawing.Size(104, 22);
             this.txt_ide.TabIndex = 3;
@@ -310,7 +312,7 @@
             // 
             this.txt_password_confirmed.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_password_confirmed.Enabled = false;
-            this.txt_password_confirmed.Location = new System.Drawing.Point(66, 339);
+            this.txt_password_confirmed.Location = new System.Drawing.Point(52, 390);
             this.txt_password_confirmed.Name = "txt_password_confirmed";
             this.txt_password_confirmed.Size = new System.Drawing.Size(235, 22);
             this.txt_password_confirmed.TabIndex = 2;
@@ -319,7 +321,7 @@
             // 
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_password.Enabled = false;
-            this.txt_password.Location = new System.Drawing.Point(66, 287);
+            this.txt_password.Location = new System.Drawing.Point(52, 327);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(235, 22);
             this.txt_password.TabIndex = 1;
@@ -328,16 +330,28 @@
             // 
             this.txt_username.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_username.Enabled = false;
-            this.txt_username.Location = new System.Drawing.Point(66, 232);
+            this.txt_username.Location = new System.Drawing.Point(52, 255);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(235, 22);
             this.txt_username.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(140, 283);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(157, 21);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Cambiar contraseña";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 660);
+            this.ClientSize = new System.Drawing.Size(1162, 687);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUsuario";
@@ -380,5 +394,6 @@
         private System.Windows.Forms.RadioButton rbtn_on;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_suser_mod;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

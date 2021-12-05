@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using TCamaleonApp.View;
+using TCamaleonApp.Views;
 
 namespace TCamaleonApp.Model
 {
@@ -221,8 +222,62 @@ namespace TCamaleonApp.Model
 
         public static void ActualizarEmpleado(int E_IDEmpleado, string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, int E_IDworkstation, string E_status, string E_mail, string E_Address)
         {
+            if (EmployeeSearcher.modify_complete)
+            {
+                Console.WriteLine(E_firstname + " " + E_thirdname + " " + E_IDworkstation + " " + E_Address);
+                SqlConnection sqlconnection = new SqlConnection();
+                Connection connection = new Connection();
+                try
+                {
+                    sqlconnection.ConnectionString = connection.cn;
 
-            Console.WriteLine(E_firstname + " " + E_thirdname + " " + E_IDworkstation + " " + E_Address);
+                    SqlCommand sqlCmd = new SqlCommand();
+                    sqlCmd.Connection = sqlconnection;
+                    sqlCmd.CommandText = "ActualizarEmpleado";
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    //------------------------------------------------------------------------------------
+                    //------------------------------------------------------------------------------------
+                    sqlCmd.Parameters.Add(new SqlParameter("@employeeID", SqlDbType.Int) { Value = E_IDEmpleado });
+                    sqlCmd.Parameters.Add(new SqlParameter("@n1", SqlDbType.VarChar) { Value = E_firstname });
+                    sqlCmd.Parameters.Add(new SqlParameter("@n2", SqlDbType.VarChar) { Value = E_secondname });
+                    sqlCmd.Parameters.Add(new SqlParameter("@n3", SqlDbType.VarChar) { Value = E_thirdname });
+                    sqlCmd.Parameters.Add(new SqlParameter("@n4", SqlDbType.VarChar) { Value = E_lastname });
+                    sqlCmd.Parameters.Add(new SqlParameter("@IDc", SqlDbType.VarChar) { Value = E_identification });
+                    sqlCmd.Parameters.Add(new SqlParameter("@phone", SqlDbType.VarChar) { Value = E_numberphone });
+                    sqlCmd.Parameters.Add(new SqlParameter("@IDw", SqlDbType.Int) { Value = E_IDworkstation });
+                    sqlCmd.Parameters.Add(new SqlParameter("@sts", SqlDbType.VarChar) { Value = E_status });
+                    sqlCmd.Parameters.Add(new SqlParameter("@mail", SqlDbType.VarChar) { Value = E_mail });
+                    sqlCmd.Parameters.Add(new SqlParameter("@adrs", SqlDbType.VarChar) { Value = E_Address });
+
+                    sqlconnection.Open();
+                    sqlCmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    sqlconnection.Close();
+                }
+            }
+            else
+            {
+                ActualizarEmpleado_Alter(E_IDEmpleado, E_firstname, E_secondname, E_thirdname, E_lastname, E_identification, E_numberphone, E_status, E_mail, E_Address);
+            }
+
+            
+
+
+
+
+
+        }
+
+
+        public static void ActualizarEmpleado_Alter(int E_IDEmpleado, string E_firstname, string E_secondname, string E_thirdname, string E_lastname, string E_identification, string E_numberphone, string E_status, string E_mail, string E_Address)
+        {
+            Console.WriteLine(E_firstname + " " + E_thirdname + " " + E_Address);
             SqlConnection sqlconnection = new SqlConnection();
             Connection connection = new Connection();
             try
@@ -231,7 +286,7 @@ namespace TCamaleonApp.Model
 
                 SqlCommand sqlCmd = new SqlCommand();
                 sqlCmd.Connection = sqlconnection;
-                sqlCmd.CommandText = "ActualizarEmpleado";
+                sqlCmd.CommandText = "ActualizarEmpleado_Alter";
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 //------------------------------------------------------------------------------------
                 //------------------------------------------------------------------------------------
@@ -242,7 +297,6 @@ namespace TCamaleonApp.Model
                 sqlCmd.Parameters.Add(new SqlParameter("@n4", SqlDbType.VarChar) { Value = E_lastname });
                 sqlCmd.Parameters.Add(new SqlParameter("@IDc", SqlDbType.VarChar) { Value = E_identification });
                 sqlCmd.Parameters.Add(new SqlParameter("@phone", SqlDbType.VarChar) { Value = E_numberphone });
-                sqlCmd.Parameters.Add(new SqlParameter("@IDw", SqlDbType.Int) { Value = E_IDworkstation });
                 sqlCmd.Parameters.Add(new SqlParameter("@sts", SqlDbType.VarChar) { Value = E_status });
                 sqlCmd.Parameters.Add(new SqlParameter("@mail", SqlDbType.VarChar) { Value = E_mail });
                 sqlCmd.Parameters.Add(new SqlParameter("@adrs", SqlDbType.VarChar) { Value = E_Address });
@@ -258,11 +312,6 @@ namespace TCamaleonApp.Model
             {
                 sqlconnection.Close();
             }
-
-
-
-
-
         }
 
         public static DataTable MostrarEmpleadoAd_noUser()
