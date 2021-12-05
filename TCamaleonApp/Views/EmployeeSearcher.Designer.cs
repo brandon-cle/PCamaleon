@@ -291,6 +291,7 @@ namespace TCamaleonApp.Views
             this.cmb_job.Name = "cmb_job";
             this.cmb_job.Size = new System.Drawing.Size(185, 24);
             this.cmb_job.TabIndex = 50;
+            this.cmb_job.SelectedIndexChanged += new System.EventHandler(this.cmb_job_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -491,6 +492,7 @@ namespace TCamaleonApp.Views
             // cb_cat_search
             // 
             this.cb_cat_search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_cat_search.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_cat_search.FormattingEnabled = true;
             this.cb_cat_search.Items.AddRange(new object[] {
             "Administración y Alto Mando",

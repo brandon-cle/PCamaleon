@@ -38,11 +38,100 @@ namespace TCamaleonApp.Views
             distribuyer = CEmployeer.ShowJob(category);
             int x = 0;
             int c = distribuyer.Rows.Count;
+            int id = 0;
             string word = null;
             do
             {
                 word = distribuyer.Rows[x][1].ToString();
-                cmb_job.Items.Add(word);
+                id = Int32.Parse(distribuyer.Rows[x][2].ToString());
+
+                //CATEGORÍA ADMINISTRACIÓN Y ALTO MANDO
+
+               
+                //Condcionales
+
+                if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando" && cmb_categories.SelectedItem.ToString() == "Colisión")
+                {
+                    if (id == 74 || id == 74 )
+                    {
+                        cmb_job.Items.Add(word);
+                    }
+                   
+                }
+
+
+                if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando" && cmb_categories.SelectedItem.ToString() == "Mecánico")
+                {
+                    if (id == 78 || id == 79)
+                    {
+                        cmb_job.Items.Add(word);
+                    }
+
+                }
+
+
+
+                if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando" && cmb_categories.SelectedItem.ToString() == "Repuestos")
+                {
+                    
+                    
+                       cmb_job.Items.Add(word);
+                    
+
+                }
+
+
+
+                if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando" && cmb_categories.SelectedItem.ToString() == "Administrativo")
+                {
+
+
+                    cmb_job.Items.Add(word);
+
+
+                }
+
+
+
+                if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando" && cmb_categories.SelectedItem.ToString() == "Alto mando")
+                {
+
+
+                    cmb_job.Items.Add(word);
+
+
+                }
+
+
+                /////////////////////////////
+                //SECCIÓN MECÁNICA
+
+
+
+
+                //Condicionales
+
+                if (cb_cat_search.SelectedItem.ToString() == "Sección Mecánica" && cmb_categories.SelectedItem.ToString() == "Mecánico")
+                {
+                    if (id != 78)
+                    {
+                        cmb_job.Items.Add(word);
+                    }
+
+                }
+                
+
+                if (cb_cat_search.SelectedItem.ToString() == "Sección Mecánica" && cmb_categories.SelectedItem.ToString() == "Colisión")
+                {
+                    if (id != 74)
+                    {
+                        cmb_job.Items.Add(word);
+                    }
+                }
+
+                
+
+
                 x++;
             } while (x != c);
             cmb_job.SelectedIndex = 0;
@@ -552,12 +641,18 @@ namespace TCamaleonApp.Views
             if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando")
             {
                 this.dgv_employees.DataSource = MEmployeer.ShowEmployeerAd();
-
+                
             }
             else
             {
                 this.dgv_employees.DataSource = MEmployeer.ShowEmployeer();
+                
             }
+        }
+
+        private void cmb_job_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

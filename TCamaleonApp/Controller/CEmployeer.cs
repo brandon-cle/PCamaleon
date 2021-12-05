@@ -60,6 +60,11 @@ namespace TCamaleonApp.Controller
             return MEmployeer.MostrarEmpleadoAd_noUser();
         }
 
+        public static DataTable BuscarEmpleadoAd_noUser(string info)
+        {
+            return MEmployeer.BuscarEmpleadoAd_noUser(info);
+        }
+
         public static DataTable MostrarEmpleado_Administrativo(string info)
         {
             return MEmployeer.SearchEmployeerAd(info);
