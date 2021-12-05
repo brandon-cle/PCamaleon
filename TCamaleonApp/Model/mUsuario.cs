@@ -76,6 +76,35 @@ namespace TCamaleonApp.Model
             return DtResultado;
         }
 
+        public static DataTable BuscarUsuarios(string info)
+        {
+            DataTable DtResultado = new DataTable("BuscarUsuario");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection conexión = new Connection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = conexión.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "BuscarUsuario";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                //   Cargando los parámetros del procedimiento almacenado
+                SqlCmd.Parameters.Add(new SqlParameter("@info", SqlDbType.VarChar) { Value = info });
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
+
         public static void InsertarUsuario(string username, string password, string employeeID)
         {
 

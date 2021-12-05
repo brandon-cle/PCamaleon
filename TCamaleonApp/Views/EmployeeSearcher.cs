@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TCamaleonApp.Controller;
+using TCamaleonApp.Model;
 
 namespace TCamaleonApp.Views
 {
@@ -19,7 +20,7 @@ namespace TCamaleonApp.Views
         public EmployeeSearcher()
         {
             InitializeComponent();
-           
+            cb_cat_search.SelectedIndex = 1;
             cb_job.Visible = false;
 
         }
@@ -62,6 +63,22 @@ namespace TCamaleonApp.Views
             } while (x != c);
         }
 
+        private void ShowToCmbCatWorks2()
+        {
+            DataTable distribuyer = new DataTable();
+            distribuyer = CEmployeer.ShowToCmbCatWorks2();
+            int x = 0;
+            int c = distribuyer.Rows.Count;
+            string word = null;
+            do
+            {
+                word = distribuyer.Rows[x][0].ToString();
+                cmb_categories.Items.Add(word);
+                x++;
+            } while (x != c);
+        }
+
+
         private int Idjobpass(string puesto)
         {
             int idxdb = 0;
@@ -98,7 +115,15 @@ namespace TCamaleonApp.Views
         private void txt_employeeS_TextChanged(object sender, EventArgs e)
         {
 
-            this.dgv_employees.DataSource = CEmployeer.SearchEmployeer(this.txt_employeeS.Text);
+            if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando")
+            {
+                this.dgv_employees.DataSource = MEmployeer.SearchEmployeerAd(txt_employeeS.Text);
+
+            }
+            else
+            {
+                this.dgv_employees.DataSource = MEmployeer.SearchEmployeer(txt_employeeS.Text);
+            }
         }
         #region trash to delete
         private void label15_Click(object sender, EventArgs e)
@@ -136,18 +161,38 @@ namespace TCamaleonApp.Views
         {
             if (modify)
             {
-                CEmployeer.ActualizarEmpleado(
-                    IDglobalmodify,
-                    txt_name.Text,
-                    txt_name2.Text,
-                    txt_name3.Text,
-                    txt_name4.Text,
-                    txt_id.Text,
-                    txt_phone.Text,
-                    Idjobpass(cmb_job.Text),
-                    status_parameter(),
-                    txt_mail.Text,
-                    txt_Address.Text);
+                if (cb_cat_search.Text == "Administración y Alto Mando")
+                {
+                    CEmployeer.ActualizarEmpleado(
+                   IDglobalmodify,
+                   txt_name.Text,
+                   txt_name2.Text,
+                   txt_name3.Text,
+                   txt_name4.Text,
+                   txt_id.Text,
+                   txt_phone.Text,
+                   Idjobpass(cmb_job.Text),
+                   status_parameter(),
+                   txt_mail.Text,
+                   txt_Address.Text);
+                }
+
+                if(cb_cat_search.Text == "Sección Mecánica")
+                {
+                    CEmployeer.ActualizarEmpleado_Administrativo(
+                   IDglobalmodify,
+                   txt_name.Text,
+                   txt_name2.Text,
+                   txt_name3.Text,
+                   txt_name4.Text,
+                   txt_id.Text,
+                   txt_phone.Text,
+                   Idjobpass(cmb_job.Text),
+                   status_parameter(),
+                   txt_mail.Text,
+                   txt_Address.Text);
+                }
+               
                 ShowEmployeer();
                 clean();
                 cb_job.Visible = false;
@@ -157,6 +202,7 @@ namespace TCamaleonApp.Views
                 //ACTIVATE
                 button3.Enabled = true;
                 dgv_employees.ClearSelection();
+                cb_cat_search.Enabled = true;
 
                 //DESACTIVATE
 
@@ -294,7 +340,8 @@ namespace TCamaleonApp.Views
 
         private void modify_option(object sender, EventArgs e)
         {
-            
+
+           
             modify = true;
             cb_job.Visible = true;
             //DESACTIVATE
@@ -317,8 +364,8 @@ namespace TCamaleonApp.Views
             btn_save.Enabled = true;
 
             //CMB
-            cmb_categories.Enabled = true;
-            cmb_job.Enabled = true;
+            cmb_categories.Enabled = false;
+            cmb_job.Enabled = false;
 
 
             //RBTN
@@ -367,6 +414,7 @@ namespace TCamaleonApp.Views
         {
             //DESACTIVATE
 
+            cb_cat_search.Enabled = false;
             
             //ACTIVATE
             txt_id.Enabled = true;
@@ -387,11 +435,20 @@ namespace TCamaleonApp.Views
             cmb_categories.Enabled = true;
             cmb_job.Enabled = true;
 
+            if (cb_cat_search.SelectedItem.ToString() == "Sección Mecánica")
+            {
+                ShowToCmbCatWorks();
+                cmb_categories.SelectedIndex = 0;
+                ShowJob(cmb_categories.SelectedItem.ToString());
+            }
+            
 
-            ShowToCmbCatWorks();
-            cmb_categories.SelectedIndex = 0;
-            ShowJob(cmb_categories.SelectedItem.ToString());
-
+            if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando")
+            {
+                ShowToCmbCatWorks2();
+                cmb_categories.SelectedIndex = 0;
+                ShowJob(cmb_categories.SelectedItem.ToString());
+            }
 
             //RBTN
             rbtn_vac.Enabled = true;
@@ -404,7 +461,7 @@ namespace TCamaleonApp.Views
             //ACTIVATE
             button3.Enabled = true;
             dgv_employees.ClearSelection();
-
+            cb_cat_search.Enabled = true;
             //DESACTIVATE
 
             //CB
@@ -461,22 +518,46 @@ namespace TCamaleonApp.Views
             {
                 modify_complete = true;
                 cmb_categories.Enabled = true;
-                cmb_categories.Enabled = true;
+                cmb_job.Enabled = true;
 
-                ShowToCmbCatWorks();
-                cmb_categories.SelectedIndex = 0;
-                ShowJob(cmb_categories.SelectedItem.ToString());
+                if (cb_cat_search.SelectedItem.ToString() == "Sección Mecánica")
+                {
+                    ShowToCmbCatWorks();
+                    cmb_categories.SelectedIndex = 0;
+                    ShowJob(cmb_categories.SelectedItem.ToString());
+                }
+
+
+                if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando")
+                {
+                    ShowToCmbCatWorks2();
+                    cmb_categories.SelectedIndex = 0;
+                    ShowJob(cmb_categories.SelectedItem.ToString());
+                }
 
             }
             else
             {
-                cmb_categories.Enabled = true;
+                cmb_categories.Enabled = false;
                 cmb_job.Enabled = false;
                 cmb_categories.Items.Clear();
                 cmb_job.Items.Clear();
                 modify_complete = false;
             }
             
+        }
+
+        private void cb_cat_search_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_cat_search.SelectedItem.ToString() == "Administración y Alto Mando")
+            {
+                this.dgv_employees.DataSource = MEmployeer.ShowEmployeerAd();
+
+            }
+            else
+            {
+                this.dgv_employees.DataSource = MEmployeer.ShowEmployeer();
+            }
         }
     }
 }

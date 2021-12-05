@@ -36,6 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_user_searcher = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btn_suser_mod = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.txt_password_confirmed = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_username = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.panel4.SuspendLayout();
@@ -137,6 +137,7 @@
             this.txt_user_searcher.Name = "txt_user_searcher";
             this.txt_user_searcher.Size = new System.Drawing.Size(248, 22);
             this.txt_user_searcher.TabIndex = 0;
+            this.txt_user_searcher.TextChanged += new System.EventHandler(this.txt_user_searcher_TextChanged);
             // 
             // panel2
             // 
@@ -163,6 +164,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(351, 687);
             this.panel2.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(140, 283);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(157, 21);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Cambiar contraseña";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btn_suser_mod
             // 
@@ -334,18 +347,6 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(235, 22);
             this.txt_username.TabIndex = 0;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(140, 283);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(157, 21);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Cambiar contraseña";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FormUsuario
             // 

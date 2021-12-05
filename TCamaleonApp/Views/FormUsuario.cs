@@ -189,6 +189,7 @@ namespace TCamaleonApp.Views
             btn_suser_mod.Visible = false;
             btn_nuser.Enabled = true;
             this.checkBox1.Visible = false;
+            globalID_toChange = null;
         }
 
         private void btn_suser_mod_Click(object sender, EventArgs e)
@@ -217,6 +218,7 @@ namespace TCamaleonApp.Views
                 if (txt_password == txt_password_confirmed)
                 {
                     CUsuario.InsertarUsuario(txt_username.Text, txt_password.Text, txt_ide.Text);
+                    this.dgv_users.DataSource = CUsuario.MostrarUsuarios();
                     return;
                 }
                 {
@@ -248,6 +250,11 @@ namespace TCamaleonApp.Views
                 txt_password.Enabled = false;
                 txt_password_confirmed.Enabled = false;
             }
+        }
+
+        private void txt_user_searcher_TextChanged(object sender, EventArgs e)
+        {
+            this.dgv_users.DataSource = CUsuario.BuscarUsuarios(this.txt_user_searcher.Text);
         }
     }
 }

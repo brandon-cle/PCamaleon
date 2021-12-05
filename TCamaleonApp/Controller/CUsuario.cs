@@ -32,6 +32,10 @@ namespace TCamaleonApp.Controller
             mUsuario.ActualizarUsuario(nu, password, status, ID_user);
         }
 
+        public static DataTable BuscarUsuarios(string info)
+        {
+            return mUsuario.BuscarUsuarios(info);
+        }
     }
 }
 

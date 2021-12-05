@@ -34,13 +34,9 @@ namespace TCamaleonApp.Views
             this.label1 = new System.Windows.Forms.Label();
             this.btn_modify = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_job = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.rbtn_fired = new System.Windows.Forms.RadioButton();
             this.rbtn_vac = new System.Windows.Forms.RadioButton();
@@ -67,12 +63,11 @@ namespace TCamaleonApp.Views
             this.txt_name2 = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cb_cat_search = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cb_job = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,54 +138,6 @@ namespace TCamaleonApp.Views
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(719, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(565, 55);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(106, 24);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(552, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Filtro de búsqueda";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(562, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Estado:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(716, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 17);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Cargo:";
-            // 
             // btn_save
             // 
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -242,6 +189,20 @@ namespace TCamaleonApp.Views
             this.panel1.Size = new System.Drawing.Size(467, 804);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cb_job
+            // 
+            this.cb_job.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cb_job.AutoSize = true;
+            this.cb_job.BackColor = System.Drawing.Color.Transparent;
+            this.cb_job.ForeColor = System.Drawing.Color.Black;
+            this.cb_job.Location = new System.Drawing.Point(24, 490);
+            this.cb_job.Name = "cb_job";
+            this.cb_job.Size = new System.Drawing.Size(134, 21);
+            this.cb_job.TabIndex = 57;
+            this.cb_job.Text = "Modificar puesto";
+            this.cb_job.UseVisualStyleBackColor = false;
+            this.cb_job.CheckedChanged += new System.EventHandler(this.cb_job_CheckedChanged);
             // 
             // label16
             // 
@@ -520,21 +481,25 @@ namespace TCamaleonApp.Views
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(413, 36);
+            this.label15.Location = new System.Drawing.Point(771, 35);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 17);
+            this.label15.Size = new System.Drawing.Size(73, 17);
             this.label15.TabIndex = 53;
-            this.label15.Text = "Cat:";
+            this.label15.Text = "Categoría:";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
-            // comboBox5
+            // cb_cat_search
             // 
-            this.comboBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(416, 55);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(116, 24);
-            this.comboBox5.TabIndex = 52;
+            this.cb_cat_search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_cat_search.FormattingEnabled = true;
+            this.cb_cat_search.Items.AddRange(new object[] {
+            "Administración y Alto Mando",
+            "Sección Mecánica"});
+            this.cb_cat_search.Location = new System.Drawing.Point(774, 55);
+            this.cb_cat_search.Name = "cb_cat_search";
+            this.cb_cat_search.Size = new System.Drawing.Size(183, 24);
+            this.cb_cat_search.TabIndex = 52;
+            this.cb_cat_search.SelectedIndexChanged += new System.EventHandler(this.cb_cat_search_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -551,13 +516,8 @@ namespace TCamaleonApp.Views
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(219)))), ((int)(((byte)(223)))));
             this.panel3.Controls.Add(this.txt_employeeS);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.comboBox5);
+            this.panel3.Controls.Add(this.cb_cat_search);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -584,20 +544,6 @@ namespace TCamaleonApp.Views
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
-            // 
-            // cb_job
-            // 
-            this.cb_job.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cb_job.AutoSize = true;
-            this.cb_job.BackColor = System.Drawing.Color.Transparent;
-            this.cb_job.ForeColor = System.Drawing.Color.Black;
-            this.cb_job.Location = new System.Drawing.Point(24, 490);
-            this.cb_job.Name = "cb_job";
-            this.cb_job.Size = new System.Drawing.Size(134, 21);
-            this.cb_job.TabIndex = 57;
-            this.cb_job.Text = "Modificar puesto";
-            this.cb_job.UseVisualStyleBackColor = false;
-            this.cb_job.CheckedChanged += new System.EventHandler(this.cb_job_CheckedChanged);
             // 
             // EmployeeSearcher
             // 
@@ -635,11 +581,6 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_modify;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
@@ -663,7 +604,7 @@ namespace TCamaleonApp.Views
         private System.Windows.Forms.TextBox txt_name2;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cb_cat_search;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
