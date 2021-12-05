@@ -598,6 +598,81 @@ namespace TCamaleonApp.Model
 
         }
 
+        
+
+
+
+
+        public static DataTable BuscarTénicoA(string info)
+        {
+            DataTable DtResultado = new DataTable("BuscarTécnicoA");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "BuscarTénicoA";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParDato = new SqlParameter();
+                ParDato.ParameterName = "@info";
+                ParDato.SqlDbType = SqlDbType.VarChar;
+                ParDato.Size = 60;
+                ParDato.Value = info;
+                SqlCmd.Parameters.Add(ParDato);
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+
+            return DtResultado;
+
+        }
+
+
+        public static DataTable MostrarTécnicoA()
+        {
+            DataTable DtResultado = new DataTable("MostrarTécnicoA");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarTécnioA";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+            return DtResultado;
+        }
 
     }
 }

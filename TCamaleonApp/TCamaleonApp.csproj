@@ -113,11 +113,11 @@
     <Compile Include="Views\FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Form_BuscarEmpleado.cs">
+    <Compile Include="Views\Form_BuscarTécnico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form_BuscarEmpleado.Designer.cs">
-      <DependentUpon>Form_BuscarEmpleado.cs</DependentUpon>
+    <Compile Include="Views\Form_BuscarTécnico.Designer.cs">
+      <DependentUpon>Form_BuscarTécnico.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Form_Login.cs">
       <SubType>Form</SubType>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Form_BuscarEmpleado.resx">
-      <DependentUpon>Form_BuscarEmpleado.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Form_BuscarTécnico.resx">
+      <DependentUpon>Form_BuscarTécnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>

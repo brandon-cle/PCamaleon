@@ -81,7 +81,15 @@ namespace TCamaleonApp.Controller
             return MEmployeer.SearchEmployeerAd(info);
         }
 
+        public static DataTable MostrarTécnicoA()
+        {
+            return MEmployeer.MostrarTécnicoA();
+        }
 
+        public static DataTable BuscarTécnicoA(string info)
+        {
+            return MEmployeer.BuscarTénicoA(info);
+        }
 
     }
 }
