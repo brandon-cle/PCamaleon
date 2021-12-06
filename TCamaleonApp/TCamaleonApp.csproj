@@ -36,6 +36,24 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Console tester\Console tester.cs" />
     <Compile Include="Controller\cCliente.cs" />
     <Compile Include="Controller\CEmployeer.cs" />
     <Compile Include="Controller\cMantenimiento.cs" />
@@ -57,6 +76,7 @@
     <Compile Include="Controller\cServicioMantenimiento.cs" />
     <Compile Include="Controller\cServicioRepuesto.cs" />
     <Compile Include="Controller\cVehiculo.cs" />
+    <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
     <Compile Include="Model\mMantenimiento.cs" />
@@ -69,6 +89,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Connectivity\Connection.cs" />
+    <Compile Include="PuestosTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PuestosTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Tester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester.Designer.cs">
+      <DependentUpon>Tester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmployeeSearcher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +108,13 @@
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormCliente.cs">
+    <Compile Include="Views\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormBase_Servicios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormCliente.Designer.cs">
@@ -116,6 +155,24 @@
     </Compile>
     <Compile Include="Views\FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_BuscarTécnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_BuscarTécnico.Designer.cs">
+      <DependentUpon>Form_BuscarTécnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.Designer.cs">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmBuscarCliente.cs">
       <SubType>Form</SubType>
@@ -163,11 +220,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Tester.resx">
+      <DependentUpon>Tester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeSearcher.resx">
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormBase_Servicios.resx">
+      <DependentUpon>FormBase_Servicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
@@ -186,6 +252,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_BuscarTécnico.resx">
+      <DependentUpon>Form_BuscarTécnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_sEmployeerAd.resx">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>
@@ -215,11 +290,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    </EmbeddedResource>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="PuestosTable.xsc">
+      <DependentUpon>PuestosTable.xsd</DependentUpon>
+    </None>
+    <None Include="PuestosTable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PuestosTable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PuestosTable.xss">
+      <DependentUpon>PuestosTable.xsd</DependentUpon>
+    </None>
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +321,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cleaning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_31322065-stock-illustration-automotive-mechanic-car-repair-retro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mecanico-automo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user lobby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1250668.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93631.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2791696.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
