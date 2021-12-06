@@ -226,7 +226,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataPuestos</DataSetName>
-        <Top>0.22167in</Top>
+        <Top>0.58in</Top>
         <Left>1.055in</Left>
         <Height>0.46667in</Height>
         <Width>4.43333in</Width>
@@ -237,7 +237,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.94167in</Height>
+    <Height>2.65in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>

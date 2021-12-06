@@ -30,6 +30,7 @@ namespace TCamaleonApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.PuestosTable = new TCamaleonApp.PuestosTable();
             this.PuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,6 +41,9 @@ namespace TCamaleonApp
             // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "DataPuestos";
+            reportDataSource1.Value = this.PuestoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TCamaleonApp.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(112, 74);
             this.reportViewer1.Name = "reportViewer1";
