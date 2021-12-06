@@ -76,6 +76,7 @@
             this.label = new System.Windows.Forms.Label();
             this.labelMantenimiento = new System.Windows.Forms.Label();
             this.lblMantenimiento = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtMantenimiento)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtServicioMantenimiento)).BeginInit();
@@ -155,6 +156,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.lblMantenimiento);
             this.panel1.Controls.Add(this.labelMantenimiento);
             this.panel1.Controls.Add(this.label);
@@ -708,6 +710,15 @@
             this.lblMantenimiento.Size = new System.Drawing.Size(0, 18);
             this.lblMantenimiento.TabIndex = 396;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(33, 339);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(295, 13);
+            this.label12.TabIndex = 408;
+            this.label12.Text = "________________________________________________";
+            // 
             // FormMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -775,5 +786,6 @@
         private System.Windows.Forms.Label labelMantenimiento;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label lblMantenimiento;
+        private System.Windows.Forms.Label label12;
     }
 }

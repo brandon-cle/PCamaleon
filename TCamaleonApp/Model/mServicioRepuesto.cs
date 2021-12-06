@@ -11,6 +11,15 @@ namespace TCamaleonApp.Model
 {
     internal class mServicioRepuesto
     {
+        private int idServicioMantenimiento;
+        private int idRepuesto;
+        private int cantidad;
+        private float costo;
+        public int IdServicioMantenimiento { get => idServicioMantenimiento; set => idServicioMantenimiento = value; }
+
+        public int IdRepuesto { get => idRepuesto; set => idRepuesto = value; }
+        public int Cantidad { get => cantidad; set => cantidad = value; }
+        public float Costo { get => costo; set => costo = value; }
         public static DataTable MostrarServicioRepuesto()
         {
             DataTable DtResultado = new DataTable("MostrarServicioRepuesto");
@@ -72,6 +81,63 @@ namespace TCamaleonApp.Model
                 DtResultado = null;
             }
             return DtResultado;
+        }
+
+        public string Insertar(mServicioRepuesto ServicioRepuesto)
+        {
+            string repuesta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = connection.cn; ;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "InsertarServicioRepuesto";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                // Parámetros del Procedimiento Almacenado
+
+                SqlParameter ParIdServicioMantenimiento = new SqlParameter();
+                ParIdServicioMantenimiento.ParameterName = "@idServicioMantenimiento";
+                ParIdServicioMantenimiento.SqlDbType = SqlDbType.Int;
+                ParIdServicioMantenimiento.Value = ServicioRepuesto.idServicioMantenimiento;
+                SqlCmd.Parameters.Add(ParIdServicioMantenimiento);
+
+                SqlParameter ParIdRepuesto = new SqlParameter();
+                ParIdRepuesto.ParameterName = "@idRepuesto";
+                ParIdRepuesto.SqlDbType = SqlDbType.Int;
+                ParIdRepuesto.Value = ServicioRepuesto.idRepuesto;
+                SqlCmd.Parameters.Add(ParIdRepuesto);
+
+                SqlParameter ParCantidad = new SqlParameter();
+                ParCantidad.ParameterName = "@cantidad";
+                ParCantidad.SqlDbType = SqlDbType.Int;
+                ParCantidad.Value = ServicioRepuesto.cantidad;
+                SqlCmd.Parameters.Add(ParCantidad);
+
+                SqlParameter ParCosto = new SqlParameter();
+                ParCosto.ParameterName = "@costo";
+                ParCosto.SqlDbType = SqlDbType.Float;
+                ParCosto.Value = ServicioRepuesto.costo;
+                SqlCmd.Parameters.Add(ParCosto);
+
+
+                repuesta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+            }
+            catch (Exception ex)
+            {
+                repuesta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return repuesta;
+
         }
     }
 }
