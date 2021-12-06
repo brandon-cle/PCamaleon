@@ -54,12 +54,16 @@
     <Compile Include="Controller\cMantenimiento.cs" />
     <Compile Include="Controller\cRepuesto.cs" />
     <Compile Include="Controller\cServicio.cs" />
+    <Compile Include="Controller\cServicioMantenimiento.cs" />
+    <Compile Include="Controller\cServicioRepuesto.cs" />
     <Compile Include="Controller\cVehiculo.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
     <Compile Include="Model\mMantenimiento.cs" />
     <Compile Include="Model\mRepuesto.cs" />
     <Compile Include="Model\mServicio.cs" />
+    <Compile Include="Model\mServicioMantenimiento.cs" />
+    <Compile Include="Model\mServicioRepuesto.cs" />
     <Compile Include="Model\mUsuario.cs" />
     <Compile Include="Model\mVehiculo.cs" />
     <Compile Include="Program.cs" />
@@ -100,6 +104,12 @@
     </Compile>
     <Compile Include="Views\FormServicio.Designer.cs">
       <DependentUpon>FormServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormServicioRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormServicioRepuesto.Designer.cs">
+      <DependentUpon>FormServicioRepuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormVehiculo.cs">
       <SubType>Form</SubType>
@@ -164,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormServicio.resx">
       <DependentUpon>FormServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormServicioRepuesto.resx">
+      <DependentUpon>FormServicioRepuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>

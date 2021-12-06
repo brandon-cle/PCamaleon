@@ -16,14 +16,14 @@ namespace TCamaleonApp.Model
         private string descripcion;
         private string estado;
         private string fechaSalida;
-        private string fechaIngreso;
+        private DateTime fechaIngreso;
         public int IdMantenimiento { get => idMantenimiento; set => idMantenimiento = value; }
         public int IdVehiculo { get => idVehiculo; set => idVehiculo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string  Estado { get => estado; set => estado = value; }
         public string FechaSalida { get => fechaSalida; set => fechaSalida = value; }
 
-        public string FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
+        public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public static DataTable MostrarMantenimiento()
         {
             DataTable DtResultado = new DataTable("MostrarMantenimiento");
@@ -54,6 +54,7 @@ namespace TCamaleonApp.Model
             }
             return DtResultado;
         }
+        //
         public static DataTable BuscarMantenimiento(string dato)
         {
             DataTable DtResultado = new DataTable("BuscarMantenimiento");
@@ -112,8 +113,8 @@ namespace TCamaleonApp.Model
 
                 SqlParameter ParFechaIngreso = new SqlParameter();
                 ParFechaIngreso.ParameterName = "@fechaIngreso";
-                ParFechaIngreso.SqlDbType = SqlDbType.VarChar;
-                ParFechaIngreso.Size = 60;
+                ParFechaIngreso.SqlDbType = SqlDbType.DateTime;
+                //ParFechaIngreso.Size = 60;
                 ParFechaIngreso.Value = Mantenimiento.fechaIngreso;
                 SqlCmd.Parameters.Add(ParFechaIngreso);
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TCamaleonApp.Controller;
+using TCamaleonApp.Model;
 
 namespace TCamaleonApp.Views
 {
@@ -20,30 +21,13 @@ namespace TCamaleonApp.Views
             InitializeComponent();
         }
 
-        private void btnBuscarCliente_Click(object sender, EventArgs e)
-        {
-            frmBuscarVehiculo fc = new frmBuscarVehiculo();
-            fc.ShowDialog();
-            if (fc.DialogResult == DialogResult.OK)
-            {
-                this.txtIdVehiculo.Text = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[0].Value.ToString();
-                string marca = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[3].Value.ToString();
-                string modelo = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[4].Value.ToString();
-                txtCliente.Text = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[2].Value.ToString();
-                txtMarca.Text = marca +' '+ modelo;
-            }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
         private void limpiar()
         {
             txtFechaIngreso.Text = String.Empty;
             txtFechaSalida.Text = String.Empty;
             txtIdVehiculo.Text = String.Empty;
             txtMarca.Text = String.Empty;
+            txtCliente.Text = String.Empty;
 
         }
         private void Botones()
@@ -74,21 +58,39 @@ namespace TCamaleonApp.Views
 
         private void btnMecanico_Click(object sender, EventArgs e)
         {
-            this.txtIdMecanico.Text=DateTime.Now.ToString();
+            MirarMantenimiento();
+            //this.txtIdMecanico.Text=DateTime.Now.ToString();
         }
 
         private void btnIdServicio_Click(object sender, EventArgs e)
         {
+            MirarMantenimiento();
             frmBuscarServicio fc = new frmBuscarServicio();
             fc.ShowDialog();
             if (fc.DialogResult == DialogResult.OK)
             {
-                this.txtIdServicio.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[2].Value.ToString();
+                this.txtIdServicio.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[0].Value.ToString();
                 txtDescripcion.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[1].Value.ToString();
                 txtCosto.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[3].Value.ToString();
 
             }
         }
+
+        private void MirarMantenimiento()
+        {
+            if (txtCliente.Text.Length == 0)
+            {
+                btnIdServicio.Enabled = false;
+                btnMecanico.Enabled = false;
+                //MessageBox.Show("Debe ingresar el mantenimiento para agregar servicios", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                btnIdServicio.Enabled = true;
+                btnMecanico.Enabled = true;
+            }
+        }
+    
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -96,20 +98,49 @@ namespace TCamaleonApp.Views
             this.IsEditar = false;
             this.Botones();
             this.limpiar();
+            BotonesFalso();
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-           
-            this.IsNuevo = false;
-            this.IsEditar = false;
-            this.Botones();
-            this.limpiar();
-            this.dtMantenimiento.CurrentCell = null;
+            if(btnCancelar.Text == "Listo")
+            {
+                lblMantenimiento.Text = String.Empty;
+                btnCancelar.Text = "Cancelar";
+                dtServicioMantenimiento.DataSource = cServicioMantenimiento.BuscarServicioMantenimiento(labelMantenimiento.Text);
+            }
+            
+                btnBuscarCliente.Enabled = true;
+                this.IsNuevo = false;
+                this.IsEditar = false;
+                this.Botones();
+                this.limpiar();
+                this.dtMantenimiento.CurrentCell = null;
+            
+            BotonesFalso();
+        }
+
+        private void BotonesFalso()
+        {
+            btnGuardarServicio.Enabled=false;
+            btnCancelarServicio.Enabled = false;
+            btnNuevoServicio.Enabled = false;
+            btnMecanico.Enabled = false;
+            btnIdServicio.Enabled = false;
+        }
+
+        private void BotonesVerdadero()
+        {
+            btnGuardarServicio.Enabled = true;
+            btnCancelarServicio.Enabled = true;
+            btnNuevoServicio.Enabled = true;
+            btnMecanico.Enabled = true;
+            btnIdServicio.Enabled = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //this.txtFechaSalida.Text = this.dateTimePicker1.Value.ToString();
             try
             {
                 if (this.txtIdVehiculo.Text.Length == 0)
@@ -123,14 +154,13 @@ namespace TCamaleonApp.Views
                 if (this.IsNuevo)
                 {
 
-                    rpta = cMantenimiento.Insertar(Convert.ToInt32(txtIdVehiculo.Text), txtFechaIngreso.Text);
+                    rpta = cMantenimiento.Insertar(Convert.ToInt32(txtIdVehiculo.Text),  DateTime.Now);
                 }
                 else
                 {
 
                    // rpta = cVehiculo.Editar(Convert.ToInt32(this.dtVehiculo.CurrentRow.Cells["Id Vehiculo"].Value), Convert.ToInt32(txtIdCliente.Text), txtMarca.Text, txtModelo.Text, Convert.ToInt32(txtAno.Text), txtPlaca.Text);
                 }
-
 
 
                 if (rpta.Equals("OK"))
@@ -155,7 +185,7 @@ namespace TCamaleonApp.Views
                 this.IsEditar = false;
                 this.Botones();
                 this.limpiar();
-                //this.dtMantenimiento.DataSource = cVehiculo.MostrarVehiculo();
+               this.dtMantenimiento.DataSource = cMantenimiento.MostrarMantenimiento();
 
 
             }
@@ -164,11 +194,170 @@ namespace TCamaleonApp.Views
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+            BotonesFalso();
         }
 
         private void FormMantenimiento_Load(object sender, EventArgs e)
         {
-            this.txtIdMecanico.Text = DateTime.Now.ToString();
+            BotonesServicio();
+            this.dtMantenimiento.DataSource = cMantenimiento.MostrarMantenimiento();
+           // this.txtFechaIngreso.Text = DateTime.Now.ToString();
+            string idManten = dtMantenimiento.Rows[dtMantenimiento.CurrentRow.Index].Cells[0].Value.ToString();
+
+
+            this.dtServicioMantenimiento.DataSource = cServicioMantenimiento.BuscarServicioMantenimiento(idManten);
+        }
+
+        private void btnBuscarVehiculo_Click_1(object sender, EventArgs e)
+        {
+
+            this.txtFechaIngreso.Text = DateTime.Now.ToString();
+            frmBuscarVehiculo fc = new frmBuscarVehiculo();
+            fc.ShowDialog();
+            if (fc.DialogResult == DialogResult.OK)
+            {
+                this.txtIdVehiculo.Text = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[0].Value.ToString();
+                string marca = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[3].Value.ToString();
+                string modelo = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[4].Value.ToString();
+                txtCliente.Text = fc.dtVehiculo.Rows[fc.dtVehiculo.CurrentRow.Index].Cells[2].Value.ToString();
+                txtMarca.Text = marca + ' ' + modelo;
+            }
+        }  
+        private void BotonesServicio()
+        {
+            if (txtCliente.Text.Length == 0)
+            {
+                btnIdServicio.Enabled = false;
+                btnMecanico.Enabled = false;
+                //MessageBox.Show("Debe ingresar el mantenimiento para agregar servicios", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            this.dtMantenimiento.DataSource = cMantenimiento.BuscarMantenimiento(txtBuscar.Text);
+        }
+
+        private void dtServicioMantenimiento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            btnCancelar.Text = "Listo";
+            if (this.dtMantenimiento.SelectedRows.Count == 1)
+            {
+                String Estado = Convert.ToString(this.dtMantenimiento.CurrentRow.Cells["Estado"].Value);
+                if (Estado == "Finalizado")
+                {
+                    MessageBox.Show("El Mantenimiento ya finalizo", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    BotonesVerdadero();
+                    string idM = Convert.ToString(this.dtMantenimiento.CurrentRow.Cells["Id Mantenimiento"].Value);
+                    this.txtMarca.Text = Convert.ToString(this.dtMantenimiento.CurrentRow.Cells["Marca de Vehiculo"].Value);
+                    this.txtCliente.Text = Convert.ToString(this.dtMantenimiento.CurrentRow.Cells["Propetario"].Value);
+                    this.txtFechaIngreso.Text = Convert.ToString(this.dtMantenimiento.CurrentRow.Cells["Ingreso"].Value);
+                    this.txtFechaSalida.Text = Convert.ToString(this.dtMantenimiento.CurrentRow.Cells["Salida"].Value);
+                    lblMantenimiento.Text = idM;
+                    this.IsNuevo = false;
+                    this.IsEditar = true;
+                    this.Botones();
+                    btnBuscarCliente.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    this.dtServicioMantenimiento.DataSource = mServicioMantenimiento.BuscarServicioMantenimiento(idM);
+                }
+               
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una Fila antes de Modificar", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void btnCancelarServicio_Click(object sender, EventArgs e)
+        {
+            limpiarSevicio();
+        }
+
+        private void btnNuevoServicio_Click(object sender, EventArgs e)
+        {
+            limpiarSevicio();
+        }
+        private void limpiarSevicio()
+        {
+            txtDescripcion.Text = String.Empty;
+            txtCosto.Text = String.Empty;
+            txtIdMecanico.Text = String.Empty;
+            txtIdServicio.Text = String.Empty;
+            txtMecanico.Text = String.Empty;
+        }
+
+        private void btnGuardarServicio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.lblMantenimiento.Text.Length == 0)
+                {
+                    MessageBox.Show("Debe ingresar el mantenimiento para agregar servicios", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+
+                }
+                if (this.txtIdMecanico.Text.Length == 0)
+                {
+                    MessageBox.Show("Debe ingresar el mecanico que brindara el servicio", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+
+                }
+                if (this.txtIdServicio.Text.Length == 0)
+                {
+                    MessageBox.Show("Debe indicar el sevicio que se dara", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+
+                }
+
+                string rpta = "";
+
+                rpta = cServicioMantenimiento.Insertar(Convert.ToInt32(lblMantenimiento.Text),
+                    Convert.ToInt32(txtIdServicio.Text), 0, float.Parse(txtCosto.Text));
+
+                if (rpta.Equals("OK"))
+                {
+                   
+
+                        MessageBox.Show("Datos Ingresados", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                    
+                }
+                else
+                {
+
+                    MessageBox.Show(rpta, "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                //this.IsNuevo = false;
+               // this.IsEditar = false;
+                //this.Botones();
+                //this.limpiar();
+                this.dtServicioMantenimiento.DataSource = cServicioMantenimiento.BuscarServicioMantenimiento(lblMantenimiento.Text);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+            BotonesFalso();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
+         
 }

@@ -33,19 +33,20 @@ namespace TCamaleonApp.Views
 
         private void btnGuardar_Click(object sender, System.EventArgs e)
         {
-            if(float.Parse(txtPrecio.Text) < 0 || Convert.ToInt32(txtCantidad.Text) < 0)
+            
+            if(float.Parse(txtPrecio.Text) < 0 )
             {
                 MessageBox.Show("Cantidad y precio no pueden ser negativos", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             try
             {
                 float valor = float.Parse(txtPrecio.Text);
-                float can = float.Parse(txtCantidad.Text);
+                
             }
             catch (FormatException ex)
             {
 
-                MessageBox.Show("Cantidad y precio solo deben ser Numeros", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El precio no puede estar vacio o menor que 0", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             try
@@ -56,14 +57,13 @@ namespace TCamaleonApp.Views
                 {
 
                     rpta = cRepuesto.Insertar(txtTitulo.Text,txtDescripcion.Text, txtMarca.Text, txtModeloR.Text, 
-                        float.Parse(txtPrecio.Text), Convert.ToInt32(txtCantidad.Text));
+                        float.Parse(txtPrecio.Text), Convert.ToInt32(numericUpDown1.Value));
                 }
                 else
                 {
 
                     rpta = cRepuesto.Editar(Convert.ToInt32(this.dtRepuesto.CurrentRow.Cells["Id Repuesto"].Value), txtTitulo.Text, txtDescripcion.Text, txtMarca.Text, txtModeloR.Text,
-                        float.Parse(txtPrecio.Text), Convert.ToInt32(txtCantidad.Text));
-
+                        float.Parse(txtPrecio.Text), Convert.ToInt32(numericUpDown1.Value));
                 }
 
                 if (rpta.Equals("OK"))
@@ -112,7 +112,7 @@ namespace TCamaleonApp.Views
             txtMarca.Text = String.Empty;
             txtModeloR.Text  = String.Empty;
             txtTitulo.Text = String.Empty;
-            txtCantidad.Text = String.Empty;
+            numericUpDown1.Value = 1;
 
         }
         private void Botones()
@@ -143,7 +143,7 @@ namespace TCamaleonApp.Views
             txtMarca.ReadOnly = !valor;
             txtPrecio.ReadOnly = !valor;
             txtModeloR.ReadOnly = !valor;
-            txtCantidad.ReadOnly = !valor;
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -162,11 +162,19 @@ namespace TCamaleonApp.Views
             {
                 this.txtTitulo.Text= Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Titulo"].Value);
                 this.txtModeloR.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Modelo"].Value);
-                this.txtCantidad.Text = Convert.ToString(dtRepuesto.CurrentRow.Cells["Cantidad"].Value);
                 this.txtMarca.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Marca"].Value);
                 this.txtDescripcion.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Descripcion"].Value);
                 this.txtPrecio.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Precio"].Value);
+                string Canti = Convert.ToString(dtRepuesto.CurrentRow.Cells["Cantidad"].Value);
+                if (Canti.Length == 0)
+                {
 
+                }
+                else
+                {
+                    numericUpDown1.Value = Convert.ToDecimal(dtRepuesto.CurrentRow.Cells["Cantidad"].Value);
+                }
+                   
                 this.IsNuevo = false;
                 this.IsEditar = true;
                 this.Botones();
@@ -180,7 +188,7 @@ namespace TCamaleonApp.Views
             }
         }
 
-        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCantidad_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
             {

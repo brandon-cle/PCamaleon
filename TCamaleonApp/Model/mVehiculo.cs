@@ -132,7 +132,7 @@ namespace TCamaleonApp.Model
                 ParMatricula.ParameterName = "@matricula";
                 ParMatricula.SqlDbType = SqlDbType.VarChar;
                 ParMatricula.Size = 60;
-                ParMatricula.Value = Vehiculo.IdCliente;
+                ParMatricula.Value = Vehiculo.matricula;
                 SqlCmd.Parameters.Add(ParMatricula);
                 //Ejecutamos nuestro comando
 
@@ -206,7 +206,7 @@ namespace TCamaleonApp.Model
                 ParMatricula.ParameterName = "@matricula";
                 ParMatricula.SqlDbType = SqlDbType.VarChar;
                 ParMatricula.Size = 60;
-                ParMatricula.Value = Vehiculo.IdCliente;
+                ParMatricula.Value = Vehiculo.matricula;
                 SqlCmd.Parameters.Add(ParMatricula);
 
                 //Ejecutamos nuestro comando
