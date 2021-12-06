@@ -22,10 +22,6 @@ namespace TCamaleonApp.Controller
         {
             return mMantenimiento.CambioEstado(idMantenimiento);
         }
-        public static DataTable BorrarServicioMantenimiento(int dato)
-        {
-            return mMantenimiento.BorrarServicioMantenimiento(dato);
-        }
         public static string Insertar(int idVehiculo, DateTime fechaIngreso)
         {
             mMantenimiento Obj = new mMantenimiento();

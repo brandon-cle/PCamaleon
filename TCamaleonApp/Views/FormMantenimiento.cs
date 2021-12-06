@@ -389,20 +389,6 @@ namespace TCamaleonApp.Views
                 MessageBox.Show("Debe seleccionar una fila para cambiar el estado", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (this.dtServicioMantenimiento.SelectedRows.Count == 1)
-            {
-                    int idSM = (int)dtServicioMantenimiento.CurrentRow.Cells["Id"].Value;
-                cMantenimiento.BorrarServicioMantenimiento(idSM);
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar una Fila antes de eliminar", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-        }
     }
          
 }
