@@ -11,7 +11,7 @@ using TCamaleonApp.Views;
 
 namespace TCamaleonApp.Views
 {
-    
+
     public partial class Lobby : Form
     {
         public Lobby()
@@ -23,7 +23,7 @@ namespace TCamaleonApp.Views
         #region Funcionalidades del formulario
         public void maximize()
         {
-            this.WindowState = FormWindowState.Maximized;   
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -34,10 +34,10 @@ namespace TCamaleonApp.Views
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-           
-            if (MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (MessageBox.Show("¿Estás seguro que quieres cerrar el programa?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
         #endregion
@@ -46,7 +46,7 @@ namespace TCamaleonApp.Views
         {
             Form form;
             form = panel_painting.Controls.OfType<myform>().FirstOrDefault(); //Search on the collection panel someone called form
-            if(form == null)
+            if (form == null)
             {
                 form = new myform();
                 form.TopLevel = false;
@@ -76,6 +76,36 @@ namespace TCamaleonApp.Views
         private void panel_painting_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OpenForm<FormUsuario>();
+        }
+
+        private void btnVehiculo_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormVehiculo>();
+        }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormServicioRepuesto>();
+        }
+
+        private void btnMantenimiento_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormMantenimiento>();
+        }
+
+        private void btnRepuesto_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormRepuesto>();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormCliente>();
         }
     }
 }

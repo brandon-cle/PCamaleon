@@ -56,6 +56,7 @@
     <Compile Include="Controller\cServicio.cs" />
     <Compile Include="Controller\cServicioMantenimiento.cs" />
     <Compile Include="Controller\cServicioRepuesto.cs" />
+    <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Controller\cVehiculo.cs" />
     <Compile Include="Model\mCliente.cs" />
     <Compile Include="Model\MEmployeer.cs" />
@@ -111,11 +112,35 @@
     <Compile Include="Views\FormServicioRepuesto.Designer.cs">
       <DependentUpon>FormServicioRepuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormVehiculo.Designer.cs">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_BuscarTécnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_BuscarTécnico.Designer.cs">
+      <DependentUpon>Form_BuscarTécnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_sEmployeerAd.Designer.cs">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmBuscarCliente.cs">
       <SubType>Form</SubType>
@@ -184,8 +209,20 @@
     <EmbeddedResource Include="Views\FormServicioRepuesto.resx">
       <DependentUpon>FormServicioRepuesto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormVehiculo.resx">
       <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_BuscarTécnico.resx">
+      <DependentUpon>Form_BuscarTécnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_sEmployeerAd.resx">
+      <DependentUpon>Form_sEmployeerAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>

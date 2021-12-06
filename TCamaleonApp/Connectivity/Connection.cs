@@ -10,6 +10,7 @@ namespace TCamaleonApp.View
     {
         //Testing branch
         //testing branch2
-        public string cn = "Data Source=JUGGERNAUT-BLCC\\SQLEXPRESS;Initial Catalog=TallerMecanicoTC;Integrated Security=True";
+        //public string cn = "Data Source=JUGGERNAUT-BLCC\\SQLEXPRESS;Initial Catalog=TallerMecanicoTC;Integrated Security=True";
+        public string cn = "Data Source=LAPTOP-CU018REQ;Initial Catalog=TallerMecanicoTC;Integrated Security=True";
     }
 }

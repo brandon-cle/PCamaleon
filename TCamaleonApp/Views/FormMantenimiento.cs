@@ -14,6 +14,8 @@ namespace TCamaleonApp.Views
 {
     public partial class FormMantenimiento : Form
     {
+        public static string globalID_toChange = null;
+        public static string globalNombre_toChange = null;
         private bool IsNuevo = false;
         private bool IsEditar = false;
         public FormMantenimiento()
@@ -58,6 +60,19 @@ namespace TCamaleonApp.Views
 
         private void btnMecanico_Click(object sender, EventArgs e)
         {
+            Form_BuscarTécnico fc = new Form_BuscarTécnico();
+            fc.ShowDialog();
+            
+            if (globalID_toChange != null)
+            {
+                txtIdMecanico.Text = globalID_toChange;
+                txtMecanico.Text = globalNombre_toChange;
+            }
+            else
+            {
+                return;
+            }
+
             MirarMantenimiento();
             //this.txtIdMecanico.Text=DateTime.Now.ToString();
         }
@@ -324,15 +339,14 @@ namespace TCamaleonApp.Views
                 string rpta = "";
 
                 rpta = cServicioMantenimiento.Insertar(Convert.ToInt32(lblMantenimiento.Text),
-                    Convert.ToInt32(txtIdServicio.Text), 0, float.Parse(txtCosto.Text));
+                    Convert.ToInt32(txtIdServicio.Text), Convert.ToInt32(txtIdMecanico.Text), float.Parse(txtCosto.Text));
 
                 if (rpta.Equals("OK"))
                 {
                    
 
                         MessageBox.Show("Datos Ingresados", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
-                    
+
                 }
                 else
                 {
