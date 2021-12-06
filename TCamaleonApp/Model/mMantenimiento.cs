@@ -24,6 +24,38 @@ namespace TCamaleonApp.Model
         public string FechaSalida { get => fechaSalida; set => fechaSalida = value; }
 
         public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
+
+        public static DataTable CambioEstado(int idMantenimiento)
+        {
+            DataTable DtResultado = new DataTable("CambioEstado");
+            SqlConnection SqlCon = new SqlConnection();
+            Connection connection = new Connection();
+            try
+            {   
+                SqlCon.ConnectionString = connection.cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "CambioEstado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                //   Cargando el parámetro de Búsqueda
+                SqlParameter ParDato = new SqlParameter();
+                ParDato.ParameterName = "@IdMantenimiento";
+                ParDato.SqlDbType = SqlDbType.Int;
+                ParDato.Value = idMantenimiento;
+                SqlCmd.Parameters.Add(ParDato);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
         public static DataTable MostrarMantenimiento()
         {
             DataTable DtResultado = new DataTable("MostrarMantenimiento");

@@ -18,6 +18,10 @@ namespace TCamaleonApp.Controller
         {
             return mMantenimiento.BuscarMantenimiento(info);
         }
+        public static DataTable CambioEstado(int idMantenimiento)
+        {
+            return mMantenimiento.CambioEstado(idMantenimiento);
+        }
         public static string Insertar(int idVehiculo, DateTime fechaIngreso)
         {
             mMantenimiento Obj = new mMantenimiento();

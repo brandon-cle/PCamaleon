@@ -358,6 +358,37 @@ namespace TCamaleonApp.Views
         {
 
         }
+
+        private void btnEstado_Click(object sender, EventArgs e)
+        {
+            if (this.dtMantenimiento.SelectedRows.Count == 1)
+            {
+                try
+                {
+
+                    cMantenimiento.CambioEstado(Convert.ToInt32(this.dtMantenimiento.CurrentRow.Cells["Id Mantenimiento"].Value));
+                   
+
+                    IsNuevo = false;
+                    this.IsEditar = false;
+                    this.Botones();
+                    //this.Limpiar();
+                    this.dtMantenimiento.DataSource= cMantenimiento.MostrarMantenimiento();
+
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila para cambiar el estado", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
          
 }
