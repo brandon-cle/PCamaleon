@@ -108,6 +108,7 @@
       <DependentUpon>EmployeeSearcher.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormCliente.cs">
+      <SubType>Form</SubType>
     <Compile Include="Views\Factura.cs">
       <SubType>Form</SubType>
     </Compile>
