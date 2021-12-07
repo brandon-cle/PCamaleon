@@ -19,6 +19,15 @@ namespace TCamaleonApp.Views
         public FormCliente()
         {
             InitializeComponent();
+
+            if (Form_Login.rol == "Gerente General" || Form_Login.rol == "Gerente Post-Venta")
+            {
+                btnNuevo.Enabled = false;
+            }
+            else
+            {
+                btnNuevo.Enabled = true;
+            }
         }
         private void MostrarServicio()
         {

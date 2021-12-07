@@ -7,22 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TCamaleonApp.Views;
 
 namespace TCamaleonApp.Views
 {
-
-    public partial class Lobby : Form
+    public partial class Form_Lobby_Gestion_G : Form
     {
-        public Lobby()
+        public Form_Lobby_Gestion_G()
         {
             InitializeComponent();
             maximize();
             dl_roluser.Text = Form_Login.rol;
             dl_username.Text = Form_Login.username;
-
-      
         }
+
 
         #region Funcionalidades del formulario
         public void maximize()
@@ -77,11 +74,6 @@ namespace TCamaleonApp.Views
             OpenForm<EmployeeSearcher>();
         }
 
-        private void panel_painting_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             OpenForm<FormUsuario>();
@@ -121,5 +113,7 @@ namespace TCamaleonApp.Views
         {
             Application.Exit();
         }
+
+        
     }
 }

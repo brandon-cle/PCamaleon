@@ -30,19 +30,24 @@ namespace TCamaleonApp.Views
 
         private void Form_BuscarTécnico_Load(object sender, EventArgs e)
         {
-            this.dgv_técnico.DataSource = CEmployeer.MostrarTécnicoA();
-            dgv_técnico.AllowUserToAddRows = false;
+            this.dtMecanico.DataSource = CEmployeer.MostrarTécnicoA();
+             dtMecanico.AllowUserToAddRows = false;
         }
 
         private void txt_searcher_TextChanged(object sender, EventArgs e)
         {
-            this.dgv_técnico.DataSource = CEmployeer.BuscarTécnicoA(txt_searcher.Text);
+            this.dtMecanico.DataSource = CEmployeer.BuscarTécnicoA(txt_searcher.Text);
         }
 
         private void dgv_técnico_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            FormMantenimiento.globalID_toChange = (Convert.ToString(this.dgv_técnico.CurrentRow.Cells["IDEmpleado"].Value));//
-            FormMantenimiento.globalNombre_toChange = (Convert.ToString(this.dgv_técnico.CurrentRow.Cells["Primer Nombre"].Value));
+           
+        }
+
+        private void DtMecanico_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            FormMantenimiento.globalID_toChange = (Convert.ToString(this.dtMecanico.CurrentRow.Cells["IDEmpleado"].Value));//
+            FormMantenimiento.globalNombre_toChange = (Convert.ToString(this.dtMecanico.CurrentRow.Cells["Primer Nombre"].Value));
             this.Close();
         }
     }

@@ -14,6 +14,8 @@ namespace TCamaleonApp.Views
 {
     public partial class Form_Login : Form
     {
+        public static string rol = null;
+        public static string username = null;
         public Form_Login()
         {
             InitializeComponent();
@@ -63,9 +65,44 @@ namespace TCamaleonApp.Views
 
                 if (dato.Rows[0][0].ToString() == "Green flag")
                 {
-                    Lobby lobby = new Lobby();
-                    lobby.Show();
-                    this.Hide();
+                    rol = dato.Rows[0][1].ToString();
+                    username = dato.Rows[0][2].ToString();
+
+
+                    if (rol == "Gerente General" || rol == "Gerente Post-Venta")
+                    {
+                        Form_Lobby_Gestion_G form_Lobby_Gestion_G = new Form_Lobby_Gestion_G();
+                        form_Lobby_Gestion_G.Show();
+                        this.Hide();
+                    }
+
+                    if (rol == "Director de Recursos Humanos")
+                    {
+                        Form_Lobby_GestionBcs form_Lobby_GestionBcs = new Form_Lobby_GestionBcs();
+                        this.Hide();
+                    }
+
+                    if (rol == "Asesor de servicios M" || rol == "Asesor de servicios C")
+                    {
+                        Form_Lobby_Gestion_A form_Lobby_Gestion_A = new Form_Lobby_Gestion_A();
+                        this.Hide();
+                    }
+
+                    if(rol == "Programador")
+                    {
+                        Lobby lobby = new Lobby();
+                        lobby.Show();
+                        this.Hide();
+                    }
+
+                    if(rol == "Cajero")
+                    {
+                        Form_Lobby_Gestion_F form_Lobby_Gestion_F = new Form_Lobby_Gestion_F();
+                        form_Lobby_Gestion_F.Show();
+                        this.Hide();
+                        
+                    }
+
                 }
                 else
                 {

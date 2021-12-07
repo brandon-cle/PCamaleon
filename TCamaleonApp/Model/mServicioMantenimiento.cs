@@ -116,7 +116,7 @@ namespace TCamaleonApp.Model
                 SqlParameter ParIdEmpleado= new SqlParameter();
                 ParIdEmpleado.ParameterName = "@idEmpleado";
                 ParIdEmpleado.SqlDbType = SqlDbType.Int;
-                ParIdEmpleado.Value = ServicioMantenimiento.idServicio;
+                ParIdEmpleado.Value = ServicioMantenimiento.idEmpleado;
                 SqlCmd.Parameters.Add(ParIdEmpleado);
 
                 SqlParameter ParCosto = new SqlParameter();

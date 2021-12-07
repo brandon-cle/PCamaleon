@@ -1,6 +1,7 @@
-﻿namespace TCamaleonApp.Views
+﻿
+namespace TCamaleonApp.Views
 {
-    partial class Lobby
+    partial class Form_Lobby_Gestion_A
     {
         /// <summary>
         /// Required designer variable.
@@ -28,54 +29,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ContentPanel = new System.Windows.Forms.Panel();
             this.panel_painting = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnVehiculo = new System.Windows.Forms.Button();
-            this.btnDetalles = new System.Windows.Forms.Button();
             this.btnMantenimiento = new System.Windows.Forms.Button();
-            this.btnRepuesto = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pb_typeofuser = new System.Windows.Forms.PictureBox();
             this.dl_roluser = new System.Windows.Forms.Label();
             this.dl_username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_employees = new System.Windows.Forms.Button();
             this.btn_Service = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDetalles = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_typeofuser = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.ContentPanel.SuspendLayout();
             this.panel_painting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_typeofuser)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_typeofuser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ContentPanel
-            // 
-            this.ContentPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ContentPanel.Controls.Add(this.panel_painting);
-            this.ContentPanel.Controls.Add(this.panel2);
-            this.ContentPanel.Controls.Add(this.panel1);
-            this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentPanel.Location = new System.Drawing.Point(0, 0);
-            this.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(1299, 902);
-            this.ContentPanel.TabIndex = 0;
             // 
             // panel_painting
             // 
@@ -85,23 +68,8 @@
             this.panel_painting.Location = new System.Drawing.Point(265, 34);
             this.panel_painting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_painting.Name = "panel_painting";
-            this.panel_painting.Size = new System.Drawing.Size(1034, 868);
-            this.panel_painting.TabIndex = 2;
-            this.panel_painting.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_painting_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::TCamaleonApp.Properties.Resources.tool_box;
-            this.pictureBox1.Location = new System.Drawing.Point(383, 316);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 257);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel_painting.Size = new System.Drawing.Size(919, 711);
+            this.panel_painting.TabIndex = 5;
             // 
             // panel2
             // 
@@ -109,20 +77,17 @@
             this.panel2.Controls.Add(this.btnVehiculo);
             this.panel2.Controls.Add(this.btnDetalles);
             this.panel2.Controls.Add(this.btnMantenimiento);
-            this.panel2.Controls.Add(this.btnRepuesto);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btn_employees);
             this.panel2.Controls.Add(this.btn_Service);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 34);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(265, 868);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(265, 711);
+            this.panel2.TabIndex = 4;
             // 
             // btnVehiculo
             // 
@@ -131,7 +96,7 @@
             this.btnVehiculo.FlatAppearance.BorderSize = 0;
             this.btnVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.btnVehiculo.Location = new System.Drawing.Point(3, 198);
+            this.btnVehiculo.Location = new System.Drawing.Point(3, 202);
             this.btnVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVehiculo.Name = "btnVehiculo";
             this.btnVehiculo.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -140,25 +105,6 @@
             this.btnVehiculo.Text = "Vehiculo";
             this.btnVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculo.UseVisualStyleBackColor = false;
-            this.btnVehiculo.Click += new System.EventHandler(this.btnVehiculo_Click);
-            // 
-            // btnDetalles
-            // 
-            this.btnDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btnDetalles.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDetalles.FlatAppearance.BorderSize = 0;
-            this.btnDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetalles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.btnDetalles.Location = new System.Drawing.Point(3, 434);
-            this.btnDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDetalles.Name = "btnDetalles";
-            this.btnDetalles.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnDetalles.Size = new System.Drawing.Size(265, 54);
-            this.btnDetalles.TabIndex = 15;
-            this.btnDetalles.Text = "Detalles Del Mantenimiento";
-            this.btnDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetalles.UseVisualStyleBackColor = false;
-            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // btnMantenimiento
             // 
@@ -167,7 +113,7 @@
             this.btnMantenimiento.FlatAppearance.BorderSize = 0;
             this.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMantenimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.btnMantenimiento.Location = new System.Drawing.Point(3, 375);
+            this.btnMantenimiento.Location = new System.Drawing.Point(3, 315);
             this.btnMantenimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -176,25 +122,6 @@
             this.btnMantenimiento.Text = "Mantenimiento";
             this.btnMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimiento.UseVisualStyleBackColor = false;
-            this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
-            // 
-            // btnRepuesto
-            // 
-            this.btnRepuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btnRepuesto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRepuesto.FlatAppearance.BorderSize = 0;
-            this.btnRepuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.btnRepuesto.Location = new System.Drawing.Point(3, 316);
-            this.btnRepuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRepuesto.Name = "btnRepuesto";
-            this.btnRepuesto.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnRepuesto.Size = new System.Drawing.Size(265, 54);
-            this.btnRepuesto.TabIndex = 13;
-            this.btnRepuesto.Text = "Repuesto";
-            this.btnRepuesto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRepuesto.UseVisualStyleBackColor = false;
-            this.btnRepuesto.Click += new System.EventHandler(this.btnRepuesto_Click);
             // 
             // panel4
             // 
@@ -210,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.label3.Location = new System.Drawing.Point(92, 11);
+            this.label3.Location = new System.Drawing.Point(96, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 1;
@@ -229,17 +156,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(259, 103);
             this.panel3.TabIndex = 11;
-            // 
-            // pb_typeofuser
-            // 
-            this.pb_typeofuser.Image = global::TCamaleonApp.Properties.Resources.user;
-            this.pb_typeofuser.Location = new System.Drawing.Point(9, 7);
-            this.pb_typeofuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pb_typeofuser.Name = "pb_typeofuser";
-            this.pb_typeofuser.Size = new System.Drawing.Size(89, 79);
-            this.pb_typeofuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_typeofuser.TabIndex = 6;
-            this.pb_typeofuser.TabStop = false;
             // 
             // dl_roluser
             // 
@@ -291,32 +207,13 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button4.Location = new System.Drawing.Point(3, 810);
+            this.button4.Location = new System.Drawing.Point(3, 653);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(265, 58);
             this.button4.TabIndex = 5;
             this.button4.Text = "Salir";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button2.Location = new System.Drawing.Point(3, 553);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(265, 54);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Usuario";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -334,25 +231,6 @@
             this.button1.Text = "Cliente";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_employees
-            // 
-            this.btn_employees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_employees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_employees.FlatAppearance.BorderSize = 0;
-            this.btn_employees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_employees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.btn_employees.Location = new System.Drawing.Point(3, 494);
-            this.btn_employees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_employees.Name = "btn_employees";
-            this.btn_employees.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btn_employees.Size = new System.Drawing.Size(265, 54);
-            this.btn_employees.TabIndex = 1;
-            this.btn_employees.Text = "Empleados";
-            this.btn_employees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_employees.UseVisualStyleBackColor = false;
-            this.btn_employees.Click += new System.EventHandler(this.btn_Empleado_Click);
             // 
             // btn_Service
             // 
@@ -370,7 +248,7 @@
             this.btn_Service.Text = "Servicio";
             this.btn_Service.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Service.UseVisualStyleBackColor = false;
-            this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click);
+            this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click_1);
             // 
             // panel1
             // 
@@ -381,57 +259,95 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1299, 34);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(1184, 34);
+            this.panel1.TabIndex = 3;
+            // 
+            // btnDetalles
+            // 
+            this.btnDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.btnDetalles.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDetalles.FlatAppearance.BorderSize = 0;
+            this.btnDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.btnDetalles.Location = new System.Drawing.Point(0, 373);
+            this.btnDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDetalles.Name = "btnDetalles";
+            this.btnDetalles.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnDetalles.Size = new System.Drawing.Size(265, 54);
+            this.btnDetalles.TabIndex = 15;
+            this.btnDetalles.Text = "Detalles Del Mantenimiento";
+            this.btnDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetalles.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::TCamaleonApp.Properties.Resources.tool_box;
+            this.pictureBox1.Location = new System.Drawing.Point(318, 247);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(266, 232);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pb_typeofuser
+            // 
+            this.pb_typeofuser.Image = global::TCamaleonApp.Properties.Resources.user;
+            this.pb_typeofuser.Location = new System.Drawing.Point(9, 7);
+            this.pb_typeofuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_typeofuser.Name = "pb_typeofuser";
+            this.pb_typeofuser.Size = new System.Drawing.Size(89, 79);
+            this.pb_typeofuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_typeofuser.TabIndex = 6;
+            this.pb_typeofuser.TabStop = false;
             // 
             // btn_close
             // 
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Image = global::TCamaleonApp.Properties.Resources.close;
-            this.btn_close.Location = new System.Drawing.Point(1265, 2);
+            this.btn_close.Location = new System.Drawing.Point(1150, 2);
             this.btn_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(29, 30);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_close.TabIndex = 0;
             this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // btn_minimize
             // 
             this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_minimize.Image = global::TCamaleonApp.Properties.Resources.minus;
-            this.btn_minimize.Location = new System.Drawing.Point(1231, 4);
+            this.btn_minimize.Location = new System.Drawing.Point(1116, 4);
             this.btn_minimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(29, 28);
             this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_minimize.TabIndex = 1;
             this.btn_minimize.TabStop = false;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
             // 
-            // Lobby
+            // Form_Lobby_Gestion_A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 902);
-            this.Controls.Add(this.ContentPanel);
+            this.ClientSize = new System.Drawing.Size(1184, 745);
+            this.Controls.Add(this.panel_painting);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Lobby";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "0";
-            this.ContentPanel.ResumeLayout(false);
+            this.Name = "Form_Lobby_Gestion_A";
+            this.Text = "Form_Lobby_Cajero";
             this.panel_painting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_typeofuser)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_typeofuser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
             this.ResumeLayout(false);
@@ -440,29 +356,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Panel panel_painting;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btn_minimize;
-        private System.Windows.Forms.PictureBox btn_close;
-        private System.Windows.Forms.Button btn_employees;
-        private System.Windows.Forms.Button btn_Service;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label dl_roluser;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pb_typeofuser;
+        private System.Windows.Forms.Button btnVehiculo;
+        private System.Windows.Forms.Button btnMantenimiento;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pb_typeofuser;
+        private System.Windows.Forms.Label dl_roluser;
         private System.Windows.Forms.Label dl_username;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnRepuesto;
-        private System.Windows.Forms.Button btnVehiculo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Service;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox btn_close;
+        private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.Button btnDetalles;
-        private System.Windows.Forms.Button btnMantenimiento;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

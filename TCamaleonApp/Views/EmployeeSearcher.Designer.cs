@@ -96,7 +96,7 @@ namespace TCamaleonApp.Views
             // txt_employeeS
             // 
             this.txt_employeeS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_employeeS.Location = new System.Drawing.Point(61, 57);
+            this.txt_employeeS.Location = new System.Drawing.Point(61, 55);
             this.txt_employeeS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_employeeS.Name = "txt_employeeS";
             this.txt_employeeS.Size = new System.Drawing.Size(239, 22);

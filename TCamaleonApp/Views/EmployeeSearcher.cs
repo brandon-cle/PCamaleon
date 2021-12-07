@@ -22,6 +22,7 @@ namespace TCamaleonApp.Views
             InitializeComponent();
             cb_cat_search.SelectedIndex = 1;
             cb_job.Visible = false;
+           
 
         }
 
@@ -264,6 +265,8 @@ namespace TCamaleonApp.Views
                    status_parameter(),
                    txt_mail.Text,
                    txt_Address.Text);
+                    this.dgv_employees.DataSource = MEmployeer.ShowEmployeerAd();
+
                 }
 
                 if(cb_cat_search.Text == "Sección Mecánica")
@@ -280,9 +283,10 @@ namespace TCamaleonApp.Views
                    status_parameter(),
                    txt_mail.Text,
                    txt_Address.Text);
+                    ShowEmployeer();
                 }
                
-                ShowEmployeer();
+                
                 clean();
                 cb_job.Visible = false;
 

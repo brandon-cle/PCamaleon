@@ -604,7 +604,7 @@ namespace TCamaleonApp.Model
 
 
 
-        public static DataTable BuscarTénicoA(string info)
+        public static DataTable BuscarTécnicoA(string info)
         {
             DataTable DtResultado = new DataTable("BuscarTécnicoA");
             SqlConnection SqlCon = new SqlConnection();
@@ -615,7 +615,7 @@ namespace TCamaleonApp.Model
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "BuscarTénicoA";
+                SqlCmd.CommandText = "BuscarTécnicoA";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParDato = new SqlParameter();
@@ -656,7 +656,7 @@ namespace TCamaleonApp.Model
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "MostrarTécnioA";
+                SqlCmd.CommandText = "MostrarTécnicoA";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
 

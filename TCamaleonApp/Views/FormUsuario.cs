@@ -22,6 +22,8 @@ namespace TCamaleonApp.Views
             InitializeComponent();
             this.btn_suser_mod.Visible = false;
             this.checkBox1.Visible = false;
+
+           
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)

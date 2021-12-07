@@ -86,7 +86,7 @@ namespace TCamaleonApp.Views
             {
                 this.txtIdServicio.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[0].Value.ToString();
                 txtDescripcion.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[1].Value.ToString();
-                txtCosto.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[3].Value.ToString();
+                //txtCosto.Text = fc.dtServicio.Rows[fc.dtServicio.CurrentRow.Index].Cells[3].Value.ToString();
 
             }
         }
@@ -123,6 +123,7 @@ namespace TCamaleonApp.Views
                 lblMantenimiento.Text = String.Empty;
                 btnCancelar.Text = "Cancelar";
                 dtServicioMantenimiento.DataSource = cServicioMantenimiento.BuscarServicioMantenimiento(labelMantenimiento.Text);
+                limpiarSevicio();
             }
             
                 btnBuscarCliente.Enabled = true;
@@ -215,12 +216,13 @@ namespace TCamaleonApp.Views
         private void FormMantenimiento_Load(object sender, EventArgs e)
         {
             BotonesServicio();
+            //this.dtMantenimiento.DataSource = CEmployeer.MostrarTécnicoA();
             this.dtMantenimiento.DataSource = cMantenimiento.MostrarMantenimiento();
            // this.txtFechaIngreso.Text = DateTime.Now.ToString();
-            string idManten = dtMantenimiento.Rows[dtMantenimiento.CurrentRow.Index].Cells[0].Value.ToString();
+            //string idManten = dtMantenimiento.Rows[dtMantenimiento.CurrentRow.Index].Cells[0].Value.ToString();
 
 
-            this.dtServicioMantenimiento.DataSource = cServicioMantenimiento.BuscarServicioMantenimiento(idManten);
+            //this.dtServicioMantenimiento.DataSource = cServicioMantenimiento.BuscarServicioMantenimiento(idManten);
         }
 
         private void btnBuscarVehiculo_Click_1(object sender, EventArgs e)
@@ -302,6 +304,7 @@ namespace TCamaleonApp.Views
 
         private void btnNuevoServicio_Click(object sender, EventArgs e)
         {
+            txtCosto.Enabled = true;
             limpiarSevicio();
         }
         private void limpiarSevicio()
@@ -332,6 +335,12 @@ namespace TCamaleonApp.Views
                 if (this.txtIdServicio.Text.Length == 0)
                 {
                     MessageBox.Show("Debe indicar el sevicio que se dara", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+
+                }
+                if (float.Parse(this.txtCosto.Text) <= 0)
+                {
+                    MessageBox.Show("Precio no debe ser menor a 0 ", "Sistema de Taller Mecanico", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
 
                 }

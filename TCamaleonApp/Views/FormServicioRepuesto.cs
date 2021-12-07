@@ -64,7 +64,7 @@ namespace TCamaleonApp.Views
             if (fc.DialogResult == DialogResult.OK)
             {
                 this.idRepuesto.Text = fc.dtRepuesto.Rows[fc.dtRepuesto.CurrentRow.Index].Cells[0].Value.ToString();
-                this.txtCosto.Text = fc.dtRepuesto.Rows[fc.dtRepuesto.CurrentRow.Index].Cells[5].Value.ToString();
+               // this.txtCosto.Text = fc.dtRepuesto.Rows[fc.dtRepuesto.CurrentRow.Index].Cells[5].Value.ToString();
                 txtDescripcion.Text = fc.dtRepuesto.Rows[fc.dtRepuesto.CurrentRow.Index].Cells[2].Value.ToString();
                 txtNombreRepuesto.Text = fc.dtRepuesto.Rows[fc.dtRepuesto.CurrentRow.Index].Cells[1].Value.ToString();
             }
@@ -144,7 +144,7 @@ namespace TCamaleonApp.Views
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (this.nudCantidad.Value > 0)
+            if (this.nudCantidad.Value > 0 && float.Parse(this.txtCosto.Text) > 0)
             {
                 bool existe = false;
                 int num_fila = 0;
@@ -204,7 +204,7 @@ namespace TCamaleonApp.Views
             }
             else
             {
-                MessageBox.Show("Debe Ingresar la Cantidad", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe Ingresar la Cantidad y/o Precio", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -282,6 +282,7 @@ namespace TCamaleonApp.Views
 
         private void btnNuevoServicio_Click(object sender, EventArgs e)
         {
+            txtCosto.Enabled = true;
             limpiarRepuesto();
         }
 

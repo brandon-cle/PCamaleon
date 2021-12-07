@@ -7,21 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TCamaleonApp.Views;
 
 namespace TCamaleonApp.Views
 {
-
-    public partial class Lobby : Form
+    public partial class Form_Lobby_Gestion_F : Form
     {
-        public Lobby()
+        public Form_Lobby_Gestion_F()
         {
             InitializeComponent();
             maximize();
-            dl_roluser.Text = Form_Login.rol;
-            dl_username.Text = Form_Login.username;
+        }
 
-      
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
         #region Funcionalidades del formulario
@@ -120,6 +119,11 @@ namespace TCamaleonApp.Views
         private void Button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormCliente>();
         }
     }
 }
